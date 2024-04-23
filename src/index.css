@@ -1,0 +1,112 @@
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+   vertical-align: baseline;
+   scroll-behavior: smooth;
+   cursor: default;
+}
+::selection {
+   color: rgba(144, 116, 158, 0.696);
+}
+::-webkit-scrollbar {
+   width: 0;
+}
+img,
+picture,
+video,
+iframe,
+figure {
+   max-width: 100%;
+   width: 100%;
+   /* opcional */
+   -o-object-fit: cover;
+   object-fit: cover;
+   /* opcional */
+   -o-object-position: center center;
+   object-position: center center;
+}
+
+@font-face {
+   font-family: "EditorialNew-Thin";
+   src: url(Fonts/PPEditorialNew-Ultralight.otf);
+}
+@font-face {
+   font-family: "Cehua";
+   src: url(Fonts/CehuaFree.otf);
+}
+
+@font-face {
+   font-family: "Prompt-Black";
+   src: url(Fonts/Prompt-Black.ttf);
+}
+
+@font-face {
+   font-family: "Prompt-ExtraBold";
+   src: url(Fonts/Prompt-ExtraBold.ttf);
+}
+
+@font-face {
+   font-family: "Prompt-SemiBold";
+   src: url(Fonts/Prompt-SemiBold.ttf);
+}
+@font-face {
+   font-family: "Antonio-Thin";
+   src: url(Fonts/Antonio-Thin.ttf);
+}
+@font-face {
+   font-family: "Antonio-Light";
+   src: url(Fonts/Antonio-Light.ttf);
+}
+@font-face {
+   font-family: "Antonio-ExtraLight";
+   src: url(Fonts/Antonio-ExtraLight.ttf);
+}
+
+h1 {
+   font-size: clamp(3.7rem, 3vw + 3rem, 5rem);
+}
+:root {
+   margin: 0 auto;
+   color: rgba(175, 182, 223, 0.87);
+   background-color: #1e1e1e;
+
+   background-size: 100%;
+   background-attachment: fixed;
+   font-family: "Hanken Grotesk", system-ui, Avenir, Helvetica, Arial, sans-serif;
+   line-height: 1.5;
+   font-weight: 400;
+   font-synthesis: none;
+   text-rendering: optimizeLegibility;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-text-size-adjust: 100%;
+   overflow-x: hidden;
+}
+
+button {
+   border-radius: 8px;
+   border: 1px solid transparent;
+   padding: 0.6em 1.2em;
+   font-size: 1em;
+   font-weight: 500;
+   font-family: inherit;
+   color: rgba(255, 255, 255, 0.87);
+   background-color: #1a1a1a;
+   cursor: pointer;
+   transition: border-color 0.25s;
+}
+button:hover {
+   border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+   outline: 4px auto -webkit-focus-ring-color;
+}
+a {
+   text-decoration: none;
+   color: inherit;
+   -webkit-user-drag: none;
+}
