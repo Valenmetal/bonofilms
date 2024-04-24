@@ -17,6 +17,15 @@ import videoediting15 from "../assets/vid/videoediting/Tapps Electrics.mov";
 import videoediting16 from "../assets/vid/videoediting/Zee.elle 1.mp4";
 import videoediting17 from "../assets/vid/videoediting/ZOOM TRB.mp4";
 
+import image1 from "../assets/Upwork commets/Andre Cassiano.png";
+import image2 from "../assets/Upwork commets/elearning partners.png";
+import image3 from "../assets/Upwork commets/Max afterburner.png";
+import image4 from "../assets/Upwork commets/Mercy Lyrics.png";
+import image5 from "../assets/Upwork commets/SPRAGUE.png";
+import image6 from "../assets/Upwork commets/Tacoma Farmers.png";
+import image7 from "../assets/Upwork commets/Tapps electric.png";
+import image8 from "../assets/Upwork commets/The phases of new construction.png";
+
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -292,6 +301,16 @@ const Videoediting = () => {
                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
                      Officiis, dolorem.
                   </p>
+               </div>
+               <div className="comments">
+                  <img src={image1} alt="" />
+                  <img src={image2} alt="" />
+                  <img src={image3} alt="" />
+                  <img src={image4} alt="" />
+                  <img src={image5} alt="" />
+                  <img src={image6} alt="" />
+                  <img src={image7} alt="" />
+                  <img src={image8} alt="" />
                </div>
             </div>
          </div>
