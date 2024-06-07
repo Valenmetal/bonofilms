@@ -191,7 +191,7 @@ nav {
    }
 
    .navbar_logo {
-      width: 2.5em;
+      width: 6em;
       height: inherit;
       -webkit-user-drag: none;
    }
@@ -386,23 +386,36 @@ nav {
 
 .subtitle {
    font-family: "Cehua";
-   margin: 4em 0 0 0;
+   margin: 39vw 0 0 51vw;
    font-size: 6vw !important;
    position: absolute;
 }
 .subtitle_stroke {
+   z-index: 6;
    @extend .subtitle;
-   position: absolute;
    -webkit-text-fill-color: transparent;
    -webkit-text-stroke: 0.085vw;
-   z-index: 1;
+   position: absolute;
 }
 
 .reel {
-   z-index: 0;
-   margin: 32em 0 0 0;
-   max-width: 70%;
-   margin-bottom: 2em;
+   margin: 1em 0 0 0;
+   max-width: 80%;
+
+   .reel_video {
+      clip-path: polygon(
+         0% 100%,
+         0% 0%,
+         100% 0%,
+         100% 88%,
+         93% 91%,
+         91% 96%,
+         81% 91%,
+         78% 98%,
+         68% 96%,
+         58% 100%
+      );
+   }
 }
 
 .work_container {
@@ -420,6 +433,44 @@ nav {
       z-index: 6;
    }
 
+   .work_grid {
+      margin-top: 20em;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+   }
+   .img_container {
+      max-width: 100%;
+      margin: 1em;
+
+      video {
+         max-height: 100%;
+         object-fit: scale-down;
+         width: fit-content;
+      }
+   }
+   .vertical_video {
+      @extend .img_container;
+      max-height: 38vw;
+      max-width: 20.78vw;
+   }
+   .filmmaking_work_grid {
+      @extend .work_grid;
+      margin-top: 5em;
+   }
+   .wraper {
+      display: flex;
+   }
+   .comments {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      img {
+         max-width: 40vw;
+      }
+   }
    .banner_filmmaking {
       clip-path: polygon(
          1% 0%,
@@ -481,57 +532,14 @@ nav {
       height: 46em;
       transform: rotate(10deg);
    }
-
-   .work_grid {
-      margin-top: 30em;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      .img_container {
-         max-width: 48%;
-         margin: 2em 1%;
-         video {
-            max-height: 27vw;
-            object-fit: scale-down;
-         }
-         p {
-            margin: 0;
-            font-size: 1.5rem;
-            font-family: "Antonio-Light";
-            letter-spacing: 1.5px;
-         }
-      }
-   }
-   .videoediting_work_grid {
-      @extend .work_grid;
-      margin-top: 0;
-   }
-   .comments {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      img {
-         max-width: 40vw;
-      }
-   }
 }
-/* .video-container {
-   position: relative;
-}
-.play-button {
-   position: absolute;
-   color: white;
-   font-size: 24px;
-   transform: translate(-50%, -50%);
-} */
 
 // FOOTER
 // FOOTER
 // FOOTER
 
 .footer {
-   margin-top: 20em;
+   margin-top: 5em;
    height: 20vh;
    width: 100%;
    display: flex;
@@ -549,6 +557,19 @@ nav {
    p {
       font-family: "Antonio-Thin";
       letter-spacing: 7px;
+   }
+}
+
+//TEAM
+//TEAM
+//TEAM
+
+.team_title {
+   font-family: "Cehua";
+   font-size: clamp(6rem, 8vw + 12rem, 13rem);
+   .team_work_grid {
+      @extend .work_grid;
+      margin-top: 1em;
    }
 }
 
@@ -603,12 +624,33 @@ nav {
          position: relative !important;
       }
    }
+
+   .navbar-items-container {
+      width: 90% !important;
+   }
+
    .logo-container {
       align-items: center;
 
       a {
          margin-left: 0.5rem;
       }
+   }
+
+   .work_title {
+      margin-top: 30% !important;
+      font-size: 16vw !important;
+   }
+
+   .work_grid {
+      margin-top: 1em;
+      .img_container {
+         margin: 0.3em;
+      }
+   }
+
+   .footer {
+      margin-top: 2em;
    }
 }
 @media screen and (max-width: 424px) {
@@ -633,5 +675,9 @@ nav {
    }
    .tecnologies {
       margin: 0 auto 2em auto;
+   }
+
+   .work_title {
+      margin-top: 38% !important;
    }
 }

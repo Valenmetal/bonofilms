@@ -303,7 +303,7 @@ export default function Clientes() {
                   className="flying_video"
                   src={preview_Filmmaking}></video>
 
-               <Link className="link" to="/videoediting#Videoediting_title">
+               <Link className="link" to="/videoediting">
                   <div id="videoediting" className="pojects_item">
                      Videoediting
                   </div>
@@ -405,7 +405,7 @@ export default function Clientes() {
                   </Link>
                </div>
                <div id="colorgrading_menu" className="pojects_menu_item">
-                  <Link className="link" to="/colorgading">
+                  <Link className="link" to="/colorgrading">
                      <span className="pojects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video

@@ -43,7 +43,7 @@ export default function Navbar() {
          </div>
          <main className="navbar-items-container">
             <Link id="logo" to="/" aria-label="Home">
-               <img className="navbar_logo" src="V-2.png" alt="logo" />
+               <img className="navbar_logo" src="logo-bono.png" alt="logo" />
             </Link>
             <ul>
                <Link to="/work" aria-label="Contact">

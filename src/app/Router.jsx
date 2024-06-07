@@ -7,11 +7,11 @@ import Videoediting from "../Pages/Videoediting";
 import Animation from "../Pages/Animation";
 import Colorgrading from "../Pages/Colorgrading";
 import Team from "../Pages/Team";
-/*import Categories from "../Pages/Categories"; */
-
+import ScrollToTop from "../components/ScrollToTop";
 const Router = () => {
    return (
       <BrowserRouter>
+         <ScrollToTop />
          <Routes>
             <Route element={<Layout />}>
                <Route index element={<Index />} />
@@ -20,11 +20,6 @@ const Router = () => {
                <Route path="/animation" element={<Animation />} />
                <Route path="/colorgrading" element={<Colorgrading />} />
                <Route path="/team" element={<Team />} />
-               {/* <Route path="/categorias" element={<Categories />} />
-                  <Route
-                     path="/categorias/:categoryId"
-                     element={<ItemListContainer />}
-                  /> */}
             </Route>
          </Routes>
       </BrowserRouter>

@@ -1,17 +1,37 @@
-import { Link } from "react-router-dom";
 import React from "react";
 import video from "../assets/vid/banners/Banner Home ANIMACION.mp4";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import Danza_vertical_2 from "../assets/vid/filmmaking/Danza vertical 2.mov";
+import EmiliaCafe from "../assets/vid/filmmaking/Emilia Cafe.mov";
+import { useEffect } from "react";
 const Animation = () => {
+   useEffect(() => {
+      const handlePointerMove = (e) => {
+         e.target.setAttribute("controls", true);
+      };
+
+      const handlePointerOut = (e) => {
+         e.target.removeAttribute("controls");
+      };
+
+      const videoElements = document.querySelectorAll("#filmmaking_video");
+      videoElements.forEach((video) => {
+         video.addEventListener("pointermove", handlePointerMove);
+         video.addEventListener("pointerout", handlePointerOut);
+      });
+
+      return () => {
+         videoElements.forEach((video) => {
+            video.removeEventListener("pointermove", handlePointerMove);
+            video.removeEventListener("pointerout", handlePointerOut);
+         });
+      };
+   }, []);
+
    useGSAP(
       () => {
          gsap.from(".work_title", {
-            opacity: 0,
-            y: 100,
-         });
-         gsap.from(".subtitle", {
-            delay: 0.1,
             opacity: 0,
             y: 100,
          });
@@ -49,44 +69,24 @@ const Animation = () => {
             <h1 className="work_title">Animation</h1>
             <h1 className="work_title work_title_stroke">Animation</h1>
 
-            <p className="subtitle">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
-               dolorem.
-            </p>
-
             <div className="work_grid">
-               <div id="work1" className="img_container">
-                  <img src="../public/work1.jpg" alt="" />
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
-               </div>
-               <div id="work2" className="img_container">
-                  <img src="../public/work2.jpg" alt="" />
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
-               </div>
-               <div id="work3" className="img_container">
-                  <img src="../public/work3.jpg" alt="" />
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
-               </div>
-               <div id="work4" className="img_container">
-                  <img src="../public/work4.jpg" alt="" />
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
+               <div className="wraper">
+                  <div id="work1" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="filmmaking_video"
+                        src={Danza_vertical_2}></video>
+                  </div>
+                  <div id="work2" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="filmmaking_video"
+                        src={EmiliaCafe}></video>
+                  </div>
                </div>
             </div>
-            {/* <Link className="link" to={`/work/${work.work}`}>
-         Video
-      </Link> */}
          </div>
       </section>
    );

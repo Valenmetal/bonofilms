@@ -1,41 +1,45 @@
 import video from "../assets/vid/banners/Banner Home FILMMAKING 2.mp4";
-import filmmaking from "../assets/vid/filmmaking/Contemo 1 horizontal.mp4";
-import filmmaking2 from "../assets/vid/filmmaking/Urbano solo horizontal.mp4";
-import filmmaking3 from "../assets/vid/filmmaking/Emilia Cafe.mov";
+import AGUS from "../assets/vid/filmmaking/AGUS.mov";
+import ClaseMADA from "../assets/vid/filmmaking/Clase MADA.mov";
+import Danza_vertical from "../assets/vid/filmmaking/Danza vertical 1.mov";
+import Danza_vertical_2 from "../assets/vid/filmmaking/Danza vertical 2.mov";
+import Danza_vertical_3 from "../assets/vid/filmmaking/Danza vertical 3_00087406.mov";
+import EmiliaCafe from "../assets/vid/filmmaking/Emilia Cafe.mov";
+import FPM from "../assets/vid/filmmaking/FPM 22.mov";
+import Handball from "../assets/vid/filmmaking/Handball.mov";
+import PASTA from "../assets/vid/filmmaking/MAD PASTA.mp4";
+import Rio from "../assets/vid/filmmaking/MADA Rio.mov";
+import Pancho from "../assets/vid/filmmaking/Pancho Publicidad.mov";
+import SEBA from "../assets/vid/filmmaking/SEBA.mov";
+import reel from "../assets/vid/filmmaking/Bonofilms reel 2024.mp4";
 
-import React from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect } from "react";
 
 export default function Filmmaking() {
-   /* useEffect(() => {
-      document
-         .getElementById("videoContainer")
-         .addEventListener("mousemove", function (event) {
-            const playButton = document.getElementById("playButton");
-            // Obtiene la posición del cursor relativa al contenedor
-            const x = event.offsetX;
-            const y = event.offsetY;
+   useEffect(() => {
+      const handlePointerMove = (e) => {
+         e.target.setAttribute("controls", true);
+      };
 
-            // Actualiza la posición del botón de play
-            playButton.style.left = `${x}px`;
-            playButton.style.top = `${y}px`;
+      const handlePointerOut = (e) => {
+         e.target.removeAttribute("controls");
+      };
+
+      const videoElements = document.querySelectorAll("#filmmaking_video");
+      videoElements.forEach((video) => {
+         video.addEventListener("pointermove", handlePointerMove);
+         video.addEventListener("pointerout", handlePointerOut);
+      });
+
+      return () => {
+         videoElements.forEach((video) => {
+            video.removeEventListener("pointermove", handlePointerMove);
+            video.removeEventListener("pointerout", handlePointerOut);
          });
-
-      document
-         .getElementById("videoContainer2")
-         .addEventListener("mousemove", function (event) {
-            const playButton = document.getElementById("playButton2");
-            // Obtiene la posición del cursor relativa al contenedor
-            const x = event.offsetX;
-            const y = event.offsetY;
-
-            // Actualiza la posición del botón de play
-            playButton.style.left = `${x}px`;
-            playButton.style.top = `${y}px`;
-         });
-   }, []); */
+      };
+   }, []);
 
    useGSAP(
       () => {
@@ -51,16 +55,6 @@ export default function Filmmaking() {
 
          gsap.from("#work1, #work2", {
             delay: 0.2,
-            opacity: 0,
-            y: 100,
-         });
-         gsap.from("#work3, #work4", {
-            scrollTrigger: {
-               trigger: "#work3",
-               start: "top bottom",
-               end: "top 90%",
-               scrub: 1,
-            },
             opacity: 0,
             y: 100,
          });
@@ -81,77 +75,86 @@ export default function Filmmaking() {
             <h1 className="work_title">Filmmaking</h1>
             <h1 className="work_title work_title_stroke">Filmmaking</h1>
 
-            <div className="work_grid">
-               <div id="work1" className="img_container">
-                  <div className="video-container" id="videoContainer">
-                     <video
-                        controls
-                        muted
-                        loop
-                        id="filmmaking_video"
-                        src={filmmaking}></video>
+            <div style={{ marginTop: 300 }} className="filmmaking_work_grid">
+               <div className="wraper">
+                  <div id="work11" className="img_container">
+                     <video id="filmmaking_video" muted loop src={Handball}></video>
                   </div>
-                  {/* <div className="play-button" id="playButton">
-                     Boton
-                  </div> */}
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
+                  <div id="work12" className="img_container">
+                     <video id="filmmaking_video" muted loop src={Rio}></video>
+                  </div>
                </div>
-               <div id="work2" className="img_container">
-                  <div className="video-container" id="videoContainer2">
+            </div>
+
+            <div id="reel" className="reel">
+               <p className="subtitle">REEL 2024</p>
+               <p className="subtitle_stroke">REEL 2024</p>
+               <video
+                  className="reel_video"
+                  autoPlay
+                  muted
+                  loop
+                  id="videoediting_video"
+                  src={reel}></video>
+            </div>
+
+            <div className="filmmaking_work_grid">
+               <div className="wraper">
+                  <div id="work1" className="vertical_video">
                      <video
-                        controls
                         muted
                         loop
                         id="filmmaking_video"
-                        src={filmmaking2}></video>
+                        src={Danza_vertical_2}></video>
                   </div>
-                  {/* <div className="play-button" id="playButton2">
-                     Boton
-                  </div> */}
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
+                  <div id="work2" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="filmmaking_video"
+                        src={EmiliaCafe}></video>
+                  </div>
+               </div>
+               <div className="wraper">
+                  <div id="work3" className="img_container">
+                     <video muted loop id="filmmaking_video" src={FPM}></video>
+                  </div>
+                  <div id="work4" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="filmmaking_video"
+                        src={Danza_vertical_3}></video>
+                  </div>
+               </div>
+               <div className="wraper">
+                  <div id="work5" className="img_container">
+                     <video muted loop id="filmmaking_video" src={PASTA}></video>
+                  </div>
+                  <div id="work6" className="img_container">
+                     <video muted loop id="filmmaking_video" src={Pancho}></video>
+                  </div>
+               </div>
+               <div className="wraper">
+                  <div id="work7" className="img_container">
+                     <video muted loop id="filmmaking_video" src={ClaseMADA}></video>
+                  </div>
+                  <div id="work8" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="filmmaking_video"
+                        src={Danza_vertical}></video>
+                  </div>
                </div>
 
-               <div id="work3" className="img_container">
-                  <div className="video-container" id="videoContainer">
-                     <video
-                        controls
-                        muted
-                        loop
-                        id="filmmaking_video"
-                        src={filmmaking3}></video>
-
-                     {/* <div className="play-button" id="playButton">
-                        Boton
-                     </div> */}
+               <div className="wraper">
+                  <div id="work9" className="img_container">
+                     <video muted loop id="filmmaking_video" src={SEBA}></video>
                   </div>
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
-               </div>
-               <div id="work4" className="img_container">
-                  <div className="video-container" id="videoContainer">
-                     <video
-                        controls
-                        muted
-                        loop
-                        id="filmmaking_video"
-                        src={filmmaking}></video>
-
-                     {/* <div className="play-button" id="playButton">
-                        Boton
-                     </div> */}
+                  <div id="work10" className="img_container">
+                     <video muted loop id="filmmaking_video" src={AGUS}></video>
                   </div>
-                  <p>
-                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                     Officiis, dolorem.
-                  </p>
                </div>
             </div>
          </div>
