@@ -40,7 +40,7 @@ const Videoediting = () => {
          e.target.removeAttribute("controls");
       };
 
-      const videoElements = document.querySelectorAll("#filmmaking_video");
+      const videoElements = document.querySelectorAll("#videoediting_video");
       videoElements.forEach((video) => {
          video.addEventListener("pointermove", handlePointerMove);
          video.addEventListener("pointerout", handlePointerOut);
@@ -95,134 +95,134 @@ const Videoediting = () => {
             <h1 className="work_title work_title_stroke">Videoediting</h1>
 
             <div className="work_grid">
-               <div id="work1" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting}></video>
+               <div className="wraper">
+                  <div id="work1" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting}></video>
+                  </div>
+                  <div id="work2" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting2}></video>
+                  </div>
                </div>
-               <div id="work2" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting2}></video>
+               <div className="wraper">
+                  <div id="work3" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting3}></video>
+                  </div>
+                  <div id="work4" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting4}></video>
+                  </div>
                </div>
-               <div id="work3" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting3}></video>
+               <div className="wraper">
+                  <div id="work5" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting5}></video>
+                  </div>
+                  <div id="work6" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting6}></video>
+                  </div>
                </div>
-               <div id="work4" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting4}></video>
+               <div className="wraper">
+                  <div id="work7" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting7}></video>
+                  </div>
+                  <div id="work8" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting8}></video>
+                  </div>
                </div>
-               <div id="work5" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting5}></video>
+               <div className="wraper">
+                  <div id="work9" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting9}></video>
+                  </div>
+                  <div id="work10" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting10}></video>
+                  </div>
                </div>
-               <div id="work6" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting6}></video>
-               </div>
-               <div id="work7" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting7}></video>
-               </div>
-               <div id="work8" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting8}></video>
-               </div>
-               <div id="work9" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting9}></video>
-               </div>
-               <div id="work10" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting10}></video>
-               </div>
-               <div id="work11" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting11}></video>
-               </div>
+               <div className="wraper">
+                  <div id="work11" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting11}></video>
+                  </div>
 
-               <div id="work12" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting13}></video>
+                  <div id="work12" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting13}></video>
+                  </div>
                </div>
-               <div id="work13" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting14}></video>
+               <div className="wraper">
+                  <div id="work13" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting14}></video>
+                  </div>
+                  <div id="work14" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting15}></video>
+                  </div>
                </div>
-               <div id="work14" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting15}></video>
-               </div>
-               <div id="work15" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting16}></video>
-               </div>
-               <div id="work16" className="img_container">
-                  <video
-                     controls
-                     muted
-                     loop
-                     id="videoediting_video"
-                     src={videoediting17}></video>
+               <div className="wraper">
+                  <div id="work15" className="vertical_video">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting16}></video>
+                  </div>
+                  <div id="work16" className="img_container">
+                     <video
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={videoediting17}></video>
+                  </div>
                </div>
                <div className="comments">
                   <img src={image1} alt="" />
