@@ -208,7 +208,7 @@ nav {
    }
 }
 .section {
-   height: 300vh;
+   height: 250vh;
    width: 70%;
    margin: 10em auto 0 auto;
 
@@ -376,6 +376,7 @@ nav {
    top: -20em;
    right: -100em;
    transform: rotate(-20deg);
+   overflow: hidden;
 }
 
 // FILMMAKING,VIDEOEDITITNG,ETC
@@ -665,7 +666,6 @@ nav {
       height: inherit;
       position: relative;
       text-align: center;
-      overflow: hidden;
    }
    .pojects_item {
       position: relative;
