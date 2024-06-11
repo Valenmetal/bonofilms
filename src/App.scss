@@ -376,7 +376,6 @@ nav {
    top: -20em;
    right: -100em;
    transform: rotate(-20deg);
-   overflow: hidden;
 }
 
 // FILMMAKING,VIDEOEDITITNG,ETC
@@ -666,11 +665,11 @@ nav {
       height: inherit;
       position: relative;
       text-align: center;
+      overflow: hidden;
    }
    .pojects_item {
       position: relative;
       font-size: clamp(2.2rem, 2.2vw + 2.2rem, 4rem);
-      overflow: hidden;
    }
    .pojects_stroke {
       display: none;
