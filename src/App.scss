@@ -376,7 +376,6 @@ nav {
    top: -20em;
    right: -100em;
    transform: rotate(-20deg);
-   overflow: hidden;
 }
 
 // FILMMAKING,VIDEOEDITITNG,ETC
@@ -660,6 +659,13 @@ nav {
 
    .footer {
       margin-top: 2em;
+   }
+
+   .section {
+      height: 250vh;
+      width: 100%;
+      margin: 10em 0 0 0;
+      overflow: hidden;
    }
 
    .pojects_grid {
