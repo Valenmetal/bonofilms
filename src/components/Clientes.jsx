@@ -283,7 +283,7 @@ export default function Clientes() {
 
    return (
       <>
-         <div className="section">
+         <div className="section" style={{ marginTop: 0 }}>
             <div className="pojects_grid">
                <div className="vert_wraper">
                   <Link className="link" to="/filmmaking">

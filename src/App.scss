@@ -384,7 +384,7 @@ nav {
 
 .page_section {
    @extend .section;
-   height: fit-content;
+   height: min-content;
    width: 100%;
 }
 
@@ -460,10 +460,6 @@ nav {
       max-height: 38vw;
       max-width: 20.78vw;
    }
-   .filmmaking_work_grid {
-      @extend .work_grid;
-      margin-top: 5em;
-   }
    .wraper {
       display: flex;
    }
@@ -492,7 +488,7 @@ nav {
       height: 26em;
       z-index: 5;
       overflow: hidden;
-      filter: brightness(50%);
+      filter: brightness(70%);
    }
    .banner_videoediting {
       @extend .banner_filmmaking;
@@ -664,8 +660,12 @@ nav {
    .section {
       height: 220vh;
       width: 100%;
-      margin: 0;
+      margin-top: 10em;
       overflow: hidden;
+   }
+
+   .page_section {
+      height: min-content;
    }
 
    .pojects_grid {
@@ -680,6 +680,17 @@ nav {
    }
    .pojects_stroke {
       display: none;
+   }
+
+   .work_grid {
+      margin-top: 1em !important;
+   }
+
+   .work_title_stroke {
+      position: absolute !important;
+   }
+   .work_title_stroke {
+      display: block !important;
    }
 }
 @media screen and (max-width: 424px) {

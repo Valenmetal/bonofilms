@@ -1,4 +1,4 @@
-import video from "../assets/vid/banners/Banner Home FILMMAKING 2.mp4";
+import video from "../assets/vid/banners/Banner Home FILMMAKING.mp4";
 import AGUS from "../assets/vid/filmmaking/AGUS.mov";
 import ClaseMADA from "../assets/vid/filmmaking/Clase MADA.mov";
 import Danza_vertical from "../assets/vid/filmmaking/Danza vertical 1.mov";
@@ -75,7 +75,7 @@ export default function Filmmaking() {
             <h1 className="work_title">Filmmaking</h1>
             <h1 className="work_title work_title_stroke">Filmmaking</h1>
 
-            <div style={{ marginTop: 300 }} className="filmmaking_work_grid">
+            <div className="work_grid">
                <div className="wraper">
                   <div id="work11" className="img_container">
                      <video id="filmmaking_video" muted loop src={Handball}></video>
