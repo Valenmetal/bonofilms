@@ -376,6 +376,7 @@ nav {
    top: -20em;
    right: -100em;
    transform: rotate(-20deg);
+   overflow: hidden;
 }
 
 // FILMMAKING,VIDEOEDITITNG,ETC
@@ -615,6 +616,10 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .gradient-blur {
+      display: none;
+   }
+
    .content {
       h1 {
          font-size: 13vw !important;
