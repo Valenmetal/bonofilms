@@ -43,8 +43,8 @@ export default function Clientes() {
                scrub: 1.5,
             },
             rotate: 70,
-            y: 500,
-            x: -5000,
+            y: "30em",
+            x: "-300em",
          });
 
          gsap.from("#videoediting", {

@@ -662,9 +662,9 @@ nav {
    }
 
    .section {
-      height: 250vh;
+      height: 220vh;
       width: 100%;
-      margin: 10em 0 0 0;
+      margin: 0;
       overflow: hidden;
    }
 
@@ -674,6 +674,7 @@ nav {
       text-align: center;
    }
    .pojects_item {
+      margin-top: 3em;
       position: relative;
       font-size: clamp(2.2rem, 2.2vw + 2.2rem, 4rem);
    }
