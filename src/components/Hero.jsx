@@ -104,7 +104,7 @@ export default function Hero() {
             .to(
                ".title-reveal,.text-reveal",
                {
-                  x: "100vw",
+                  x: "115vw",
                   y: "0",
                   duration: 2,
                },

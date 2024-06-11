@@ -285,78 +285,85 @@ export default function Clientes() {
       <>
          <div className="section">
             <div className="pojects_grid">
-               <Link className="link" to="/filmmaking">
-                  <div id="filmmaking" className="pojects_item">
-                     Filmmaking
-                  </div>
-                  <div
-                     id="filmmaking_stroke"
-                     className="pojects_item pojects_stroke">
-                     Filmmaking
-                  </div>
-               </Link>
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  id="filmmaking_video"
-                  className="flying_video"
-                  src={preview_Filmmaking}></video>
+               <div className="vert_wraper">
+                  <Link className="link" to="/filmmaking">
+                     <div id="filmmaking" className="pojects_item">
+                        Filmmaking
+                     </div>
+                     <div
+                        id="filmmaking_stroke"
+                        className="pojects_item pojects_stroke">
+                        Filmmaking
+                     </div>
+                  </Link>
+                  <video
+                     autoPlay
+                     muted
+                     loop
+                     id="filmmaking_video"
+                     className="flying_video"
+                     src={preview_Filmmaking}></video>
+               </div>
+               <div className="vert_wraper">
+                  <Link className="link" to="/videoediting">
+                     <div id="videoediting" className="pojects_item">
+                        Videoediting
+                     </div>
 
-               <Link className="link" to="/videoediting">
-                  <div id="videoediting" className="pojects_item">
-                     Videoediting
-                  </div>
+                     <div
+                        id="videoediting_stroke"
+                        className="pojects_item pojects_stroke">
+                        Videoediting
+                     </div>
+                  </Link>
+                  <video
+                     autoPlay
+                     muted
+                     loop
+                     id="videoediting_video"
+                     className="flying_video"
+                     src={preview_Videoediting}></video>
+               </div>
+               <div className="vert_wraper">
+                  <Link className="link" to="/animation">
+                     <div id="animation" className="pojects_item">
+                        Animation
+                     </div>
 
-                  <div
-                     id="videoediting_stroke"
-                     className="pojects_item pojects_stroke">
-                     Videoediting
-                  </div>
-               </Link>
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  id="videoediting_video"
-                  className="flying_video"
-                  src={preview_Videoediting}></video>
+                     <div
+                        id="animation_stroke"
+                        className="pojects_item pojects_stroke">
+                        Animation
+                     </div>
+                  </Link>
+                  <video
+                     autoPlay
+                     muted
+                     loop
+                     id="animation_video"
+                     className="flying_video"
+                     src={preview_Animation}></video>
+               </div>
+               <div className="vert_wraper">
+                  <Link className="link" to="/colorgrading">
+                     <div id="colorgrading" className="pojects_item">
+                        Colorgrading
+                     </div>
 
-               <Link className="link" to="/animation">
-                  <div id="animation" className="pojects_item">
-                     Animation
-                  </div>
-
-                  <div id="animation_stroke" className="pojects_item pojects_stroke">
-                     Animation
-                  </div>
-               </Link>
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  id="animation_video"
-                  className="flying_video"
-                  src={preview_Animation}></video>
-
-               <Link className="link" to="/colorgrading">
-                  <div id="colorgrading" className="pojects_item">
-                     Colorgrading
-                  </div>
-
-                  <div
-                     id="colorgrading_stroke"
-                     className="pojects_item pojects_stroke">
-                     Colorgrading
-                  </div>
-               </Link>
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  id="colorgrading_video"
-                  className="flying_video"
-                  src={preview_Colorgrading}></video>
+                     <div
+                        id="colorgrading_stroke"
+                        className="pojects_item pojects_stroke">
+                        Colorgrading
+                     </div>
+                  </Link>
+                  <video
+                     autoPlay
+                     muted
+                     loop
+                     id="colorgrading_video"
+                     className="flying_video"
+                     src={preview_Colorgrading}></video>
+               </div>
             </div>
          </div>
 

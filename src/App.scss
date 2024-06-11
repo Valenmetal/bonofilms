@@ -208,7 +208,7 @@ nav {
    }
 }
 .section {
-   height: 200vh;
+   height: 300vh;
    width: 70%;
    margin: 10em auto 0 auto;
 
@@ -282,19 +282,22 @@ nav {
    flex-direction: column;
    justify-content: space-between;
    position: absolute;
-   overflow: hidden;
 }
 .pojects_item {
    position: absolute;
    font-family: "Cehua";
    font-size: clamp(4rem, 4vw + 4rem, 7rem);
+   overflow: hidden;
 }
 .pojects_stroke {
    -webkit-text-fill-color: transparent;
    -webkit-text-stroke: 0.085vw;
    z-index: 1;
 }
-
+.vert_wraper {
+   display: flex;
+   flex-direction: column;
+}
 .pojects_menu_section {
    @extend .section;
    height: 100vh;
@@ -614,14 +617,14 @@ nav {
 @media screen and (max-width: 522px) {
    .content {
       h1 {
-         font-size: 16vw !important;
+         font-size: 13vw !important;
       }
       p {
-         font-size: 5.2vw !important;
-         width: 17.8em !important;
+         font-size: 4.2vw !important;
+         width: 17.7em !important;
       }
       img {
-         width: 8vw !important;
+         width: 6vw !important;
          position: relative !important;
       }
    }
@@ -652,6 +655,20 @@ nav {
 
    .footer {
       margin-top: 2em;
+   }
+
+   .pojects_grid {
+      height: inherit;
+      position: relative;
+      text-align: center;
+   }
+   .pojects_item {
+      position: relative;
+      font-size: clamp(2.2rem, 2.2vw + 2.2rem, 4rem);
+      // overflow: hidden;
+   }
+   .pojects_stroke {
+      display: none;
    }
 }
 @media screen and (max-width: 424px) {
