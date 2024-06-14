@@ -9,7 +9,7 @@ gsap.registerPlugin(CustomEase);
 export default function Hero() {
    useGSAP(() => {
       let tl = gsap.timeline({ Defaults: { Easing: "Expo.EaseOut" } });
-      let mm = gsap.matchMedia();
+      /* let mm = gsap.matchMedia(); */
 
       tl.to(".text-reveal", {
          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -45,10 +45,9 @@ export default function Hero() {
             ">"
          )
          .to(
-            ".content",
+            ".text-reveal, .title-reveal",
             {
-               x: "-30em",
-               y: "20em",
+               y: "320px",
                duration: 0,
             },
             "-=1"
@@ -61,7 +60,7 @@ export default function Hero() {
             },
             "-=1"
          );
-      mm.add("(max-width: 522px)", () => {
+      /*  mm.add("(max-width: 522px)", () => {
          let tl = gsap.timeline({ Defaults: { Easing: "Expo.EaseOut" } });
 
          tl.to(
@@ -69,16 +68,13 @@ export default function Hero() {
             {
                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
                delay: 0.3,
-               y: "0em",
                duration: 1,
             },
             ">"
          )
-            .fromTo(
+            .to(
                ".title-reveal",
-               { y: "0em" },
                {
-                  y: "0em",
                   clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
                   duration: 2,
                   ease: CustomEase.create(
@@ -96,20 +92,6 @@ export default function Hero() {
                },
                ">"
             )
-            .to(".content", {
-               x: "0",
-               y: "60vw",
-               duration: 0,
-            })
-            .to(
-               ".title-reveal,.text-reveal",
-               {
-                  x: "115vw",
-                  y: "0",
-                  duration: 2,
-               },
-               ">"
-            )
 
             .to(
                ".text-reveal, .title-reveal",
@@ -118,8 +100,9 @@ export default function Hero() {
                   stagger: 0.2,
                },
                ">"
-            );
-      });
+            ); 
+        
+      });*/
    }, ".hero");
 
    return (

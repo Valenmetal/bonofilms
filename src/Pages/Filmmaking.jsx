@@ -16,6 +16,10 @@ import reel from "../assets/vid/filmmaking/Bonofilms reel 2024.mp4";
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom";
+import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
+import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
+import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
 
 export default function Filmmaking() {
    useEffect(() => {
@@ -62,6 +66,115 @@ export default function Filmmaking() {
       { scope: ".work_container" }
    );
 
+   useGSAP(
+      () => {
+         gsap.to(".pojects_menu_item_fill", {
+            scrollTrigger: {
+               trigger: "#videoediting_menu",
+               start: "-75% center",
+               duration: 0.1,
+            },
+            width: "100%",
+         });
+         gsap.to(".pojects_menu_item_fill", {
+            scrollTrigger: {
+               trigger: "#videoediting_menu",
+               start: "-75% center",
+            },
+            autoAlpha: 0,
+            delay: 0.4,
+         });
+         gsap.to("#ghost", {
+            scrollTrigger: {
+               trigger: "#videoediting_menu",
+               start: "-75% center",
+            },
+            color: "rgba(175, 182, 223)",
+            borderBottomWidth: "2px",
+            delay: 1,
+         });
+
+         gsap.from("#videoediting_menu", {
+            scrollTrigger: {
+               trigger: "#videoediting_menu",
+               start: "top bottom",
+               end: "top 90%",
+               scrub: 1,
+            },
+            opacity: 0,
+            y: 100,
+         });
+         gsap.from("#animation_menu", {
+            scrollTrigger: {
+               trigger: "#animation_menu",
+               start: "top bottom",
+               end: "top 90%",
+               scrub: 1,
+            },
+            opacity: 0,
+            y: 100,
+         });
+         gsap.from("#colorgrading_menu", {
+            scrollTrigger: {
+               trigger: "#colorgrading_menu",
+               start: "top bottom",
+               end: "top 90%",
+               scrub: 1,
+            },
+            opacity: 0,
+            y: 100,
+         });
+
+         {
+            let videoediting = document.querySelector("#videoediting_menu");
+            let tl_videoediting = gsap.timeline({ paused: true });
+
+            tl_videoediting.to("#videoediting_mini", {
+               duration: 0.5,
+               display: "block",
+               width: "100%",
+            });
+            videoediting.addEventListener("mouseenter", () =>
+               tl_videoediting.timeScale(1).play()
+            );
+            videoediting.addEventListener("mouseleave", () =>
+               tl_videoediting.timeScale(1.5).reverse()
+            );
+
+            let animation = document.querySelector("#animation_menu");
+            let tl_animation = gsap.timeline({ paused: true });
+
+            tl_animation.to("#animation_mini", {
+               duration: 0.5,
+               display: "block",
+               width: "100%",
+            });
+            animation.addEventListener("mouseenter", () =>
+               tl_animation.timeScale(1).play()
+            );
+            animation.addEventListener("mouseleave", () =>
+               tl_animation.timeScale(1.5).reverse()
+            );
+
+            let colorgrading = document.querySelector("#colorgrading_menu");
+            let tl_colorgrading = gsap.timeline({ paused: true });
+
+            tl_colorgrading.to("#colorgrading_mini", {
+               duration: 0.5,
+               display: "block",
+               width: "100%",
+            });
+            colorgrading.addEventListener("mouseenter", () =>
+               tl_colorgrading.timeScale(1).play()
+            );
+            colorgrading.addEventListener("mouseleave", () =>
+               tl_colorgrading.timeScale(1.5).reverse()
+            );
+         }
+      },
+      { scope: ".pojects_menu_grid" }
+   );
+
    return (
       <section className="page_section">
          <div className="work_container">
@@ -98,7 +211,7 @@ export default function Filmmaking() {
                   src={reel}></video>
             </div>
 
-            <div className="filmmaking_work_grid">
+            <div style={{ marginTop: "1em" }} className="work_grid">
                <div className="wraper">
                   <div id="work1" className="vertical_video">
                      <video
@@ -158,6 +271,52 @@ export default function Filmmaking() {
                </div>
             </div>
          </div>
+
+         <section className="pojects_menu_section">
+            <div className="pojects_menu_grid">
+               <div id="videoediting_menu" className="pojects_menu_item">
+                  <Link className="link" to="/videoediting">
+                     <span className="pojects_menu_item_fill">Videoediting</span>
+
+                     <span id="ghost">Video</span>
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="videoediting_mini"
+                        className="poject_mini"
+                        src={mini_Videoediting}></video>
+                     <span id="ghost">editing</span>
+                  </Link>
+               </div>
+               <div id="animation_menu" className="pojects_menu_item">
+                  <Link className="link" to="/animation">
+                     <span className="pojects_menu_item_fill">Animation</span>
+                     <span id="ghost">Animation</span>
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="animation_mini"
+                        className="poject_mini"
+                        src={mini_Animation}></video>
+                  </Link>
+               </div>
+               <div id="colorgrading_menu" className="pojects_menu_item">
+                  <Link className="link" to="/colorgrading">
+                     <span className="pojects_menu_item_fill">Colorgrading</span>
+                     <span id="ghost">Colorgrading</span>
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="colorgrading_mini"
+                        className="poject_mini"
+                        src={mini_Colorgrading}></video>
+                  </Link>
+               </div>
+            </div>
+         </section>
       </section>
    );
 }

@@ -16,20 +16,15 @@ import videoediting15 from "../assets/vid/videoediting/Tapps Electrics.mov";
 import videoediting16 from "../assets/vid/videoediting/Zee.elle 1.mp4";
 import videoediting17 from "../assets/vid/videoediting/ZOOM TRB.mp4";
 
-import image1 from "../assets/Upwork commets/Andre Cassiano.png";
-import image2 from "../assets/Upwork commets/elearning partners.png";
-import image3 from "../assets/Upwork commets/Max afterburner.png";
-import image4 from "../assets/Upwork commets/Mercy Lyrics.png";
-import image5 from "../assets/Upwork commets/SPRAGUE.png";
-import image6 from "../assets/Upwork commets/Tacoma Farmers.png";
-import image7 from "../assets/Upwork commets/Tapps electric.png";
-import image8 from "../assets/Upwork commets/The phases of new construction.png";
-
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
+import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
+import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
+import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
+import Carrousel from "../components/Carrousel";
 const Videoediting = () => {
    useEffect(() => {
       const handlePointerMove = (e) => {
@@ -65,19 +60,131 @@ const Videoediting = () => {
             opacity: 0,
             y: 100,
          });
-         /* gsap.from("#work3, #work4", {
+      },
+      { scope: ".work_container" }
+   );
+
+   useGSAP(
+      () => {
+         gsap.to(".pojects_menu_item_fill", {
             scrollTrigger: {
-               trigger: "#work3",
+               trigger: "#animation_menu",
+               start: "-75% center",
+               duration: 0.1,
+            },
+            width: "100%",
+         });
+         gsap.to(".pojects_menu_item_fill", {
+            scrollTrigger: {
+               trigger: "#animation_menu",
+               start: "-75% center",
+            },
+            autoAlpha: 0,
+            delay: 0.4,
+         });
+         gsap.to("#ghost", {
+            scrollTrigger: {
+               trigger: "#animation_menu",
+               start: "-75% center",
+            },
+            color: "rgba(175, 182, 223)",
+            borderBottomWidth: "2px",
+            delay: 1,
+         });
+
+         gsap.from("#filmmaking_menu", {
+            scrollTrigger: {
+               trigger: "#filmmaking_menu",
                start: "top bottom",
                end: "top 90%",
                scrub: 1,
             },
             opacity: 0,
             y: 100,
-         }); */
+         });
+
+         gsap.from("#animation_menu", {
+            scrollTrigger: {
+               trigger: "#animation_menu",
+               start: "top bottom",
+               end: "top 90%",
+               scrub: 1,
+            },
+            opacity: 0,
+            y: 100,
+         });
+         gsap.from("#colorgrading_menu", {
+            scrollTrigger: {
+               trigger: "#colorgrading_menu",
+               start: "top bottom",
+               end: "top 90%",
+               scrub: 1,
+            },
+            opacity: 0,
+            y: 100,
+         });
+
+         {
+            let film = document.querySelector("#filmmaking_menu");
+            let tl_filmmaking = gsap.timeline({ paused: true });
+
+            tl_filmmaking.to("#filmmaking_mini", {
+               duration: 0.5,
+               display: "block",
+               width: "100%",
+            });
+
+            film.addEventListener("mouseenter", () =>
+               tl_filmmaking.timeScale(1).play()
+            );
+            film.addEventListener("mouseleave", () =>
+               tl_filmmaking.timeScale(1.5).reverse()
+            );
+
+            let animation = document.querySelector("#animation_menu");
+            let tl_animation = gsap.timeline({ paused: true });
+
+            tl_animation.to("#animation_mini", {
+               duration: 0.5,
+               display: "block",
+               width: "100%",
+            });
+            animation.addEventListener("mouseenter", () =>
+               tl_animation.timeScale(1).play()
+            );
+            animation.addEventListener("mouseleave", () =>
+               tl_animation.timeScale(1.5).reverse()
+            );
+
+            let colorgrading = document.querySelector("#colorgrading_menu");
+            let tl_colorgrading = gsap.timeline({ paused: true });
+
+            tl_colorgrading.to("#colorgrading_mini", {
+               duration: 0.5,
+               display: "block",
+               width: "100%",
+            });
+            colorgrading.addEventListener("mouseenter", () =>
+               tl_colorgrading.timeScale(1).play()
+            );
+            colorgrading.addEventListener("mouseleave", () =>
+               tl_colorgrading.timeScale(1.5).reverse()
+            );
+         }
       },
-      { scope: ".work_container" }
+      { scope: ".pojects_menu_grid" }
    );
+
+   const texts = [
+      '"Alan, is an exceptional video producer. Not just an editor, but a creative director. We will definitely work with him if we have a project in the future in video."',
+      '"Was able to stick through the project and make changes on the fly."',
+      '"Great job, thank you for the good work!"',
+      '"Complete professional that I recommend, delivering every detail of my perfectionist screenplay and responded to suggestions for revisions without a hitch."',
+      '"Great skills in action fast-paced editing, track and scene sync, VFX effects and 2D animation."',
+      '"Did a really really good edit job. We struggled at first with the colour grading but the issue was fixed. Thank you"',
+      '"Great work! did precisely what was asked in a timely fashion and with great quality!"',
+      '"Bono Films did a great job delivering what I asked for. Will work with again in the future."',
+   ];
 
    return (
       <section className="page_section">
@@ -224,18 +331,54 @@ const Videoediting = () => {
                         src={videoediting17}></video>
                   </div>
                </div>
-               <div className="comments">
-                  <img src={image1} alt="" />
-                  <img src={image2} alt="" />
-                  <img src={image3} alt="" />
-                  <img src={image4} alt="" />
-                  <img src={image5} alt="" />
-                  <img src={image6} alt="" />
-                  <img src={image7} alt="" />
-                  <img src={image8} alt="" />
+            </div>
+            <Carrousel texts={texts} interval={3000} />
+         </div>
+
+         <section className="pojects_menu_section">
+            <div className="pojects_menu_grid">
+               <div id="filmmaking_menu" className="pojects_menu_item">
+                  <Link className="link" to="/filmmaking">
+                     <span className="pojects_menu_item_fill">Filmmaking</span>
+                     <span id="ghost">Film</span>
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="filmmaking_mini"
+                        className="poject_mini"
+                        src={mini_Filmmaking}></video>
+                     <span id="ghost">making</span>
+                  </Link>
+               </div>
+               <div id="animation_menu" className="pojects_menu_item">
+                  <Link className="link" to="/animation">
+                     <span className="pojects_menu_item_fill">Animation</span>
+                     <span id="ghost">Animation</span>
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="animation_mini"
+                        className="poject_mini"
+                        src={mini_Animation}></video>
+                  </Link>
+               </div>
+               <div id="colorgrading_menu" className="pojects_menu_item">
+                  <Link className="link" to="/colorgrading">
+                     <span className="pojects_menu_item_fill">Colorgrading</span>
+                     <span id="ghost">Colorgrading</span>
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="colorgrading_mini"
+                        className="poject_mini"
+                        src={mini_Colorgrading}></video>
+                  </Link>
                </div>
             </div>
-         </div>
+         </section>
       </section>
    );
 };

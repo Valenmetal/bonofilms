@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import { LogoGitHub, LogoLinkedin, LogoEmail } from "../assets/Icons";
+import { LogoEmail, LogoInsta, LogoYoutube } from "../assets/Icons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -33,15 +33,21 @@ export default function Footer() {
          <hr className="animated-line"></hr>
          <main>
             <div className="logo-container">
-               <a href="https://github.com/Valenmetal" aria-label="Github Profile">
-                  <LogoGitHub />
+               <a
+                  target="_blank"
+                  style={{ marginRight: "1rem" }}
+                  href="https://youtube.com/@bonofilms8108?si=GmPj3FUkTNFf9C9O"
+                  aria-label="Youtube Channel">
+                  <LogoYoutube />
                </a>
                <a
-                  href="https://www.linkedin.com/in/valentino-geronzi-404945217/"
-                  aria-label="Linkedin Profile">
-                  <LogoLinkedin />
+                  target="_blank"
+                  style={{ marginRight: "1rem" }}
+                  href="https://www.instagram.com/bonofilms/"
+                  aria-label="Instagram Profile">
+                  <LogoInsta />
                </a>
-               <a href="mailto:valentinogeronzi@hotmail.com" aria-label="Email Me">
+               <a href="mailto:Bonofilms@gmail.com" aria-label="Email Me">
                   <LogoEmail />
                </a>
             </div>
