@@ -33,14 +33,6 @@ export default function Navbar() {
 
    return (
       <nav id="navbar">
-         <div id="blur" className="gradient-blur">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-         </div>
          <main className="navbar-items-container">
             <Link id="logo" to="/" aria-label="Home">
                <img className="navbar_logo" src="logo-bono.png" alt="logo" />
