@@ -1,6 +1,6 @@
 import React from "react";
-import colorgrading from "../assets/vid/filmmaking/Clase MADA.mov";
-import colorgrading2 from "../assets/vid/filmmaking/MADA Rio.mov";
+import colorgrading from "../assets/vid/filmmaking/Clase MADA.mp4";
+import colorgrading2 from "../assets/vid/filmmaking/MADA Rio.mp4";
 
 const Team = () => {
    return (

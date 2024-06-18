@@ -1,18 +1,18 @@
 import video from "../assets/vid/banners/Banner Home VIDEOEDITING.mp4";
 import videoediting from "../assets/vid/videoediting/Andre Cassiano.mp4";
 import videoediting2 from "../assets/vid/videoediting/Fandelier.mp4";
-import videoediting3 from "../assets/vid/videoediting/Interview to Tacoma Farmers.mov";
+import videoediting3 from "../assets/vid/videoediting/Interview to Tacoma Farmers.mp4";
 import videoediting4 from "../assets/vid/videoediting/MADA 1.mp4";
 import videoediting5 from "../assets/vid/videoediting/MADA 2.mp4";
 import videoediting6 from "../assets/vid/videoediting/MADA 3.mp4";
-import videoediting7 from "../assets/vid/videoediting/Max Drifting.mov";
+import videoediting7 from "../assets/vid/videoediting/Max Drifting.mp4";
 import videoediting8 from "../assets/vid/videoediting/Mercy - Lyrics.mp4";
 import videoediting9 from "../assets/vid/videoediting/Olive Group Blog.mp4";
-import videoediting10 from "../assets/vid/videoediting/Pancho Publi Vertical.mov";
-import videoediting11 from "../assets/vid/filmmaking/Pancho Publicidad.mov";
-import videoediting13 from "../assets/vid/videoediting/Sprague.mov";
+import videoediting10 from "../assets/vid/videoediting/Pancho Publi Vertical.mp4";
+import videoediting11 from "../assets/vid/filmmaking/Pancho Publicidad.mp4";
+import videoediting13 from "../assets/vid/videoediting/Sprague.mp4";
 import videoediting14 from "../assets/vid/videoediting/Tacoma Farmers.mp4";
-import videoediting15 from "../assets/vid/videoediting/Tapps Electrics.mov";
+import videoediting15 from "../assets/vid/videoediting/Tapps Electrics.mp4";
 import videoediting16 from "../assets/vid/videoediting/Zee.elle 1.mp4";
 import videoediting17 from "../assets/vid/videoediting/ZOOM TRB.mp4";
 

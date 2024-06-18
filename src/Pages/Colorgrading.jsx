@@ -1,9 +1,9 @@
 import video from "../assets/vid/banners/Banner Home COLORGRADING.mp4";
-import colorgrading from "../assets/vid/filmmaking/Clase MADA.mov";
-import colorgrading2 from "../assets/vid/filmmaking/MADA Rio.mov";
-import colorgrading3 from "../assets/vid/filmmaking/Emilia Cafe.mov";
-import colorgrading4 from "../assets/vid/filmmaking/Handball.mov";
-import colorgrading5 from "../assets/vid/filmmaking/Pancho Publicidad.mov";
+import colorgrading from "../assets/vid/filmmaking/Clase MADA.mp4";
+import colorgrading2 from "../assets/vid/filmmaking/MADA Rio.mp4";
+import colorgrading3 from "../assets/vid/filmmaking/Emilia Cafe.mp4";
+import colorgrading4 from "../assets/vid/filmmaking/Handball.mp4";
+import colorgrading5 from "../assets/vid/filmmaking/Pancho Publicidad.mp4";
 import colorgrading6 from "../assets/vid/filmmaking/MAD PASTA.mp4";
 
 import React from "react";

@@ -1,16 +1,16 @@
 import video from "../assets/vid/banners/Banner Home FILMMAKING.mp4";
-import AGUS from "../assets/vid/filmmaking/AGUS.mov";
-import ClaseMADA from "../assets/vid/filmmaking/Clase MADA.mov";
-import Danza_vertical from "../assets/vid/filmmaking/Danza vertical 1.mov";
-import Danza_vertical_2 from "../assets/vid/filmmaking/Danza vertical 2.mov";
-import Danza_vertical_3 from "../assets/vid/filmmaking/Danza vertical 3_00087406.mov";
-import EmiliaCafe from "../assets/vid/filmmaking/Emilia Cafe.mov";
-import FPM from "../assets/vid/filmmaking/FPM 22.mov";
-import Handball from "../assets/vid/filmmaking/Handball.mov";
+import AGUS from "../assets/vid/filmmaking/AGUS.mp4";
+import ClaseMADA from "../assets/vid/filmmaking/Clase MADA.mp4";
+import Danza_vertical from "../assets/vid/filmmaking/Danza vertical 1.mp4";
+import Danza_vertical_2 from "../assets/vid/filmmaking/Danza vertical 2.mp4";
+import Danza_vertical_3 from "../assets/vid/filmmaking/Danza vertical 3_00087406.mp4";
+import EmiliaCafe from "../assets/vid/filmmaking/Emilia Cafe.mp4";
+import FPM from "../assets/vid/filmmaking/FPM 22.mp4";
+import Handball from "../assets/vid/filmmaking/Handball.mp4";
 import PASTA from "../assets/vid/filmmaking/MAD PASTA.mp4";
-import Rio from "../assets/vid/filmmaking/MADA Rio.mov";
-import Pancho from "../assets/vid/filmmaking/Pancho Publicidad.mov";
-import SEBA from "../assets/vid/filmmaking/SEBA.mov";
+import Rio from "../assets/vid/filmmaking/MADA Rio.mp4";
+import Pancho from "../assets/vid/filmmaking/Pancho Publicidad.mp4";
+import SEBA from "../assets/vid/filmmaking/SEBA.mp4";
 import reel from "../assets/vid/filmmaking/Bonofilms reel 2024.mp4";
 
 import React, { useEffect } from "react";
