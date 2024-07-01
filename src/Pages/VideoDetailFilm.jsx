@@ -27,7 +27,7 @@ const VideoDetail = () => {
                muted
                loop
                controls
-               src={`../assets/vid/filmmaking/Rio.mp4`}></video>
+               src={`/${videoId}.mp4`}></video>
          </div>
       </>
    );
