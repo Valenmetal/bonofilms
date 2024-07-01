@@ -1,10 +1,10 @@
 import video from "../assets/vid/banners/Banner Home COLORGRADING.mp4";
-import colorgrading from "../assets/vid/filmmaking/Clase MADA.mp4";
-import colorgrading2 from "../assets/vid/filmmaking/MADA Rio.mp4";
-import colorgrading3 from "../assets/vid/filmmaking/Emilia Cafe.mp4";
+import colorgrading from "../assets/vid/filmmaking/ClaseMADA.mp4";
+import colorgrading2 from "../assets/vid/filmmaking/Rio.mp4";
+import colorgrading3 from "../assets/vid/filmmaking/EmiliaCafe.mp4";
 import colorgrading4 from "../assets/vid/filmmaking/Handball.mp4";
-import colorgrading5 from "../assets/vid/filmmaking/Pancho Publicidad.mp4";
-import colorgrading6 from "../assets/vid/filmmaking/MAD PASTA.mp4";
+import colorgrading5 from "../assets/vid/filmmaking/Pancho.mp4";
+import colorgrading6 from "../assets/vid/filmmaking/Pasta.mp4";
 
 import React from "react";
 import { gsap } from "gsap";

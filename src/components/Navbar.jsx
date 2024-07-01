@@ -2,6 +2,7 @@ import React from "react";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
+import { LogoEmail } from "../assets/Icons";
 
 export default function Navbar() {
    var prevScrollpos = window.scrollY;
@@ -9,17 +10,15 @@ export default function Navbar() {
       var currentScrollPos = window.scrollY;
       if (prevScrollpos > currentScrollPos) {
          document.getElementById("navbar").style.top = "0";
-         document.getElementById("blur").style.top = "60vh";
       } else {
          document.getElementById("navbar").style.top = "-200px";
-         document.getElementById("blur").style.top = "-200px";
       }
       prevScrollpos = currentScrollPos;
    };
 
    useGSAP(
       () => {
-         gsap.from("#logo,li,.gradient-blur", {
+         gsap.from("#logo,.navbar-li-container", {
             ease: "Expo.easeOut", // <- NavBar Animation
             opacity: 0,
             y: -200,
@@ -35,14 +34,14 @@ export default function Navbar() {
       <nav id="navbar">
          <main className="navbar-items-container">
             <Link id="logo" to="/" aria-label="Home">
-               <img className="navbar_logo" src="logo-bono.png" alt="logo" />
+               <img className="navbar_logo" src="/logo-bono.png" alt="logo" />
             </Link>
             <ul>
                <Link to="/work" aria-label="Contact">
-                  <li>Contact</li>
-               </Link>
-               <Link to="/team" aria-label="Team">
-                  <li>Team</li>
+                  <div className="navbar-li-container">
+                     <li>Contact</li>
+                     <LogoEmail />
+                  </div>
                </Link>
             </ul>
          </main>

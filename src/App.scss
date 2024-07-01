@@ -29,8 +29,13 @@ nav {
       display: flex;
       width: 15%;
       justify-content: space-between;
+      .navbar-li-container {
+         display: flex;
+         align-items: center;
+      }
       li {
          list-style: none;
+         margin-right: 0.2em;
       }
    }
 }
@@ -288,16 +293,44 @@ nav {
    .wraper {
       display: flex;
    }
-   .comments {
+   .modal {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      img {
-         max-width: 40vw;
+      align-items: center;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.479);
+      z-index: 9;
+      .modal-content {
+         width: 80%;
+         max-width: 70vw;
+         position: absolute;
       }
    }
 
-   /* src/TextCarousel.css */
+   .close {
+      color: #aaa;
+      float: right;
+      font-size: 3em;
+      font-weight: bold;
+      cursor: pointer;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: black;
+      text-decoration: none;
+   }
+
+   .video-container video {
+      cursor: pointer;
+   }
+
    .carousel-container {
       display: flex;
       font-family: "Antonio-ExtraLight";
@@ -450,6 +483,56 @@ nav {
    }
 }
 
+// VIDEO DETAIL
+// VIDEO DETAIL
+// VIDEO DETAIL
+
+.video-detail {
+   max-height: fit-content;
+   margin: 9em auto 0 auto;
+   display: flex;
+   justify-content: center;
+   video {
+      max-width: fit-content;
+      max-height: 37vw;
+   }
+}
+.back-button {
+   left: 6em;
+   top: 10em;
+   border: unset;
+   border-radius: 1em;
+   color: rgba(175, 182, 223, 0.87);
+   z-index: 10;
+   background: transparent;
+   position: fixed;
+   transition: all 250ms;
+   overflow: hidden;
+   height: 3.5em;
+   width: 3.5em;
+}
+
+.back-button::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 0;
+   border-radius: 15px;
+   background-color: rgba(175, 182, 223, 0.87);
+   z-index: -1;
+   transition: all 250ms;
+}
+
+.back-button:hover {
+   color: #1e1e1e;
+}
+
+.back-button:hover::before {
+   width: 100%;
+}
+
 // FOOTER
 // FOOTER
 // FOOTER
@@ -482,7 +565,7 @@ nav {
 
 .team_title {
    font-family: "Cehua";
-   font-size: clamp(6rem, 8vw + 12rem, 13rem);
+   font-size: clamp(6rem, 8vw + 12rem, 9rem);
    .team_work_grid {
       @extend .work_grid;
       margin-top: 1em;
@@ -508,7 +591,14 @@ nav {
    width: 3em;
    height: 3em;
 }
-
+.external-logo {
+   width: 2.5em;
+   height: 2.5em;
+   position: absolute;
+   z-index: 99;
+   color: #e3e3e3;
+   mix-blend-mode: difference;
+}
 // MEDIA QUERIES
 // MEDIA QUERIES
 // MEDIA QUERIES
@@ -524,6 +614,13 @@ nav {
    .divider {
       margin-top: 4em;
    }
+   .video-detail {
+      min-height: 80vw;
+      margin: 50% auto 0 auto;
+      video {
+         max-height: 55vw;
+      }
+   }
 }
 @media screen and (max-width: 522px) {
    .gradient-blur {
@@ -535,6 +632,7 @@ nav {
    }
 
    .content {
+      margin-bottom: 10em;
       h1 {
          font-size: 4.01em !important;
       }

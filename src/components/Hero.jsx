@@ -113,7 +113,7 @@ export default function Hero() {
             <div className="content">
                <p className="text-reveal">
                   Filmmaking company based in Buenos Aires AR
-                  <img src={mundo} alt="" />
+                  <img src={mundo} alt="world logo" />
                </p>
                <h1 className="title-reveal">BONOFILMS</h1>
             </div>

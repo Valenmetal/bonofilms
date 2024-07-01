@@ -1,17 +1,17 @@
 import video from "../assets/vid/banners/Banner Home FILMMAKING.mp4";
 import AGUS from "../assets/vid/filmmaking/AGUS.mp4";
-import ClaseMADA from "../assets/vid/filmmaking/Clase MADA.mp4";
-import Danza_vertical from "../assets/vid/filmmaking/Danza vertical 1.mp4";
-import Danza_vertical_2 from "../assets/vid/filmmaking/Danza vertical 2.mp4";
-import Danza_vertical_3 from "../assets/vid/filmmaking/Danza vertical 3_00087406.mp4";
-import EmiliaCafe from "../assets/vid/filmmaking/Emilia Cafe.mp4";
-import FPM from "../assets/vid/filmmaking/FPM 22.mp4";
+import ClaseMADA from "../assets/vid/filmmaking/ClaseMADA.mp4";
+import Danza_vertical_1 from "../assets/vid/filmmaking/Danza_vertical_1.mp4";
+import Danza_vertical_2 from "../assets/vid/filmmaking/Danza_vertical_2.mp4";
+import Danza_vertical_3 from "../assets/vid/filmmaking/Danza_vertical_3.mp4";
+import EmiliaCafe from "../assets/vid/filmmaking/EmiliaCafe.mp4";
+import FPM from "../assets/vid/filmmaking/FPM.mp4";
 import Handball from "../assets/vid/filmmaking/Handball.mp4";
-import PASTA from "../assets/vid/filmmaking/MAD PASTA.mp4";
-import Rio from "../assets/vid/filmmaking/MADA Rio.mp4";
-import Pancho from "../assets/vid/filmmaking/Pancho Publicidad.mp4";
+import Pasta from "../assets/vid/filmmaking/Pasta.mp4";
+import Rio from "../assets/vid/filmmaking/Rio.mp4";
+import Pancho from "../assets/vid/filmmaking/Pancho.mp4";
 import SEBA from "../assets/vid/filmmaking/SEBA.mp4";
-import reel from "../assets/vid/filmmaking/Bonofilms reel 2024.mp4";
+import Reel from "../assets/vid/filmmaking/Reel.mp4";
 
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
@@ -20,27 +20,22 @@ import { Link } from "react-router-dom";
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
+import { ExternalLogo } from "../assets/Icons";
 
 export default function Filmmaking() {
    useEffect(() => {
-      const handlePointerMove = (e) => {
+      const handleClick = (e) => {
          e.target.setAttribute("controls", true);
-      };
-
-      const handlePointerOut = (e) => {
-         e.target.removeAttribute("controls");
       };
 
       const videoElements = document.querySelectorAll("#filmmaking_video");
       videoElements.forEach((video) => {
-         video.addEventListener("pointermove", handlePointerMove);
-         video.addEventListener("pointerout", handlePointerOut);
+         video.addEventListener("click", handleClick);
       });
 
       return () => {
          videoElements.forEach((video) => {
-            video.removeEventListener("pointermove", handlePointerMove);
-            video.removeEventListener("pointerout", handlePointerOut);
+            video.removeEventListener("click", handleClick);
          });
       };
    }, []);
@@ -191,9 +186,15 @@ export default function Filmmaking() {
             <div className="work_grid">
                <div className="wraper">
                   <div id="work11" className="img_container">
+                     <Link className="external-logo" to={`/filmmaking/Handball`}>
+                        <ExternalLogo />
+                     </Link>
                      <video id="filmmaking_video" muted loop src={Handball}></video>
                   </div>
                   <div id="work12" className="img_container">
+                     <Link className="external-logo" to={`/filmmaking/Rio`}>
+                        <ExternalLogo />
+                     </Link>
                      <video id="filmmaking_video" muted loop src={Rio}></video>
                   </div>
                </div>
@@ -208,65 +209,101 @@ export default function Filmmaking() {
                   muted
                   loop
                   id="videoediting_video"
-                  src={reel}></video>
+                  src={Reel}></video>
             </div>
 
             <div style={{ marginTop: "1em" }} className="work_grid">
                <div className="wraper">
                   <div id="work1" className="vertical_video">
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/Danza_vertical_2`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
+                        id="filmmaking_video"
                         muted
                         loop
-                        id="filmmaking_video"
                         src={Danza_vertical_2}></video>
                   </div>
                   <div id="work2" className="img_container">
+                     <Link className="external-logo" to={`/filmmaking/EmiliaCafe`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
+                        id="filmmaking_video"
                         muted
                         loop
-                        id="filmmaking_video"
                         src={EmiliaCafe}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work3" className="img_container">
-                     <video muted loop id="filmmaking_video" src={FPM}></video>
+                     <Link className="external-logo" to={`/filmmaking/FPM`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video id="filmmaking_video" muted loop src={FPM}></video>
                   </div>
                   <div id="work4" className="vertical_video">
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/Danza_vertical_3`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
+                        id="filmmaking_video"
                         muted
                         loop
-                        id="filmmaking_video"
                         src={Danza_vertical_3}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work5" className="img_container">
-                     <video muted loop id="filmmaking_video" src={PASTA}></video>
+                     <Link className="external-logo" to={`/filmmaking/Pasta`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video id="filmmaking_video" muted loop src={Pasta}></video>
                   </div>
                   <div id="work6" className="img_container">
-                     <video muted loop id="filmmaking_video" src={Pancho}></video>
+                     <Link className="external-logo" to={`/filmmaking/Pancho`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video id="filmmaking_video" muted loop src={Pancho}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work7" className="img_container">
-                     <video muted loop id="filmmaking_video" src={ClaseMADA}></video>
+                     <Link className="external-logo" to={`/filmmaking/ClaseMADA`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video id="filmmaking_video" muted loop src={ClaseMADA}></video>
                   </div>
                   <div id="work8" className="vertical_video">
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/Danza_vertical_1`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
+                        id="filmmaking_video"
                         muted
                         loop
-                        id="filmmaking_video"
-                        src={Danza_vertical}></video>
+                        src={Danza_vertical_1}></video>
                   </div>
                </div>
 
                <div className="wraper">
                   <div id="work9" className="img_container">
-                     <video muted loop id="filmmaking_video" src={SEBA}></video>
+                     <Link className="external-logo" to={`/filmmaking/SEBA`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video id="filmmaking_video" muted loop src={SEBA}></video>
                   </div>
                   <div id="work10" className="img_container">
-                     <video muted loop id="filmmaking_video" src={AGUS}></video>
+                     <Link className="external-logo" to={`/filmmaking/AGUS`}>
+                        <ExternalLogo />
+                     </Link>{" "}
+                     <video id="filmmaking_video" muted loop src={AGUS}></video>
                   </div>
                </div>
             </div>

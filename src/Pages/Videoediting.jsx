@@ -1,20 +1,20 @@
 import video from "../assets/vid/banners/Banner Home VIDEOEDITING.mp4";
-import videoediting from "../assets/vid/videoediting/Andre Cassiano.mp4";
-import videoediting2 from "../assets/vid/videoediting/Fandelier.mp4";
-import videoediting3 from "../assets/vid/videoediting/Interview to Tacoma Farmers.mp4";
-import videoediting4 from "../assets/vid/videoediting/MADA 1.mp4";
-import videoediting5 from "../assets/vid/videoediting/MADA 2.mp4";
-import videoediting6 from "../assets/vid/videoediting/MADA 3.mp4";
-import videoediting7 from "../assets/vid/videoediting/Max Drifting.mp4";
-import videoediting8 from "../assets/vid/videoediting/Mercy - Lyrics.mp4";
-import videoediting9 from "../assets/vid/videoediting/Olive Group Blog.mp4";
-import videoediting10 from "../assets/vid/videoediting/Pancho Publi Vertical.mp4";
-import videoediting11 from "../assets/vid/filmmaking/Pancho Publicidad.mp4";
-import videoediting13 from "../assets/vid/videoediting/Sprague.mp4";
-import videoediting14 from "../assets/vid/videoediting/Tacoma Farmers.mp4";
-import videoediting15 from "../assets/vid/videoediting/Tapps Electrics.mp4";
-import videoediting16 from "../assets/vid/videoediting/Zee.elle 1.mp4";
-import videoediting17 from "../assets/vid/videoediting/ZOOM TRB.mp4";
+import AndreCassiano from "../assets/vid/filmmaking/AndreCassiano.mp4";
+import Fandelier from "../assets/vid/filmmaking/Fandelier.mp4";
+import Interview_Tacoma_Farmers from "../assets/vid/filmmaking/Interview_Tacoma_Farmers.mp4";
+import MADA_1 from "../assets/vid/filmmaking/MADA_1.mp4";
+import MADA_2 from "../assets/vid/filmmaking/MADA_2.mp4";
+import MADA_3 from "../assets/vid/filmmaking/MADA_3.mp4";
+import Max_Drifting from "../assets/vid/filmmaking/Max_Drifting.mp4";
+import Mercy from "../assets/vid/filmmaking/Mercy.mp4";
+import Olive_Group from "../assets/vid/filmmaking/Olive_Group.mp4";
+import PanchoVertical from "../assets/vid/filmmaking/PanchoVertical.mp4";
+import Pancho from "../assets/vid/filmmaking/Pancho.mp4";
+import Sprague from "../assets/vid/filmmaking/Sprague.mp4";
+import Tacoma_Farmers from "../assets/vid/filmmaking/Tacoma_Farmers.mp4";
+import Tapps_Electrics from "../assets/vid/filmmaking/Tapps_Electrics.mp4";
+import Zee from "../assets/vid/filmmaking/Zee.mp4";
+import ZOOM_TRB from "../assets/vid/filmmaking/ZOOM_TRB.mp4";
 
 import React from "react";
 import { gsap } from "gsap";
@@ -208,14 +208,14 @@ const Videoediting = () => {
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting}></video>
+                        src={AndreCassiano}></video>
                   </div>
                   <div id="work2" className="img_container">
                      <video
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting2}></video>
+                        src={Fandelier}></video>
                   </div>
                </div>
                <div className="wraper">
@@ -224,30 +224,18 @@ const Videoediting = () => {
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting3}></video>
+                        src={Interview_Tacoma_Farmers}></video>
                   </div>
                   <div id="work4" className="vertical_video">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting4}></video>
+                     <video muted loop id="videoediting_video" src={MADA_1}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work5" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting5}></video>
+                     <video muted loop id="videoediting_video" src={MADA_2}></video>
                   </div>
                   <div id="work6" className="vertical_video">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting6}></video>
+                     <video muted loop id="videoediting_video" src={MADA_3}></video>
                   </div>
                </div>
                <div className="wraper">
@@ -256,14 +244,10 @@ const Videoediting = () => {
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting7}></video>
+                        src={Max_Drifting}></video>
                   </div>
                   <div id="work8" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting8}></video>
+                     <video muted loop id="videoediting_video" src={Mercy}></video>
                   </div>
                </div>
                <div className="wraper">
@@ -272,31 +256,23 @@ const Videoediting = () => {
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting9}></video>
+                        src={Olive_Group}></video>
                   </div>
                   <div id="work10" className="vertical_video">
                      <video
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting10}></video>
+                        src={PanchoVertical}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work11" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting11}></video>
+                     <video muted loop id="videoediting_video" src={Pancho}></video>
                   </div>
 
                   <div id="work12" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting13}></video>
+                     <video muted loop id="videoediting_video" src={Sprague}></video>
                   </div>
                </div>
                <div className="wraper">
@@ -305,30 +281,26 @@ const Videoediting = () => {
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting14}></video>
+                        src={Tacoma_Farmers}></video>
                   </div>
                   <div id="work14" className="img_container">
                      <video
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting15}></video>
+                        src={Tapps_Electrics}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work15" className="vertical_video">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={videoediting16}></video>
+                     <video muted loop id="videoediting_video" src={Zee}></video>
                   </div>
                   <div id="work16" className="img_container">
                      <video
                         muted
                         loop
                         id="videoediting_video"
-                        src={videoediting17}></video>
+                        src={ZOOM_TRB}></video>
                   </div>
                </div>
             </div>
