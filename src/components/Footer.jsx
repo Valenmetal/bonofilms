@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { LogoEmail, LogoInsta, LogoYoutube } from "../assets/Icons";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Footer() {
+   const footer = useRef();
    useLayoutEffect(() => {
       const ctx = gsap.context(() => {
          gsap.from(".animated-line", {
@@ -24,12 +25,12 @@ export default function Footer() {
             scale: 0.9,
             duration: 3,
          });
-      }, ".footer"); // <- Scope
+      }, footer); // <- Scope
 
       return () => ctx.revert(); // <- Cleanup!
    }, []);
    return (
-      <footer className="footer">
+      <footer ref={footer} className="footer">
          <hr className="animated-line"></hr>
          <main>
             <div className="logo-container">

@@ -4,12 +4,14 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Danza_vertical_2 from "../assets/vid/filmmaking/Danza_vertical_2.mp4";
 import EmiliaCafe from "../assets/vid/filmmaking/EmiliaCafe.mp4";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
 const Animation = () => {
+   const work_container = useRef();
+   const pojects_menu_grid = useRef();
    useEffect(() => {
       const handlePointerMove = (e) => {
          e.target.setAttribute("controls", true);
@@ -39,24 +41,8 @@ const Animation = () => {
             opacity: 0,
             y: 100,
          });
-
-         gsap.from("#work1, #work2", {
-            delay: 0.2,
-            opacity: 0,
-            y: 100,
-         });
-         gsap.from("#work3, #work4", {
-            scrollTrigger: {
-               trigger: "#work3",
-               start: "top bottom",
-               end: "top 90%",
-               scrub: 1,
-            },
-            opacity: 0,
-            y: 100,
-         });
       },
-      { scope: ".work_container" }
+      { scope: work_container }
    );
    useGSAP(
       () => {
@@ -166,11 +152,11 @@ const Animation = () => {
             );
          }
       },
-      { scope: ".pojects_menu_grid" }
+      { scope: pojects_menu_grid }
    );
    return (
       <section className="page_section">
-         <div className="work_container">
+         <div ref={work_container} className="work_container">
             <video
                id="Animation_title"
                autoPlay
@@ -203,7 +189,7 @@ const Animation = () => {
          </div>
 
          <section className="pojects_menu_section">
-            <div className="pojects_menu_grid">
+            <div ref={pojects_menu_grid} className="pojects_menu_grid">
                <div id="filmmaking_menu" className="pojects_menu_item">
                   <Link className="link" to="/filmmaking">
                      <span className="pojects_menu_item_fill">Filmmaking</span>

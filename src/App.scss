@@ -111,7 +111,8 @@ nav {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   position: absolute;
+
+   position: relative;
 }
 .pojects_item {
    position: absolute;
@@ -623,9 +624,6 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
-   .gradient-blur {
-      display: none;
-   }
    .carousel-container {
       width: 90% !important;
       margin: 0;

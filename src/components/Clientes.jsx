@@ -7,8 +7,11 @@ import preview_Filmmaking from "../assets/vid/preview/Scrolling preview FILMMAKI
 import preview_Videoediting from "../assets/vid/preview/Scrolling preview VIDEOEDITING.mp4";
 import preview_Animation from "../assets/vid/preview/Scrolling preview ANIMACION.mp4";
 import preview_Colorgrading from "../assets/vid/preview/Scrolling preview COLOR.mp4";
+import { useRef } from "react";
 
 export default function Clientes() {
+   const pojects_grid = useRef();
+
    useGSAP(
       () => {
          gsap.from("#filmmaking", {
@@ -139,13 +142,13 @@ export default function Clientes() {
             x: -5000,
          });
       },
-      { scope: ".pojects_grid" }
+      { scope: pojects_grid }
    );
 
    return (
       <>
          <div className="section" style={{ marginTop: 0 }}>
-            <div className="pojects_grid">
+            <div ref={pojects_grid} className="pojects_grid">
                <div className="vert_wraper">
                   <Link className="link" to="/filmmaking">
                      <div id="filmmaking" className="pojects_item">

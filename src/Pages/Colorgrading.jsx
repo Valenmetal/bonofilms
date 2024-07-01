@@ -9,13 +9,16 @@ import colorgrading6 from "../assets/vid/filmmaking/Pasta.mp4";
 import React from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
 
 const Colorgrading = () => {
+   const work_container = useRef();
+   const pojects_menu_grid = useRef();
+
    useEffect(() => {
       const handlePointerMove = (e) => {
          e.target.setAttribute("controls", true);
@@ -51,18 +54,8 @@ const Colorgrading = () => {
             opacity: 0,
             y: 100,
          });
-         /* gsap.from("#work3, #work4", {
-            scrollTrigger: {
-               trigger: "#work3",
-               start: "top bottom",
-               end: "top 90%",
-               scrub: 1,
-            },
-            opacity: 0,
-            y: 100,
-         }); */
       },
-      { scope: ".work_container" }
+      { scope: work_container }
    );
    useGSAP(
       () => {
@@ -171,11 +164,11 @@ const Colorgrading = () => {
             );
          }
       },
-      { scope: ".pojects_menu_grid" }
+      { scope: pojects_menu_grid }
    );
    return (
       <section className="page_section">
-         <div className="work_container">
+         <div ref={work_container} className="work_container">
             <video
                id="Colorgrading_title"
                autoPlay
@@ -238,7 +231,7 @@ const Colorgrading = () => {
          </div>
 
          <section className="pojects_menu_section">
-            <div className="pojects_menu_grid">
+            <div ref={pojects_menu_grid} className="pojects_menu_grid">
                <div id="filmmaking_menu" className="pojects_menu_item">
                   <Link className="link" to="/filmmaking">
                      <span className="pojects_menu_item_fill">Filmmaking</span>

@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { Link } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
 import { LogoEmail } from "../assets/Icons";
+import { useRef } from "react";
 
 export default function Navbar() {
    var prevScrollpos = window.scrollY;
@@ -15,7 +16,7 @@ export default function Navbar() {
       }
       prevScrollpos = currentScrollPos;
    };
-
+   const navbar = useRef();
    useGSAP(
       () => {
          gsap.from("#logo,.navbar-li-container", {
@@ -27,11 +28,11 @@ export default function Navbar() {
             stagger: 0.2,
          });
       },
-      { scope: "#navbar" }
+      { scope: navbar }
    );
 
    return (
-      <nav id="navbar">
+      <nav ref={navbar} id="navbar">
          <main className="navbar-items-container">
             <Link id="logo" to="/" aria-label="Home">
                <img className="navbar_logo" src="/logo-bono.png" alt="logo" />

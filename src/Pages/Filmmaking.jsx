@@ -13,7 +13,7 @@ import Pancho from "../assets/vid/filmmaking/Pancho.mp4";
 import SEBA from "../assets/vid/filmmaking/SEBA.mp4";
 import Reel from "../assets/vid/filmmaking/Reel.mp4";
 
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from "react-router-dom";
@@ -23,6 +23,9 @@ import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
 import { ExternalLogo } from "../assets/Icons";
 
 export default function Filmmaking() {
+   const work_container = useRef();
+   const pojects_menu_grid = useRef();
+
    useEffect(() => {
       const handleClick = (e) => {
          e.target.setAttribute("controls", true);
@@ -58,7 +61,7 @@ export default function Filmmaking() {
             y: 100,
          });
       },
-      { scope: ".work_container" }
+      { scope: work_container }
    );
 
    useGSAP(
@@ -167,12 +170,12 @@ export default function Filmmaking() {
             );
          }
       },
-      { scope: ".pojects_menu_grid" }
+      { scope: pojects_menu_grid }
    );
 
    return (
       <section className="page_section">
-         <div className="work_container">
+         <div ref={work_container} className="work_container">
             <video
                autoPlay
                muted
@@ -302,7 +305,7 @@ export default function Filmmaking() {
                   <div id="work10" className="img_container">
                      <Link className="external-logo" to={`/filmmaking/AGUS`}>
                         <ExternalLogo />
-                     </Link>{" "}
+                     </Link>
                      <video id="filmmaking_video" muted loop src={AGUS}></video>
                   </div>
                </div>
@@ -310,7 +313,7 @@ export default function Filmmaking() {
          </div>
 
          <section className="pojects_menu_section">
-            <div className="pojects_menu_grid">
+            <div ref={pojects_menu_grid} className="pojects_menu_grid">
                <div id="videoediting_menu" className="pojects_menu_item">
                   <Link className="link" to="/videoediting">
                      <span className="pojects_menu_item_fill">Videoediting</span>
