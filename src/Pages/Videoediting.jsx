@@ -24,6 +24,7 @@ import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
 import Carrousel from "../components/Carrousel";
+import { ExternalLogo } from "../assets/Icons";
 const Videoediting = () => {
    const work_container = useRef();
    const pojects_menu_grid = useRef();
@@ -199,6 +200,11 @@ const Videoediting = () => {
             <div className="work_grid">
                <div className="wraper">
                   <div id="work1" className="img_container">
+                     <Link
+                        className="external-logo"
+                        to={`/videoediting/AndreCassiano`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -206,6 +212,9 @@ const Videoediting = () => {
                         src={AndreCassiano}></video>
                   </div>
                   <div id="work2" className="img_container">
+                     <Link className="external-logo" to={`/videoediting/Fandelier`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -215,6 +224,11 @@ const Videoediting = () => {
                </div>
                <div className="wraper">
                   <div id="work3" className="img_container">
+                     <Link
+                        className="external-logo"
+                        to={`/videoediting/Interview_Tacoma_Farmers`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -222,19 +236,33 @@ const Videoediting = () => {
                         src={Interview_Tacoma_Farmers}></video>
                   </div>
                   <div id="work4" className="vertical_video">
+                     <Link className="external-logo" to={`/videoediting/MADA_1`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={MADA_1}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work5" className="img_container">
+                     <Link className="external-logo" to={`/videoediting/MADA_2`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={MADA_2}></video>
                   </div>
                   <div id="work6" className="vertical_video">
+                     <Link className="external-logo" to={`/videoediting/MADA_3`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={MADA_3}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work7" className="img_container">
+                     <Link
+                        className="external-logo"
+                        to={`/videoediting/Max_Drifting`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -242,11 +270,19 @@ const Videoediting = () => {
                         src={Max_Drifting}></video>
                   </div>
                   <div id="work8" className="img_container">
+                     <Link className="external-logo" to={`/videoediting/Mercy`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={Mercy}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work9" className="img_container">
+                     <Link
+                        className="external-logo"
+                        to={`/videoediting/Olive_Group`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -254,6 +290,11 @@ const Videoediting = () => {
                         src={Olive_Group}></video>
                   </div>
                   <div id="work10" className="vertical_video">
+                     <Link
+                        className="external-logo"
+                        to={`/videoediting/PanchoVertical`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -263,14 +304,25 @@ const Videoediting = () => {
                </div>
                <div className="wraper">
                   <div id="work11" className="img_container">
+                     <Link className="external-logo" to={`/videoediting/Pancho`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={Pancho}></video>
                   </div>
 
                   <div id="work12" className="img_container">
+                     <Link className="external-logo" to={`/videoediting/Sprague`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={Sprague}></video>
                   </div>
                </div>
                <div className="wraper">
+                  <Link
+                     className="external-logo"
+                     to={`/videoediting/Tacoma_Farmers`}>
+                     <ExternalLogo />
+                  </Link>
                   <div id="work13" className="img_container">
                      <video
                         muted
@@ -279,6 +331,11 @@ const Videoediting = () => {
                         src={Tacoma_Farmers}></video>
                   </div>
                   <div id="work14" className="img_container">
+                     <Link
+                        className="external-logo"
+                        to={`/videoediting/Tapps_Electrics`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -288,9 +345,15 @@ const Videoediting = () => {
                </div>
                <div className="wraper">
                   <div id="work15" className="vertical_video">
+                     <Link className="external-logo" to={`/videoediting/Zee`}>
+                        <ExternalLogo />
+                     </Link>
                      <video muted loop id="videoediting_video" src={Zee}></video>
                   </div>
                   <div id="work16" className="img_container">
+                     <Link className="external-logo" to={`/videoediting/ZOOM_TRB`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop

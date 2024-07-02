@@ -260,7 +260,7 @@ nav {
 
    .work_title {
       margin-top: 0.15em;
-      font-size: clamp(6rem, 8vw + 12rem, 13rem);
+      font-size: clamp(4.125rem, 2.0594rem + 10.3281vi, 14.4531rem);
       @extend .pojects_item;
    }
    .work_title_stroke {
@@ -467,6 +467,7 @@ nav {
       left: 30%;
       height: 33em;
       transform: rotate(-10deg);
+      overflow: hidden !important;
    }
    .banner_Animation {
       @extend .banner_filmmaking;
@@ -474,6 +475,7 @@ nav {
       left: -10%;
       height: 39em;
       transform: rotate(-15deg);
+      overflow: hidden !important;
    }
    .banner_Colorgrading {
       @extend .banner_filmmaking;
@@ -481,6 +483,7 @@ nav {
       left: -4%;
       height: 46em;
       transform: rotate(10deg);
+      overflow: hidden !important;
    }
 }
 
@@ -662,7 +665,7 @@ nav {
    }
 
    .work_grid {
-      margin-top: 1em;
+      margin-top: 1em !important;
       .img_container {
          margin: 0.3em;
       }
@@ -695,10 +698,6 @@ nav {
    }
    .pojects_stroke {
       display: none;
-   }
-
-   .work_grid {
-      margin-top: 1em !important;
    }
 
    .work_title_stroke {

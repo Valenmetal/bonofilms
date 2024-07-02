@@ -1,19 +1,19 @@
 import video from "../assets/vid/banners/Banner Home COLORGRADING.mp4";
-import colorgrading from "/ClaseMADA.mp4";
-import colorgrading2 from "/Rio.mp4";
-import colorgrading3 from "/EmiliaCafe.mp4";
-import colorgrading4 from "/Handball.mp4";
-import colorgrading5 from "/Pancho.mp4";
-import colorgrading6 from "/Pasta.mp4";
+import ClaseMADA from "/ClaseMADA.mp4";
+import Rio from "/Rio.mp4";
+import EmiliaCafe from "/EmiliaCafe.mp4";
+import Handball from "/Handball.mp4";
+import Pancho from "/Pancho.mp4";
+import Pasta from "/Pasta.mp4";
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
+import { ExternalLogo } from "../assets/Icons";
 
 const Colorgrading = () => {
    const work_container = useRef();
@@ -183,49 +183,51 @@ const Colorgrading = () => {
             <div className="work_grid">
                <div className="wraper">
                   <div id="work1" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="colorgrading_video"
-                        src={colorgrading2}></video>
+                     <Link className="external-logo" to={`/colorgrading/Rio`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video muted loop id="colorgrading_video" src={Rio}></video>
                   </div>
                   <div id="work2" className="img_container">
+                     <Link className="external-logo" to={`/colorgrading/ClaseMADA`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
                         id="colorgrading_video"
-                        src={colorgrading}></video>
+                        src={ClaseMADA}></video>
                   </div>
                </div>
                <div id="work3" className="img_container">
-                  <video
-                     muted
-                     loop
-                     id="colorgrading_video"
-                     src={colorgrading4}></video>
+                  <Link className="external-logo" to={`/colorgrading/EmiliaCafe`}>
+                     <ExternalLogo />
+                  </Link>
+                  <video muted loop id="colorgrading_video" src={EmiliaCafe}></video>
                </div>
                <div className="wraper">
                   <div id="work4" className="img_container">
+                     <Link className="external-logo" to={`/colorgrading/Handball`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
                         id="colorgrading_video"
-                        src={colorgrading3}></video>
+                        src={Handball}></video>
                   </div>
                   <div id="work5" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="colorgrading_video"
-                        src={colorgrading5}></video>
+                     <Link className="external-logo" to={`/colorgrading/Pancho`}>
+                        <ExternalLogo />
+                     </Link>
+                     <video muted loop id="colorgrading_video" src={Pancho}></video>
                   </div>
                </div>
                <div id="work6" className="img_container">
-                  <video
-                     muted
-                     loop
-                     id="colorgrading_video"
-                     src={colorgrading6}></video>
+                  <Link className="external-logo" to={`/colorgrading/Pasta`}>
+                     <ExternalLogo />
+                  </Link>
+                  <video muted loop id="colorgrading_video" src={Pasta}></video>
                </div>
             </div>
          </div>

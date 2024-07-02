@@ -171,6 +171,11 @@ const Animation = () => {
             <div className="work_grid">
                <div className="wraper">
                   <div id="work1" className="vertical_video">
+                     <Link
+                        className="external-logo"
+                        to={`/animation/Danza_vertical_2`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
@@ -178,6 +183,9 @@ const Animation = () => {
                         src={Danza_vertical_2}></video>
                   </div>
                   <div id="work2" className="img_container">
+                     <Link className="external-logo" to={`/animation/EmiliaCafe`}>
+                        <ExternalLogo />
+                     </Link>
                      <video
                         muted
                         loop
