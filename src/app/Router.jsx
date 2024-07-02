@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Layout from "../Pages/Layout";
 import Index from "../Pages/Index";
 import Filmmaking from "../Pages/Filmmaking";
@@ -13,7 +13,7 @@ import VideoDetailColor from "../Pages/VideoDetailColor";
 import ScrollToTop from "../components/ScrollToTop";
 const Router = () => {
    return (
-      <BrowserRouter>
+      <HashRouter>
          <ScrollToTop />
          <Routes>
             <Route element={<Layout />}>
@@ -31,7 +31,7 @@ const Router = () => {
                <Route path="/colorgrading/:videoId" element={<VideoDetailColor />} />
             </Route>
          </Routes>
-      </BrowserRouter>
+      </HashRouter>
    );
 };
 
