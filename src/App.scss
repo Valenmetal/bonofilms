@@ -421,7 +421,9 @@ nav {
          opacity: 0.5;
       }
    }
-
+   .banner_container {
+      overflow: hidden !important;
+   }
    .banner_filmmaking {
       clip-path: polygon(
          1% 0%,
@@ -467,7 +469,6 @@ nav {
       left: 30%;
       height: 33em;
       transform: rotate(-10deg);
-      overflow: hidden !important;
    }
    .banner_Animation {
       @extend .banner_filmmaking;
