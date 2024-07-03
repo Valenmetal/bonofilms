@@ -7,7 +7,7 @@ nav {
    top: 0;
    position: fixed;
    z-index: 9 !important;
-   overflow: hidden !important;
+
    .navbar-items-container {
       z-index: 10 !important;
       display: flex;
@@ -217,6 +217,7 @@ nav {
    @extend .section;
    height: min-content;
    width: 100%;
+   overflow: hidden;
 }
 
 .subtitle {
@@ -437,7 +438,6 @@ nav {
       left: 0;
       height: 26em;
       z-index: 5;
-      overflow: hidden !important;
       filter: brightness(70%);
    }
    .banner_videoediting {
