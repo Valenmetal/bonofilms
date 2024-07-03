@@ -185,14 +185,12 @@ const Videoediting = () => {
    return (
       <section className="page_section">
          <div ref={work_container} className="work_container">
-            <div className="banner_container">
-               <video
-                  autoPlay
-                  muted
-                  loop
-                  src={video}
-                  className="banner_videoediting"></video>
-            </div>
+            <video
+               autoPlay
+               muted
+               loop
+               src={video}
+               className="banner_videoediting"></video>
             <h1 id="Videoediting_title" className="work_title">
                Videoediting
             </h1>

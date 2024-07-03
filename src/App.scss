@@ -7,7 +7,6 @@ nav {
    top: 0;
    position: fixed;
    z-index: 9 !important;
-   overflow: hidden !important;
    .navbar-items-container {
       z-index: 10 !important;
       display: flex;
@@ -217,7 +216,6 @@ nav {
    @extend .section;
    height: min-content;
    width: 100%;
-   overflow: hidden !important;
 }
 
 .subtitle {
@@ -421,9 +419,7 @@ nav {
          opacity: 0.5;
       }
    }
-   .banner_container {
-      overflow: hidden !important;
-   }
+
    .banner_filmmaking {
       clip-path: polygon(
          1% 0%,
@@ -441,6 +437,7 @@ nav {
       height: 26em;
       z-index: 5;
       filter: brightness(70%);
+      overflow-x: hidden;
    }
    .banner_videoediting {
       @extend .banner_filmmaking;
@@ -626,6 +623,15 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .banner_filmmaking {
+      position: relative;
+   }
+
+   .banner_videoediting {
+      top: -5em !important;
+      height: 28em !important;
+   }
+
    .carousel-container {
       width: 90% !important;
       margin: 0;
@@ -661,6 +667,7 @@ nav {
    .work_title {
       margin-top: 30% !important;
       font-size: 16vw !important;
+      position: absolute !important;
    }
 
    .work_grid {
@@ -678,7 +685,6 @@ nav {
       height: 220vh;
       width: 100%;
       margin-top: 10em;
-      overflow: hidden;
    }
 
    .page_section {
@@ -701,8 +707,6 @@ nav {
 
    .work_title_stroke {
       position: absolute !important;
-   }
-   .work_title_stroke {
       display: block !important;
    }
 
