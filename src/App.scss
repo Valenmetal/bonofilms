@@ -629,14 +629,14 @@ nav {
 @media screen and (max-width: 522px) {
    .banner_container {
       position: relative;
-      height: 23em;
+      height: 19em;
       width: 100%;
       overflow-x: hidden;
    }
 
    .banner_videoediting {
       top: 0em !important;
-      height: 21em !important;
+      height: 17em !important;
    }
 
    .carousel-container {
@@ -672,7 +672,7 @@ nav {
    }
 
    .work_title {
-      margin-top: 50% !important;
+      margin-top: 45% !important;
       font-size: 16vw !important;
       position: absolute !important;
    }
@@ -758,9 +758,16 @@ nav {
    .tecnologies {
       margin: 0 auto 2em auto;
    }
+   .banner_container {
+      height: 15em;
+   }
 
+   .banner_videoediting {
+      top: 0em !important;
+      height: 12em !important;
+   }
    .work_title {
-      margin-top: 38% !important;
+      margin-top: 35% !important;
    }
    .upwork_container {
       align-items: center;
