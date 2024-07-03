@@ -7,6 +7,7 @@
    vertical-align: baseline;
    scroll-behavior: smooth;
    cursor: default;
+   overflow-x: hidden !important;
 }
 ::selection {
    color: rgba(144, 116, 158, 0.696);
@@ -83,7 +84,7 @@ h1 {
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    -webkit-text-size-adjust: 100%;
-   overflow-x: hidden;
+   overflow-x: hidden !important;
 }
 
 a {
