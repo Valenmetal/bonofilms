@@ -7,7 +7,7 @@ nav {
    top: 0;
    position: fixed;
    z-index: 9 !important;
-
+   overflow: hidden !important;
    .navbar-items-container {
       z-index: 10 !important;
       display: flex;
@@ -437,7 +437,7 @@ nav {
       left: 0;
       height: 26em;
       z-index: 5;
-      overflow: hidden;
+      overflow: hidden !important;
       filter: brightness(70%);
    }
    .banner_videoediting {
@@ -467,7 +467,6 @@ nav {
       left: 30%;
       height: 33em;
       transform: rotate(-10deg);
-      overflow: hidden !important;
    }
    .banner_Animation {
       @extend .banner_filmmaking;
@@ -475,7 +474,6 @@ nav {
       left: -10%;
       height: 39em;
       transform: rotate(-15deg);
-      overflow: hidden !important;
    }
    .banner_Colorgrading {
       @extend .banner_filmmaking;
@@ -483,7 +481,6 @@ nav {
       left: -4%;
       height: 46em;
       transform: rotate(10deg);
-      overflow: hidden !important;
    }
 }
 
