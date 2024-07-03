@@ -213,9 +213,13 @@ nav {
 // FILMMAKING,VIDEOEDITITNG,ETC
 
 .page_section {
-   @extend .section;
    height: min-content;
    width: 100%;
+   margin: 10em auto 0 auto;
+
+   p {
+      font-size: clamp(1.429rem, 2vw + 1rem, 2rem);
+   }
 }
 
 .subtitle {
@@ -625,14 +629,14 @@ nav {
 @media screen and (max-width: 522px) {
    .banner_container {
       position: relative;
-      height: 33em;
+      height: 23em;
       width: 100%;
       overflow-x: hidden;
    }
 
    .banner_videoediting {
-      top: -5em !important;
-      height: 28em !important;
+      top: 0em !important;
+      height: 21em !important;
    }
 
    .carousel-container {
@@ -668,7 +672,7 @@ nav {
    }
 
    .work_title {
-      margin-top: 30% !important;
+      margin-top: 50% !important;
       font-size: 16vw !important;
       position: absolute !important;
    }
