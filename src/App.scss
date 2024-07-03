@@ -623,8 +623,11 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
-   .banner_filmmaking {
+   .banner_container {
       position: relative;
+      height: 33em;
+      width: 100%;
+      overflow-x: hidden;
    }
 
    .banner_videoediting {
