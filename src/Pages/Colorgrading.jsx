@@ -13,7 +13,6 @@ import { Link } from "react-router-dom";
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
-import { ExternalLogo } from "../assets/Icons";
 
 const Colorgrading = () => {
    const work_container = useRef();
@@ -184,15 +183,13 @@ const Colorgrading = () => {
             <div className="work_grid">
                <div className="wraper">
                   <div id="work1" className="img_container">
-                     <Link className="external-logo" to={`/colorgrading/Rio`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link className="external-logo" to={`/colorgrading/Rio`}></Link>
                      <video muted loop id="colorgrading_video" src={Rio}></video>
                   </div>
                   <div id="work2" className="img_container">
-                     <Link className="external-logo" to={`/colorgrading/ClaseMADA`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/colorgrading/ClaseMADA`}></Link>
                      <video
                         muted
                         loop
@@ -201,16 +198,16 @@ const Colorgrading = () => {
                   </div>
                </div>
                <div id="work3" className="img_container">
-                  <Link className="external-logo" to={`/colorgrading/EmiliaCafe`}>
-                     <ExternalLogo />
-                  </Link>
+                  <Link
+                     className="external-logo"
+                     to={`/colorgrading/EmiliaCafe`}></Link>
                   <video muted loop id="colorgrading_video" src={EmiliaCafe}></video>
                </div>
                <div className="wraper">
                   <div id="work4" className="img_container">
-                     <Link className="external-logo" to={`/colorgrading/Handball`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/colorgrading/Handball`}></Link>
                      <video
                         muted
                         loop
@@ -218,16 +215,14 @@ const Colorgrading = () => {
                         src={Handball}></video>
                   </div>
                   <div id="work5" className="img_container">
-                     <Link className="external-logo" to={`/colorgrading/Pancho`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/colorgrading/Pancho`}></Link>
                      <video muted loop id="colorgrading_video" src={Pancho}></video>
                   </div>
                </div>
                <div id="work6" className="img_container">
-                  <Link className="external-logo" to={`/colorgrading/Pasta`}>
-                     <ExternalLogo />
-                  </Link>
+                  <Link className="external-logo" to={`/colorgrading/Pasta`}></Link>
                   <video muted loop id="colorgrading_video" src={Pasta}></video>
                </div>
             </div>

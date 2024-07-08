@@ -20,7 +20,6 @@ import { Link } from "react-router-dom";
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
-import { ExternalLogo } from "../assets/Icons";
 
 export default function Filmmaking() {
    const work_container = useRef();
@@ -190,15 +189,13 @@ export default function Filmmaking() {
             <div className="work_grid">
                <div className="wraper">
                   <div id="work11" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/Handball`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/Handball`}></Link>
                      <video id="filmmaking_video" muted loop src={Handball}></video>
                   </div>
                   <div id="work12" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/Rio`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link className="external-logo" to={`/filmmaking/Rio`}></Link>
                      <video id="filmmaking_video" muted loop src={Rio}></video>
                   </div>
                </div>
@@ -221,9 +218,7 @@ export default function Filmmaking() {
                   <div id="work1" className="vertical_video">
                      <Link
                         className="external-logo"
-                        to={`/filmmaking/Danza_vertical_2`}>
-                        <ExternalLogo />
-                     </Link>
+                        to={`/filmmaking/Danza_vertical_2`}></Link>
                      <video
                         id="filmmaking_video"
                         muted
@@ -231,9 +226,9 @@ export default function Filmmaking() {
                         src={Danza_vertical_2}></video>
                   </div>
                   <div id="work2" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/EmiliaCafe`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/EmiliaCafe`}></Link>
                      <video
                         id="filmmaking_video"
                         muted
@@ -243,17 +238,13 @@ export default function Filmmaking() {
                </div>
                <div className="wraper">
                   <div id="work3" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/FPM`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link className="external-logo" to={`/filmmaking/FPM`}></Link>
                      <video id="filmmaking_video" muted loop src={FPM}></video>
                   </div>
                   <div id="work4" className="vertical_video">
                      <Link
                         className="external-logo"
-                        to={`/filmmaking/Danza_vertical_3`}>
-                        <ExternalLogo />
-                     </Link>
+                        to={`/filmmaking/Danza_vertical_3`}></Link>
                      <video
                         id="filmmaking_video"
                         muted
@@ -263,31 +254,27 @@ export default function Filmmaking() {
                </div>
                <div className="wraper">
                   <div id="work5" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/Pasta`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link className="external-logo" to={`/filmmaking/Pasta`}></Link>
                      <video id="filmmaking_video" muted loop src={Pasta}></video>
                   </div>
                   <div id="work6" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/Pancho`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/Pancho`}></Link>
                      <video id="filmmaking_video" muted loop src={Pancho}></video>
                   </div>
                </div>
                <div className="wraper">
                   <div id="work7" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/ClaseMADA`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/filmmaking/ClaseMADA`}></Link>
                      <video id="filmmaking_video" muted loop src={ClaseMADA}></video>
                   </div>
                   <div id="work8" className="vertical_video">
                      <Link
                         className="external-logo"
-                        to={`/filmmaking/Danza_vertical_1`}>
-                        <ExternalLogo />
-                     </Link>
+                        to={`/filmmaking/Danza_vertical_1`}></Link>
                      <video
                         id="filmmaking_video"
                         muted
@@ -298,15 +285,11 @@ export default function Filmmaking() {
 
                <div className="wraper">
                   <div id="work9" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/SEBA`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link className="external-logo" to={`/filmmaking/SEBA`}></Link>
                      <video id="filmmaking_video" muted loop src={SEBA}></video>
                   </div>
                   <div id="work10" className="img_container">
-                     <Link className="external-logo" to={`/filmmaking/AGUS`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link className="external-logo" to={`/filmmaking/AGUS`}></Link>
                      <video id="filmmaking_video" muted loop src={AGUS}></video>
                   </div>
                </div>
