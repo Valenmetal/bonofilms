@@ -48,7 +48,6 @@ export default function Clientes() {
                      start: "top bottom",
                      end: "bottom top",
                      scrub: 1.5,
-                     markers: true,
                   },
                   rotate: 40,
                   y: small ? "20em" : "30em",
@@ -157,7 +156,7 @@ export default function Clientes() {
 
    return (
       <>
-         <div className="section" style={{ marginTop: 0, height: "300vh" }}>
+         <div className="section" style={{ marginTop: 0, height: "350vh" }}>
             <div ref={pojects_grid} className="pojects_grid">
                <div className="vert_wraper">
                   <Link className="link" to="/filmmaking">
