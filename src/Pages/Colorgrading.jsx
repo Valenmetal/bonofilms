@@ -169,14 +169,15 @@ const Colorgrading = () => {
    return (
       <section className="page_section">
          <div ref={work_container} className="work_container">
-            <video
-               id="Colorgrading_title"
-               autoPlay
-               muted
-               loop
-               src={video}
-               className="banner_Colorgrading"></video>
-
+            <div className="banner_container">
+               <video
+                  id="Colorgrading_title"
+                  autoPlay
+                  muted
+                  loop
+                  src={video}
+                  className="banner_Colorgrading"></video>
+            </div>
             <h1 className="work_title">Colorgrading</h1>
             <h1 className="work_title work_title_stroke">Colorgrading</h1>
 

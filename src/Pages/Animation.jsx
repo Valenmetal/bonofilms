@@ -157,14 +157,15 @@ const Animation = () => {
    return (
       <section className="page_section">
          <div ref={work_container} className="work_container">
-            <video
-               id="Animation_title"
-               autoPlay
-               muted
-               loop
-               src={video}
-               className="banner_Animation"></video>
-
+            <div className="banner_container">
+               <video
+                  id="Animation_title"
+                  autoPlay
+                  muted
+                  loop
+                  src={video}
+                  className="banner_Animation"></video>
+            </div>
             <h1 className="work_title">Animation</h1>
             <h1 className="work_title work_title_stroke">Animation</h1>
 
@@ -173,9 +174,7 @@ const Animation = () => {
                   <div id="work1" className="vertical_video">
                      <Link
                         className="external-logo"
-                        to={`/animation/Danza_vertical_2`}>
-                        <ExternalLogo />
-                     </Link>
+                        to={`/animation/Danza_vertical_2`}></Link>
                      <video
                         muted
                         loop
@@ -183,9 +182,9 @@ const Animation = () => {
                         src={Danza_vertical_2}></video>
                   </div>
                   <div id="work2" className="img_container">
-                     <Link className="external-logo" to={`/animation/EmiliaCafe`}>
-                        <ExternalLogo />
-                     </Link>
+                     <Link
+                        className="external-logo"
+                        to={`/animation/EmiliaCafe`}></Link>
                      <video
                         muted
                         loop

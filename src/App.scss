@@ -40,6 +40,7 @@ nav {
 }
 .section {
    height: 250vh;
+
    width: 70%;
    margin: 10em auto 0 auto;
 
@@ -107,6 +108,7 @@ nav {
 // PROJECTS ANIMATION
 
 .pojects_grid {
+   height: 300vh;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -204,7 +206,7 @@ nav {
    border-radius: 3%;
    position: relative;
    top: -20em;
-   right: -100em;
+   right: -80em;
    transform: rotate(-20deg);
 }
 
@@ -444,7 +446,6 @@ nav {
       overflow-x: hidden;
    }
    .banner_videoediting {
-      @extend .banner_filmmaking;
       clip-path: polygon(
          0 3%,
          0 28%,
@@ -470,20 +471,50 @@ nav {
       left: 30%;
       height: 33em;
       transform: rotate(-10deg);
+      z-index: 5;
+      filter: brightness(70%);
+      position: absolute;
+      overflow-x: hidden;
    }
    .banner_Animation {
-      @extend .banner_filmmaking;
+      clip-path: polygon(
+         1% 0%,
+         100% 0%,
+         100% 89%,
+         81% 73%,
+         54% 91%,
+         31% 71%,
+         21% 85%,
+         0 75%
+      );
       top: -20%;
       left: -10%;
       height: 39em;
       transform: rotate(-15deg);
+      z-index: 5;
+      filter: brightness(70%);
+      position: absolute;
+      overflow-x: hidden;
    }
    .banner_Colorgrading {
-      @extend .banner_filmmaking;
+      clip-path: polygon(
+         1% 0%,
+         100% 0%,
+         100% 89%,
+         81% 73%,
+         54% 91%,
+         31% 71%,
+         21% 85%,
+         0 75%
+      );
       top: -25%;
       left: -4%;
       height: 46em;
       transform: rotate(10deg);
+      z-index: 5;
+      filter: brightness(70%);
+      position: absolute;
+      overflow-x: hidden;
    }
 }
 
@@ -627,6 +658,12 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .flying_video {
+      top: -20em;
+      right: -30em;
+      opacity: 60%;
+   }
+
    .banner_container {
       position: relative;
       height: 19em;
@@ -634,11 +671,28 @@ nav {
       overflow-x: hidden;
    }
 
-   .banner_videoediting {
-      top: 0em !important;
-      height: 17em !important;
+   .banner_filmmaking {
+      top: -20% !important;
+      left: 0;
+      height: 25em !important;
    }
 
+   .banner_videoediting {
+      top: -15% !important;
+      left: 20% !important;
+      height: 20em !important;
+   }
+   .banner_Colorgrading {
+      top: -45% !important;
+      left: 0% !important;
+      height: 30em !important;
+      transform: scale(1) !important;
+   }
+   .banner_Animation {
+      left: 0% !important;
+      height: 25em !important;
+      transform: rotate(0deg) !important;
+   }
    .carousel-container {
       width: 90% !important;
       margin: 0;
@@ -697,6 +751,7 @@ nav {
 
    .page_section {
       height: min-content;
+      margin-top: 0;
    }
 
    .pojects_grid {
@@ -759,15 +814,29 @@ nav {
       margin: 0 auto 2em auto;
    }
    .banner_container {
-      height: 15em;
+      height: 17em;
+   }
+
+   .banner_filmmaking {
+      top: -20% !important;
+      left: 0;
+      height: 20em !important;
    }
 
    .banner_videoediting {
-      top: 0em !important;
-      height: 12em !important;
+      top: -5em !important;
+      height: 19em !important;
+   }
+   .banner_Colorgrading {
+      top: -45% !important;
+      left: 0% !important;
+      height: 25em !important;
+   }
+   .banner_Animation {
+      height: 20em !important;
    }
    .work_title {
-      margin-top: 35% !important;
+      margin-top: 40% !important;
    }
    .upwork_container {
       align-items: center;
