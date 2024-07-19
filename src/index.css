@@ -30,10 +30,6 @@ figure {
 }
 
 @font-face {
-   font-family: "EditorialNew-Thin";
-   src: url(Fonts/PPEditorialNew-Ultralight.otf);
-}
-@font-face {
    font-family: "Cehua";
    src: url(Fonts/CehuaFree.otf);
 }
@@ -41,16 +37,6 @@ figure {
 @font-face {
    font-family: "Prompt-Black";
    src: url(Fonts/Prompt-Black.ttf);
-}
-
-@font-face {
-   font-family: "Prompt-ExtraBold";
-   src: url(Fonts/Prompt-ExtraBold.ttf);
-}
-
-@font-face {
-   font-family: "Prompt-SemiBold";
-   src: url(Fonts/Prompt-SemiBold.ttf);
 }
 @font-face {
    font-family: "Antonio-Thin";
