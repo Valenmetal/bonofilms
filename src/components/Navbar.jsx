@@ -1,35 +1,35 @@
-import React from "react";
-import { gsap } from "gsap";
-import { Link } from "react-router-dom";
-import { useGSAP } from "@gsap/react";
-import { LogoEmail } from "../assets/Icons";
-import { useRef } from "react";
+import React from "react"
+import { gsap } from "gsap"
+import { Link } from "react-router-dom"
+import { useGSAP } from "@gsap/react"
+import { LogoEmail } from "../assets/Icons"
+import { useRef } from "react"
 
 export default function Navbar() {
-   var prevScrollpos = window.scrollY;
+   var prevScrollpos = window.scrollY
    window.onscroll = function () {
-      var currentScrollPos = window.scrollY;
+      var currentScrollPos = window.scrollY
       if (prevScrollpos > currentScrollPos) {
-         document.getElementById("navbar").style.top = "0";
+         document.getElementById("navbar").style.top = "0"
       } else {
-         document.getElementById("navbar").style.top = "-200px";
+         document.getElementById("navbar").style.top = "-200px"
       }
-      prevScrollpos = currentScrollPos;
-   };
-   const navbar = useRef();
+      prevScrollpos = currentScrollPos
+   }
+   const navbar = useRef()
    useGSAP(
       () => {
          gsap.from("#logo,.navbar-li-container", {
             ease: "Expo.easeOut", // <- NavBar Animation
             opacity: 0,
             y: -200,
-            delay: 0.5,
+            delay: 4.5,
             duration: 1.5,
             stagger: 0.2,
-         });
+         })
       },
       { scope: navbar }
-   );
+   )
 
    return (
       <nav ref={navbar} id="navbar">
@@ -47,5 +47,5 @@ export default function Navbar() {
             </ul>
          </main>
       </nav>
-   );
+   )
 }

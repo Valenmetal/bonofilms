@@ -1,67 +1,67 @@
-import video from "../assets/vid/banners/Banner Home FILMMAKING.mp4";
-import AGUS from "/AGUS.mp4";
-import ClaseMADA from "/ClaseMADA.mp4";
-import Danza_vertical_1 from "/Danza_vertical_1.mp4";
-import Danza_vertical_2 from "/Danza_vertical_2.mp4";
-import Danza_vertical_3 from "/Danza_vertical_3.mp4";
-import EmiliaCafe from "/EmiliaCafe.mp4";
-import FPM from "/FPM.mp4";
-import Handball from "/Handball.mp4";
-import Pasta from "/Pasta.mp4";
-import Rio from "/Rio.mp4";
-import Pancho from "/Pancho.mp4";
-import SEBA from "/SEBA.mp4";
-import Reel from "/Reel.mp4";
+import video from "../assets/vid/banners/Banner Home FILMMAKING.mp4"
+import AGUS from "/AGUS.mp4"
+import ClaseMADA from "/ClaseMADA.mp4"
+import Danza_vertical_1 from "/Danza_vertical_1.mp4"
+import Danza_vertical_2 from "/Danza_vertical_2.mp4"
+import Danza_vertical_3 from "/Danza_vertical_3.mp4"
+import EmiliaCafe from "/EmiliaCafe.mp4"
+import FPM from "/FPM.mp4"
+import Handball from "/Handball.mp4"
+import Pasta from "/Pasta.mp4"
+import Rio from "/Rio.mp4"
+import Pancho from "/Pancho.mp4"
+import SEBA from "/SEBA.mp4"
+import Reel from "/Reel.mp4"
 
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { Link } from "react-router-dom";
-import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4";
-import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
-import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
+import React, { useEffect, useRef } from "react"
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
+import { Link } from "react-router-dom"
+import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4"
+import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
+import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
 
 export default function Filmmaking() {
-   const work_container = useRef();
-   const pojects_menu_grid = useRef();
+   const work_container = useRef()
+   const pojects_menu_grid = useRef()
 
    useEffect(() => {
       const handleClick = (e) => {
-         e.target.setAttribute("controls", true);
-      };
+         e.target.setAttribute("controls", true)
+      }
 
-      const videoElements = document.querySelectorAll("#filmmaking_video");
+      const videoElements = document.querySelectorAll("#filmmaking_video")
       videoElements.forEach((video) => {
-         video.addEventListener("click", handleClick);
-      });
+         video.addEventListener("click", handleClick)
+      })
 
       return () => {
          videoElements.forEach((video) => {
-            video.removeEventListener("click", handleClick);
-         });
-      };
-   }, []);
+            video.removeEventListener("click", handleClick)
+         })
+      }
+   }, [])
 
    useGSAP(
       () => {
          gsap.from(".work_title", {
             opacity: 0,
             y: 100,
-         });
+         })
          gsap.from(".subtitle", {
             delay: 0.1,
             opacity: 0,
             y: 100,
-         });
+         })
 
          gsap.from("#work1, #work2", {
             delay: 0.2,
             opacity: 0,
             y: 100,
-         });
+         })
       },
       { scope: work_container }
-   );
+   )
 
    useGSAP(
       () => {
@@ -72,7 +72,7 @@ export default function Filmmaking() {
                duration: 0.1,
             },
             width: "100%",
-         });
+         })
          gsap.to(".pojects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#videoediting_menu",
@@ -80,7 +80,7 @@ export default function Filmmaking() {
             },
             autoAlpha: 0,
             delay: 0.4,
-         });
+         })
          gsap.to("#ghost", {
             scrollTrigger: {
                trigger: "#videoediting_menu",
@@ -89,7 +89,7 @@ export default function Filmmaking() {
             color: "rgba(175, 182, 223)",
             borderBottomWidth: "2px",
             delay: 1,
-         });
+         })
 
          gsap.from("#videoediting_menu", {
             scrollTrigger: {
@@ -100,7 +100,7 @@ export default function Filmmaking() {
             },
             opacity: 0,
             y: 100,
-         });
+         })
          gsap.from("#animation_menu", {
             scrollTrigger: {
                trigger: "#animation_menu",
@@ -110,7 +110,7 @@ export default function Filmmaking() {
             },
             opacity: 0,
             y: 100,
-         });
+         })
          gsap.from("#colorgrading_menu", {
             scrollTrigger: {
                trigger: "#colorgrading_menu",
@@ -120,57 +120,57 @@ export default function Filmmaking() {
             },
             opacity: 0,
             y: 100,
-         });
+         })
 
          {
-            let videoediting = document.querySelector("#videoediting_menu");
-            let tl_videoediting = gsap.timeline({ paused: true });
+            let videoediting = document.querySelector("#videoediting_menu")
+            let tl_videoediting = gsap.timeline({ paused: true })
 
             tl_videoediting.to("#videoediting_mini", {
                duration: 0.5,
                display: "block",
                width: "100%",
-            });
+            })
             videoediting.addEventListener("mouseenter", () =>
                tl_videoediting.timeScale(1).play()
-            );
+            )
             videoediting.addEventListener("mouseleave", () =>
                tl_videoediting.timeScale(1.5).reverse()
-            );
+            )
 
-            let animation = document.querySelector("#animation_menu");
-            let tl_animation = gsap.timeline({ paused: true });
+            let animation = document.querySelector("#animation_menu")
+            let tl_animation = gsap.timeline({ paused: true })
 
             tl_animation.to("#animation_mini", {
                duration: 0.5,
                display: "block",
                width: "100%",
-            });
+            })
             animation.addEventListener("mouseenter", () =>
                tl_animation.timeScale(1).play()
-            );
+            )
             animation.addEventListener("mouseleave", () =>
                tl_animation.timeScale(1.5).reverse()
-            );
+            )
 
-            let colorgrading = document.querySelector("#colorgrading_menu");
-            let tl_colorgrading = gsap.timeline({ paused: true });
+            let colorgrading = document.querySelector("#colorgrading_menu")
+            let tl_colorgrading = gsap.timeline({ paused: true })
 
             tl_colorgrading.to("#colorgrading_mini", {
                duration: 0.5,
                display: "block",
                width: "100%",
-            });
+            })
             colorgrading.addEventListener("mouseenter", () =>
                tl_colorgrading.timeScale(1).play()
-            );
+            )
             colorgrading.addEventListener("mouseleave", () =>
                tl_colorgrading.timeScale(1.5).reverse()
-            );
+            )
          }
       },
       { scope: pojects_menu_grid }
-   );
+   )
 
    return (
       <section className="page_section">
@@ -192,11 +192,21 @@ export default function Filmmaking() {
                      <Link
                         className="external-logo"
                         to={`/filmmaking/Handball`}></Link>
-                     <video id="filmmaking_video" muted loop src={Handball}></video>
+                     <video
+                        poster="/src/assets/thumbnails/Handball.jpg"
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={Handball}></video>
                   </div>
                   <div id="work12" className="img_container">
                      <Link className="external-logo" to={`/filmmaking/Rio`}></Link>
-                     <video id="filmmaking_video" muted loop src={Rio}></video>
+                     <video
+                        poster="/src/assets/thumbnails/MADA Rio.jpg"
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={Rio}></video>
                   </div>
                </div>
             </div>
@@ -230,6 +240,7 @@ export default function Filmmaking() {
                         className="external-logo"
                         to={`/filmmaking/EmiliaCafe`}></Link>
                      <video
+                        poster="/src/assets/thumbnails/Emilia Cafe.jpg"
                         id="filmmaking_video"
                         muted
                         loop
@@ -239,7 +250,12 @@ export default function Filmmaking() {
                <div className="wraper">
                   <div id="work3" className="img_container">
                      <Link className="external-logo" to={`/filmmaking/FPM`}></Link>
-                     <video id="filmmaking_video" muted loop src={FPM}></video>
+                     <video
+                        poster="/src/assets/thumbnails/Clase MADA.jpg"
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={FPM}></video>
                   </div>
                   <div id="work4" className="vertical_video">
                      <Link
@@ -290,7 +306,11 @@ export default function Filmmaking() {
                   </div>
                   <div id="work10" className="img_container">
                      <Link className="external-logo" to={`/filmmaking/AGUS`}></Link>
-                     <video id="filmmaking_video" muted loop src={AGUS}></video>
+                     <video
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={`${AGUS}#t=0.1`}></video>
                   </div>
                </div>
             </div>
@@ -342,5 +362,5 @@ export default function Filmmaking() {
             </div>
          </section>
       </section>
-   );
+   )
 }

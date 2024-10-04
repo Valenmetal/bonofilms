@@ -108,7 +108,7 @@ nav {
 // PROJECTS ANIMATION
 
 .pojects_grid {
-   height: 300vh;
+   height: 250vh;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -206,13 +206,13 @@ nav {
    border-radius: 3%;
    position: relative;
    top: -20em;
-   right: -80em;
+   right: -90em;
    transform: rotate(-20deg);
 }
 
-// FILMMAKING,VIDEOEDITITNG,ETC
-// FILMMAKING,VIDEOEDITITNG,ETC
-// FILMMAKING,VIDEOEDITITNG,ETC
+// FILMMAKING,ETC
+// FILMMAKING,ETC
+// FILMMAKING,ETC
 
 .page_section {
    height: min-content;
@@ -262,7 +262,66 @@ nav {
    display: flex;
    flex-direction: column;
    align-items: center;
+   .banner_filmmaking {
+      clip-path: polygon(
+         1% 0%,
+         100% 0%,
+         100% 89%,
+         81% 73%,
+         54% 91%,
+         31% 71%,
+         21% 85%,
+         0 75%
+      );
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 26em;
+      z-index: 5;
+      filter: brightness(70%);
+      overflow-x: hidden;
+   }
 
+   .banner_Animation {
+      clip-path: polygon(
+         1% 0%,
+         100% 0%,
+         100% 89%,
+         81% 73%,
+         54% 91%,
+         31% 71%,
+         21% 85%,
+         0 75%
+      );
+      top: -20%;
+      left: -10%;
+      height: 39em;
+      transform: rotate(-15deg);
+      z-index: 5;
+      filter: brightness(70%);
+      position: absolute;
+      overflow-x: hidden;
+   }
+   .banner_Colorgrading {
+      clip-path: polygon(
+         1% 0%,
+         100% 0%,
+         100% 89%,
+         81% 73%,
+         54% 91%,
+         31% 71%,
+         21% 85%,
+         0 75%
+      );
+      top: -25%;
+      left: -4%;
+      height: 46em;
+      transform: rotate(10deg);
+      z-index: 5;
+      filter: brightness(70%);
+      position: absolute;
+      overflow-x: hidden;
+   }
    .work_title {
       margin-top: 0.15em;
       font-size: clamp(4.125rem, 2.0594rem + 10.3281vi, 14.4531rem);
@@ -299,6 +358,50 @@ nav {
    .wraper {
       display: flex;
    }
+   // VIDEOEDITITNG
+   // VIDEOEDITITNG
+   // VIDEOEDITITNG
+
+   .iframe_container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      flex-wrap: wrap;
+   }
+
+   .iframe {
+      margin-top: 2em;
+      width: 48%;
+      height: 25vw;
+      border: none;
+   }
+
+   .swiper {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      .swiper-slide {
+         background-position: center;
+         background-size: cover;
+         width: 60vw;
+         height: 40vw;
+      }
+
+      .swiper-slide video {
+         display: block;
+         width: inherit;
+         height: inherit;
+      }
+      .iframe-carrousel {
+         height: 35vw;
+      }
+   }
+   .carrousel-title {
+      margin-top: 1em;
+      font-size: clamp(1.75rem, 1.225rem + 2.625vw, 4.375rem);
+      font-family: "Cehua";
+   }
+
    .modal {
       display: flex;
       justify-content: center;
@@ -425,26 +528,6 @@ nav {
          opacity: 0.5;
       }
    }
-
-   .banner_filmmaking {
-      clip-path: polygon(
-         1% 0%,
-         100% 0%,
-         100% 89%,
-         81% 73%,
-         54% 91%,
-         31% 71%,
-         21% 85%,
-         0 75%
-      );
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 26em;
-      z-index: 5;
-      filter: brightness(70%);
-      overflow-x: hidden;
-   }
    .banner_videoediting {
       clip-path: polygon(
          0 3%,
@@ -471,46 +554,6 @@ nav {
       left: 30%;
       height: 33em;
       transform: rotate(-10deg);
-      z-index: 5;
-      filter: brightness(70%);
-      position: absolute;
-      overflow-x: hidden;
-   }
-   .banner_Animation {
-      clip-path: polygon(
-         1% 0%,
-         100% 0%,
-         100% 89%,
-         81% 73%,
-         54% 91%,
-         31% 71%,
-         21% 85%,
-         0 75%
-      );
-      top: -20%;
-      left: -10%;
-      height: 39em;
-      transform: rotate(-15deg);
-      z-index: 5;
-      filter: brightness(70%);
-      position: absolute;
-      overflow-x: hidden;
-   }
-   .banner_Colorgrading {
-      clip-path: polygon(
-         1% 0%,
-         100% 0%,
-         100% 89%,
-         81% 73%,
-         54% 91%,
-         31% 71%,
-         21% 85%,
-         0 75%
-      );
-      top: -25%;
-      left: -4%;
-      height: 46em;
-      transform: rotate(10deg);
       z-index: 5;
       filter: brightness(70%);
       position: absolute;
@@ -663,7 +706,17 @@ nav {
       right: -30em;
       opacity: 60%;
    }
+   .iframe_container {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      width: 100% !important;
+   }
 
+   .iframe {
+      width: 90% !important;
+      height: 50vw !important;
+   }
    .banner_container {
       position: relative;
       height: 19em;

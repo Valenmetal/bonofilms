@@ -1,63 +1,110 @@
-import video from "../assets/vid/banners/Banner Home VIDEOEDITING.mp4";
-import AndreCassiano from "/AndreCassiano.mp4";
-import Fandelier from "/Fandelier.mp4";
-import Interview_Tacoma_Farmers from "/Interview_Tacoma_Farmers.mp4";
-import MADA_1 from "/MADA_1.mp4";
-import MADA_2 from "/MADA_2.mp4";
-import MADA_3 from "/MADA_3.mp4";
-import Max_Drifting from "/Max_Drifting.mp4";
-import Mercy from "/Mercy.mp4";
-import Olive_Group from "/Olive_Group.mp4";
-import PanchoVertical from "/PanchoVertical.mp4";
-import Pancho from "/Pancho.mp4";
-import Sprague from "/Sprague.mp4";
-import Tacoma_Farmers from "/Tacoma_Farmers.mp4";
-import Tapps_Electrics from "/Tapps_Electrics.mp4";
-import Zee from "/Zee.mp4";
-import ZOOM_TRB from "/ZOOM_TRB.mp4";
+import video from "../assets/vid/banners/Banner Home VIDEOEDITING.mp4"
+import AndreCassiano from "/AndreCassiano.mp4"
+import Fandelier from "/Fandelier.mp4"
+import Interview_Tacoma_Farmers from "/Interview_Tacoma_Farmers.mp4"
+import MADA_1 from "/MADA_1.mp4"
+// import MADA_2 from "/MADA_2.mp4"
+import MADA_3 from "/MADA_3.mp4"
+import Max_Drifting from "/Max_Drifting.mp4"
+import Mercy from "/Mercy.mp4"
+import Olive_Group from "/Olive_Group.mp4"
+import PanchoVertical from "/PanchoVertical.mp4"
+// import Pancho from "/Pancho.mp4"
+import Sprague from "/Sprague.mp4"
+import Tacoma_Farmers from "/Tacoma_Farmers.mp4"
+import Tapps_Electrics from "/Tapps_Electrics.mp4"
+import Zee from "/Zee.mp4"
+import ZOOM_TRB from "/ZOOM_TRB.mp4"
+import AveryJason from "/AveryJason.mp4"
+import CaitlynThomas from "/CaitlynThomas.mp4"
+import CatherineRyan from "/CatherineRyan.mp4"
+import ChristinaMatth from "/ChristinaMatth.mp4"
+import CindyAnthony from "/CindyAnthony.mp4"
+import geishachris from "/geishachris.mp4"
+import Jacki from "/Jacki.mp4"
+import JessicaNick from "/JessicaNick.mp4"
+import Jennifer from "/Jennifer.mp4"
+import KatiChris from "/KatiChris.mp4"
+import LindsayNick from "/LindsayNick.mp4"
+import MarinaJoe from "/MarinaJoe.mp4"
+import Tori from "/Tori.mp4"
 
-import React, { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { Link } from "react-router-dom";
-import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4";
-import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4";
-import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4";
-import Carrousel from "../components/Carrousel";
+import React, { useEffect, useRef, useState } from "react"
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
+import { Link } from "react-router-dom"
+import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4"
+import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
+import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
+import Carrousel from "../components/Carrousel"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { EffectCoverflow, Navigation } from "swiper/modules"
+
+import "swiper/css"
+import "swiper/css/effect-coverflow"
+import "swiper/css/pagination"
+import "swiper/css/navigation"
+
 const Videoediting = () => {
-   const work_container = useRef();
-   const pojects_menu_grid = useRef();
+   const [isDragging, setIsDragging] = useState(false)
+
+   const handleDragStart = () => {
+      setIsDragging(true) // Comienza el arrastre
+   }
+
+   const handleDragEnd = () => {
+      setIsDragging(false) // Termina el arrastre
+   }
+
+   const handleClick = (videoSrc) => {
+      if (!isDragging) {
+         // Si no hubo arrastre, abrir modal
+         openModal(videoSrc)
+      }
+   }
+   const openModal = (videoSrc) => {
+      console.log("Abriendo modal con video:", videoSrc)
+      // Aquí puedes agregar el código para abrir el modal
+   }
+
+   const work_container = useRef()
+   const pojects_menu_grid = useRef()
    useEffect(() => {
       const handlePointerMove = (e) => {
-         e.target.setAttribute("controls", true);
-      };
+         e.target.setAttribute("controls", true)
+      }
 
       const handlePointerOut = (e) => {
-         e.target.removeAttribute("controls");
-      };
+         e.target.removeAttribute("controls")
+      }
 
-      const videoElements = document.querySelectorAll("#videoediting_video");
+      const videoElements = document.querySelectorAll("#videoediting_video")
       videoElements.forEach((video) => {
-         video.addEventListener("pointermove", handlePointerMove);
-         video.addEventListener("pointerout", handlePointerOut);
-      });
+         video.addEventListener("pointermove", handlePointerMove)
+         video.addEventListener("pointerout", handlePointerOut)
+      })
 
       return () => {
          videoElements.forEach((video) => {
-            video.removeEventListener("pointermove", handlePointerMove);
-            video.removeEventListener("pointerout", handlePointerOut);
-         });
-      };
-   }, []);
+            video.removeEventListener("pointermove", handlePointerMove)
+            video.removeEventListener("pointerout", handlePointerOut)
+         })
+      }
+   }, [])
    useGSAP(
       () => {
          gsap.from(".work_title", {
             opacity: 0,
             y: 100,
-         });
+         })
+         gsap.from(".carrousel-title", {
+            opacity: 0,
+            y: 100,
+            delay: 0.5,
+         })
       },
       { scope: work_container }
-   );
+   )
 
    useGSAP(
       () => {
@@ -68,7 +115,7 @@ const Videoediting = () => {
                duration: 0.1,
             },
             width: "100%",
-         });
+         })
          gsap.to(".pojects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#animation_menu",
@@ -76,7 +123,7 @@ const Videoediting = () => {
             },
             autoAlpha: 0,
             delay: 0.4,
-         });
+         })
          gsap.to("#ghost", {
             scrollTrigger: {
                trigger: "#animation_menu",
@@ -85,7 +132,7 @@ const Videoediting = () => {
             color: "rgba(175, 182, 223)",
             borderBottomWidth: "2px",
             delay: 1,
-         });
+         })
 
          gsap.from("#filmmaking_menu", {
             scrollTrigger: {
@@ -96,7 +143,7 @@ const Videoediting = () => {
             },
             opacity: 0,
             y: 100,
-         });
+         })
 
          gsap.from("#animation_menu", {
             scrollTrigger: {
@@ -107,7 +154,7 @@ const Videoediting = () => {
             },
             opacity: 0,
             y: 100,
-         });
+         })
          gsap.from("#colorgrading_menu", {
             scrollTrigger: {
                trigger: "#colorgrading_menu",
@@ -117,58 +164,58 @@ const Videoediting = () => {
             },
             opacity: 0,
             y: 100,
-         });
+         })
 
          {
-            let film = document.querySelector("#filmmaking_menu");
-            let tl_filmmaking = gsap.timeline({ paused: true });
+            let film = document.querySelector("#filmmaking_menu")
+            let tl_filmmaking = gsap.timeline({ paused: true })
 
             tl_filmmaking.to("#filmmaking_mini", {
                duration: 0.5,
                display: "block",
                width: "100%",
-            });
+            })
 
             film.addEventListener("mouseenter", () =>
                tl_filmmaking.timeScale(1).play()
-            );
+            )
             film.addEventListener("mouseleave", () =>
                tl_filmmaking.timeScale(1.5).reverse()
-            );
+            )
 
-            let animation = document.querySelector("#animation_menu");
-            let tl_animation = gsap.timeline({ paused: true });
+            let animation = document.querySelector("#animation_menu")
+            let tl_animation = gsap.timeline({ paused: true })
 
             tl_animation.to("#animation_mini", {
                duration: 0.5,
                display: "block",
                width: "100%",
-            });
+            })
             animation.addEventListener("mouseenter", () =>
                tl_animation.timeScale(1).play()
-            );
+            )
             animation.addEventListener("mouseleave", () =>
                tl_animation.timeScale(1.5).reverse()
-            );
+            )
 
-            let colorgrading = document.querySelector("#colorgrading_menu");
-            let tl_colorgrading = gsap.timeline({ paused: true });
+            let colorgrading = document.querySelector("#colorgrading_menu")
+            let tl_colorgrading = gsap.timeline({ paused: true })
 
             tl_colorgrading.to("#colorgrading_mini", {
                duration: 0.5,
                display: "block",
                width: "100%",
-            });
+            })
             colorgrading.addEventListener("mouseenter", () =>
                tl_colorgrading.timeScale(1).play()
-            );
+            )
             colorgrading.addEventListener("mouseleave", () =>
                tl_colorgrading.timeScale(1.5).reverse()
-            );
+            )
          }
       },
       { scope: pojects_menu_grid }
-   );
+   )
 
    const texts = [
       '"Alan, is an exceptional video producer. Not just an editor, but a creative director. We will definitely work with him if we have a project in the future in video."',
@@ -179,7 +226,7 @@ const Videoediting = () => {
       '"Did a really really good edit job. We struggled at first with the colour grading but the issue was fixed. Thank you"',
       '"Great work! did precisely what was asked in a timely fashion and with great quality!"',
       '"Bono Films did a great job delivering what I asked for. Will work with again in the future."',
-   ];
+   ]
 
    return (
       <section className="page_section">
@@ -198,153 +245,466 @@ const Videoediting = () => {
             <h1 className="work_title work_title_stroke">Videoediting</h1>
 
             <div className="work_grid">
-               <div className="wraper">
-                  <div id="work1" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/AndreCassiano`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={AndreCassiano}></video>
-                  </div>
-                  <div id="work2" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Fandelier`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Fandelier}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <div id="work3" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Interview_Tacoma_Farmers`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Interview_Tacoma_Farmers}></video>
-                  </div>
-                  <div id="work4" className="vertical_video">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/MADA_1`}></Link>
-                     <video muted loop id="videoediting_video" src={MADA_1}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <div id="work5" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/MADA_2`}></Link>
-                     <video muted loop id="videoediting_video" src={MADA_2}></video>
-                  </div>
-                  <div id="work6" className="vertical_video">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/MADA_3`}></Link>
-                     <video muted loop id="videoediting_video" src={MADA_3}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <div id="work7" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Max_Drifting`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Max_Drifting}></video>
-                  </div>
-                  <div id="work8" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Mercy`}></Link>
-                     <video muted loop id="videoediting_video" src={Mercy}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <div id="work9" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Olive_Group`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Olive_Group}></video>
-                  </div>
-                  <div id="work10" className="vertical_video">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/PanchoVertical`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={PanchoVertical}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <div id="work11" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Pancho`}></Link>
-                     <video muted loop id="videoediting_video" src={Pancho}></video>
-                  </div>
+               <h2 className="carrousel-title">Docummentary</h2>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  centeredSlides={true}
+                  slidesPerView={1.3}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Interview_Tacoma_Farmers")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Interview_Tacoma_Farmers}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Tacoma_Farmers")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Tacoma_Farmers}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("AndreCassiano")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={AndreCassiano}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
 
-                  <div id="work12" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Sprague`}></Link>
-                     <video muted loop id="videoediting_video" src={Sprague}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <Link
-                     className="external-logo"
-                     to={`/videoediting/Tacoma_Farmers`}></Link>
-                  <div id="work13" className="img_container">
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Tacoma_Farmers}></video>
-                  </div>
-                  <div id="work14" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/Tapps_Electrics`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Tapps_Electrics}></video>
-                  </div>
-               </div>
-               <div className="wraper">
-                  <div id="work15" className="vertical_video">
-                     <Link className="external-logo" to={`/videoediting/Zee`}></Link>
-                     <video muted loop id="videoediting_video" src={Zee}></video>
-                  </div>
-                  <div id="work16" className="img_container">
-                     <Link
-                        className="external-logo"
-                        to={`/videoediting/ZOOM_TRB`}></Link>
-                     <video
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={ZOOM_TRB}></video>
-                  </div>
-               </div>
+               <h2 className="carrousel-title">Wedding</h2>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  slidesPerView={3}
+                  centeredSlides={true}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={AveryJason}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={CaitlynThomas}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={CatherineRyan}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={ChristinaMatth}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={CindyAnthony}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={geishachris}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Jacki}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Jennifer}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={JessicaNick}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={KatiChris}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={LindsayNick}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={MarinaJoe}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Tori}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
+
+               <h2 className="carrousel-title">Social Media</h2>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  slidesPerView={3}
+                  centeredSlides={true}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Zee")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Zee}></video>
+                     </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={PanchoVertical}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  slidesPerView={2}
+                  centeredSlides={true}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_1")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={MADA_1}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Tacoma_Farmers")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Fandelier}></video>
+                     </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("MADA_3")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={MADA_3}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
+
+               <h2 className="carrousel-title">Commercial</h2>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  centeredSlides={true}
+                  slidesPerView={"auto"}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Interview_Tacoma_Farmers")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Tapps_Electrics}></video>
+                     </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("AndreCassiano")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Mercy}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("AndreCassiano")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Max_Drifting}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
+
+               <h2 className="carrousel-title">Corporate</h2>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  centeredSlides={true}
+                  slidesPerView={1.3}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Interview_Tacoma_Farmers")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Sprague}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("Tacoma_Farmers")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={ZOOM_TRB}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick("AndreCassiano")}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Olive_Group}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
+
+               <h2 className="carrousel-title">Youtube</h2>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  slidesPerView={1.3}
+                  centeredSlides={true}
+                  spaceBetween={50}
+                  coverflowEffect={{
+                     modifier: 1,
+                     slideShadows: false,
+                  }}
+                  onSlideChangeTransitionStart={handleDragStart}
+                  onSlideChangeTransitionEnd={handleDragEnd}
+                  modules={[EffectCoverflow, Navigation]}>
+                  <SwiperSlide>
+                     <iframe
+                        className="iframe-carrousel"
+                        src="https://www.youtube.com/embed/WMASl9qsoRE"
+                        title="Talent Cards LMS 2024: Comprehensive Review &amp; Tutorial"
+                        frameBorder="0"
+                        allow="autoplay"
+                        autoPlay
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <iframe
+                        className="iframe-carrousel"
+                        src="https://www.youtube.com/embed/m5hGwGN65Ms"
+                        title="Ultimate Talent LMS 2024 Review: Features, Pricing, and Setup Guide"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <iframe
+                        className="iframe-carrousel"
+                        src="https://www.youtube.com/embed/qwzHqNJ_KGI"
+                        title="How Russia and the USA Would Actually Fight Each Other"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <iframe
+                        className="iframe-carrousel"
+                        src="https://www.youtube.com/embed/MsEXPjgWqOc"
+                        title='IT&#39;S ABOUT TO GET CRAZY!!! | Demon Slayer Season 4 Episode 1 Reaction "To Defeat Muzan Kibutsuji"'
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <iframe
+                        className="iframe-carrousel"
+                        src="https://www.youtube.com/embed/uSsW5HHfKFw"
+                        title="The Phases of New Construction Home Builds | The Denver Real Estate Agent"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+                  </SwiperSlide>
+               </Swiper>
             </div>
             <Carrousel texts={texts} interval={3000} />
          </div>
@@ -394,7 +754,7 @@ const Videoediting = () => {
             </div>
          </section>
       </section>
-   );
-};
+   )
+}
 
-export default Videoediting;
+export default Videoediting

@@ -1,16 +1,16 @@
-import { React, useRef } from "react";
-import video from "../assets/vid/bono-hero.mp4";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { CustomEase } from "gsap/CustomEase";
-import mundo from "../assets/mundo.png";
-gsap.registerPlugin(CustomEase);
+import { React, useRef } from "react"
+import video from "../assets/vid/bono-hero.mp4"
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
+import { CustomEase } from "gsap/CustomEase"
+import mundo from "../assets/mundo.png"
+gsap.registerPlugin(CustomEase)
 
 export default function Hero() {
-   const hero = useRef();
+   const hero = useRef()
 
    useGSAP(() => {
-      let tl = gsap.timeline({ Defaults: { Easing: "Expo.EaseOut" } });
+      let tl = gsap.timeline({ Defaults: { Easing: "Expo.EaseOut" } })
 
       tl.to(".text-reveal", {
          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
@@ -60,8 +60,8 @@ export default function Hero() {
                stagger: 0.2,
             },
             "-=1"
-         );
-   }, hero);
+         )
+   }, hero)
 
    return (
       <section ref={hero} id="me" className="hero">
@@ -77,5 +77,5 @@ export default function Hero() {
             </div>
          </main>
       </section>
-   );
+   )
 }

@@ -1,26 +1,26 @@
-import { Link } from "react-router-dom";
-import React from "react";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
+import { Link } from "react-router-dom"
+import React from "react"
+import { gsap } from "gsap"
+import { useGSAP } from "@gsap/react"
 
-import preview_Filmmaking from "../assets/vid/preview/Scrolling preview FILMMAKING .mp4";
-import preview_Videoediting from "../assets/vid/preview/Scrolling preview VIDEOEDITING.mp4";
-import preview_Animation from "../assets/vid/preview/Scrolling preview ANIMACION.mp4";
-import preview_Colorgrading from "../assets/vid/preview/Scrolling preview COLOR.mp4";
-import { useRef } from "react";
+import preview_Filmmaking from "../assets/vid/preview/Scrolling preview FILMMAKING .mp4"
+import preview_Videoediting from "../assets/vid/preview/Scrolling preview VIDEOEDITING.mp4"
+import preview_Animation from "../assets/vid/preview/Scrolling preview ANIMACION.mp4"
+import preview_Colorgrading from "../assets/vid/preview/Scrolling preview COLOR.mp4"
+import { useRef } from "react"
 
 export default function Clientes() {
-   const pojects_grid = useRef();
+   const pojects_grid = useRef()
    useGSAP(
       () => {
-         let mm = gsap.matchMedia();
+         let mm = gsap.matchMedia()
          mm.add(
             {
                small: "(max-width: 522px)",
                large: "(min-width: 523px)",
             },
             (ctx) => {
-               const { small } = ctx.conditions;
+               const { small } = ctx.conditions
 
                gsap.from("#filmmaking", {
                   scrollTrigger: {
@@ -31,7 +31,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#filmmaking_stroke", {
                   scrollTrigger: {
                      trigger: "#filmmaking_stroke",
@@ -41,7 +41,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#filmmaking_video", {
                   scrollTrigger: {
                      trigger: "#filmmaking",
@@ -52,7 +52,7 @@ export default function Clientes() {
                   rotate: 40,
                   y: small ? "20em" : "30em",
                   x: small ? "-70em" : "-200em",
-               });
+               })
                gsap.from("#videoediting", {
                   scrollTrigger: {
                      trigger: "#videoediting",
@@ -62,7 +62,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#videoediting_stroke", {
                   scrollTrigger: {
                      trigger: "#videoediting_stroke",
@@ -72,7 +72,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#videoediting_video", {
                   scrollTrigger: {
                      trigger: "#videoediting",
@@ -83,7 +83,7 @@ export default function Clientes() {
                   rotate: 70,
                   y: small ? "20em" : "30em",
                   x: small ? "-70em" : "-200em",
-               });
+               })
 
                gsap.from("#animation", {
                   scrollTrigger: {
@@ -94,7 +94,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#animation_stroke", {
                   scrollTrigger: {
                      trigger: "#animation_stroke",
@@ -104,7 +104,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#animation_video", {
                   scrollTrigger: {
                      trigger: "#animation",
@@ -115,7 +115,7 @@ export default function Clientes() {
                   rotate: 70,
                   y: small ? "20em" : "30em",
                   x: small ? "-70em" : "-200em",
-               });
+               })
 
                gsap.from("#colorgrading", {
                   scrollTrigger: {
@@ -126,7 +126,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#colorgrading_stroke", {
                   scrollTrigger: {
                      trigger: "#colorgrading_stroke",
@@ -136,7 +136,7 @@ export default function Clientes() {
                   },
                   scale: 3,
                   y: 200,
-               });
+               })
                gsap.from("#colorgrading_video", {
                   scrollTrigger: {
                      trigger: "#colorgrading",
@@ -147,16 +147,16 @@ export default function Clientes() {
                   rotate: 70,
                   y: small ? "20em" : "30em",
                   x: small ? "-70em" : "-200em",
-               });
+               })
             }
-         );
+         )
       },
       { scope: pojects_grid }
-   );
+   )
 
    return (
       <>
-         <div className="section" style={{ marginTop: 0, height: "400vh" }}>
+         <div className="section" style={{ marginTop: 0, height: "250vh" }}>
             <div ref={pojects_grid} className="pojects_grid">
                <div className="vert_wraper">
                   <Link className="link" to="/filmmaking">
@@ -240,5 +240,5 @@ export default function Clientes() {
             </div>
          </div>
       </>
-   );
+   )
 }
