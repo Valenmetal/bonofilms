@@ -112,7 +112,6 @@ nav {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-
    position: relative;
 }
 .pojects_item {
@@ -701,6 +700,9 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .hero {
+      margin-bottom: 1em;
+   }
    .flying_video {
       top: -20em;
       right: -30em;
@@ -808,7 +810,7 @@ nav {
    }
 
    .pojects_grid {
-      height: 350vh;
+      height: 200vh;
       position: relative;
       text-align: center;
    }
@@ -864,6 +866,15 @@ nav {
          }
       }
    }
+   .content {
+      h1 {
+         font-size: 3.5em !important;
+      }
+      p {
+         font-size: 1.15em !important;
+      }
+   }
+
    .tecnologies {
       margin: 0 auto 2em auto;
    }
