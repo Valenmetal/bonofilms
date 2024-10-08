@@ -38,7 +38,7 @@ export default function Navbar() {
                <img className="navbar_logo" src="/logo-bono.png" alt="logo" />
             </Link>
             <ul>
-               <Link to="/work" aria-label="Contact">
+               <Link to="https://wa.me/5491126512436" aria-label="Contact">
                   <div className="navbar-li-container">
                      <li>Contact</li>
                      <LogoEmail />

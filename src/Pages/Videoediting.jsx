@@ -9,7 +9,7 @@ import Max_Drifting from "/Max_Drifting.mp4"
 import Mercy from "/Mercy.mp4"
 import Olive_Group from "/Olive_Group.mp4"
 import PanchoVertical from "/PanchoVertical.mp4"
-// import Pancho from "/Pancho.mp4"
+import Pancho from "/Pancho.mp4"
 import Sprague from "/Sprague.mp4"
 import Tacoma_Farmers from "/Tacoma_Farmers.mp4"
 import Tapps_Electrics from "/Tapps_Electrics.mp4"
@@ -17,17 +17,13 @@ import Zee from "/Zee.mp4"
 import ZOOM_TRB from "/ZOOM_TRB.mp4"
 import AveryJason from "/AveryJason.mp4"
 import CaitlynThomas from "/CaitlynThomas.mp4"
-import CatherineRyan from "/CatherineRyan.mp4"
 import ChristinaMatth from "/ChristinaMatth.mp4"
-import CindyAnthony from "/CindyAnthony.mp4"
 import geishachris from "/geishachris.mp4"
 import Jacki from "/Jacki.mp4"
 import JessicaNick from "/JessicaNick.mp4"
 import Jennifer from "/Jennifer.mp4"
 import KatiChris from "/KatiChris.mp4"
 import LindsayNick from "/LindsayNick.mp4"
-import MarinaJoe from "/MarinaJoe.mp4"
-import Tori from "/Tori.mp4"
 
 import React, { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
@@ -46,27 +42,6 @@ import "swiper/css/pagination"
 import "swiper/css/navigation"
 
 const Videoediting = () => {
-   const [isDragging, setIsDragging] = useState(false)
-
-   const handleDragStart = () => {
-      setIsDragging(true) // Comienza el arrastre
-   }
-
-   const handleDragEnd = () => {
-      setIsDragging(false) // Termina el arrastre
-   }
-
-   const handleClick = (videoSrc) => {
-      if (!isDragging) {
-         // Si no hubo arrastre, abrir modal
-         openModal(videoSrc)
-      }
-   }
-   const openModal = (videoSrc) => {
-      console.log("Abriendo modal con video:", videoSrc)
-      // Aquí puedes agregar el código para abrir el modal
-   }
-
    const work_container = useRef()
    const pojects_menu_grid = useRef()
    useEffect(() => {
@@ -228,6 +203,24 @@ const Videoediting = () => {
       '"Bono Films did a great job delivering what I asked for. Will work with again in the future."',
    ]
 
+   const [isModalOpen, setIsModalOpen] = useState(false)
+   const [selectedVideo, setSelectedVideo] = useState("")
+
+   const handleClick = (videoSrc) => {
+      setSelectedVideo(videoSrc) // Guarda el video que se va a mostrar en el modal
+      setIsModalOpen(true) // Abre el modal
+   }
+
+   const closeModal = () => {
+      setIsModalOpen(false)
+      setSelectedVideo("") // Limpia el video seleccionado al cerrar
+   }
+   const handleOutsideClick = (event) => {
+      if (event.target.className === "modal") {
+         closeModal()
+      }
+   }
+
    return (
       <section className="page_section">
          <div ref={work_container} className="work_container">
@@ -244,23 +237,22 @@ const Videoediting = () => {
             </h1>
             <h1 className="work_title work_title_stroke">Videoediting</h1>
 
-            <div className="work_grid">
+            <div style={{ width: "99%" }} className="work_grid">
                <h2 className="carrousel-title">Docummentary</h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  centeredSlides={true}
-                  slidesPerView={1.3}
-                  spaceBetween={50}
+                  slidesPerView={1.1}
+                  spaceBetween={10}
+                  loop={true}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[EffectCoverflow, Navigation]}
+                  className="mySwiper">
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Interview_Tacoma_Farmers")}>
+                     <div onClick={() => handleClick(Interview_Tacoma_Farmers)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -271,7 +263,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Tacoma_Farmers")}>
+                     <div onClick={() => handleClick(Tacoma_Farmers)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -282,7 +274,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("AndreCassiano")}>
+                     <div onClick={() => handleClick(AndreCassiano)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -298,18 +290,16 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={3}
-                  centeredSlides={true}
-                  spaceBetween={50}
+                  slidesPerView={2.5}
+                  spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[EffectCoverflow, Navigation]}
+                  className="mySwiper">
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(AveryJason)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -320,7 +310,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(CaitlynThomas)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -331,18 +321,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
-                        <video
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={CatherineRyan}></video>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(ChristinaMatth)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -353,18 +332,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
-                        <video
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={CindyAnthony}></video>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(geishachris)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -375,7 +343,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(Jacki)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -386,7 +354,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(Jennifer)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -397,7 +365,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(JessicaNick)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -408,7 +376,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(KatiChris)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -419,7 +387,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(LindsayNick)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -429,46 +397,23 @@ const Videoediting = () => {
                            src={LindsayNick}></video>
                      </div>
                   </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
-                        <video
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={MarinaJoe}></video>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
-                        <video
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={Tori}></video>
-                     </div>
-                  </SwiperSlide>
                </Swiper>
 
                <h2 className="carrousel-title">Social Media</h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={3}
-                  centeredSlides={true}
-                  spaceBetween={50}
+                  slidesPerView={2.5}
+                  spaceBetween={10}
+                  loop={true}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[EffectCoverflow, Navigation]}
+                  className="mySwiper">
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Zee")}>
+                     <div onClick={() => handleClick(Zee)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -478,9 +423,30 @@ const Videoediting = () => {
                            src={Zee}></video>
                      </div>
                   </SwiperSlide>
-
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(PanchoVertical)}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={PanchoVertical}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Zee)}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Zee}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(PanchoVertical)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -494,18 +460,17 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={2}
-                  centeredSlides={true}
-                  spaceBetween={50}
+                  slidesPerView={1.5}
+                  spaceBetween={10}
+                  loop={true}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[EffectCoverflow, Navigation]}
+                  className="mySwiper">
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_1")}>
+                     <div onClick={() => handleClick(MADA_1)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -516,7 +481,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Tacoma_Farmers")}>
+                     <div onClick={() => handleClick(Fandelier)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -526,9 +491,8 @@ const Videoediting = () => {
                            src={Fandelier}></video>
                      </div>
                   </SwiperSlide>
-
                   <SwiperSlide>
-                     <div onClick={() => handleClick("MADA_3")}>
+                     <div onClick={() => handleClick(MADA_3)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -544,18 +508,17 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  centeredSlides={true}
-                  slidesPerView={"auto"}
-                  spaceBetween={50}
+                  loop={true}
+                  slidesPerView={1.1}
+                  spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[EffectCoverflow, Navigation]}
+                  className="mySwiper">
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Interview_Tacoma_Farmers")}>
+                     <div onClick={() => handleClick(Tapps_Electrics)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -565,9 +528,8 @@ const Videoediting = () => {
                            src={Tapps_Electrics}></video>
                      </div>
                   </SwiperSlide>
-
                   <SwiperSlide>
-                     <div onClick={() => handleClick("AndreCassiano")}>
+                     <div onClick={() => handleClick(Mercy)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -578,7 +540,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("AndreCassiano")}>
+                     <div onClick={() => handleClick(Max_Drifting)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -588,24 +550,34 @@ const Videoediting = () => {
                            src={Max_Drifting}></video>
                      </div>
                   </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Pancho)}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Pancho}></video>
+                     </div>
+                  </SwiperSlide>
                </Swiper>
 
                <h2 className="carrousel-title">Corporate</h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  centeredSlides={true}
-                  slidesPerView={1.3}
-                  spaceBetween={50}
+                  loop={true}
+                  slidesPerView={1.1}
+                  spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[EffectCoverflow, Navigation]}
+                  className="mySwiper">
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Interview_Tacoma_Farmers")}>
+                     <div onClick={() => handleClick(Sprague)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -616,7 +588,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("Tacoma_Farmers")}>
+                     <div onClick={() => handleClick(ZOOM_TRB)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -627,7 +599,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
-                     <div onClick={() => handleClick("AndreCassiano")}>
+                     <div onClick={() => handleClick(Olive_Group)}>
                         <video
                            style={{ pointerEvents: "none" }}
                            autoPlay
@@ -643,22 +615,19 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={1.3}
-                  centeredSlides={true}
-                  spaceBetween={50}
+                  slidesPerView={1.1}
+                  spaceBetween={10}
+                  loop={true}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  onSlideChangeTransitionStart={handleDragStart}
-                  onSlideChangeTransitionEnd={handleDragEnd}
                   modules={[EffectCoverflow, Navigation]}>
                   <SwiperSlide>
                      <iframe
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/WMASl9qsoRE"
                         title="Talent Cards LMS 2024: Comprehensive Review &amp; Tutorial"
-                        frameBorder="0"
                         allow="autoplay"
                         autoPlay
                         referrerPolicy="strict-origin-when-cross-origin"
@@ -669,7 +638,6 @@ const Videoediting = () => {
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/m5hGwGN65Ms"
                         title="Ultimate Talent LMS 2024 Review: Features, Pricing, and Setup Guide"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen></iframe>
@@ -679,7 +647,6 @@ const Videoediting = () => {
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/qwzHqNJ_KGI"
                         title="How Russia and the USA Would Actually Fight Each Other"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen></iframe>
@@ -689,7 +656,6 @@ const Videoediting = () => {
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/MsEXPjgWqOc"
                         title='IT&#39;S ABOUT TO GET CRAZY!!! | Demon Slayer Season 4 Episode 1 Reaction "To Defeat Muzan Kibutsuji"'
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen></iframe>
@@ -699,13 +665,28 @@ const Videoediting = () => {
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/uSsW5HHfKFw"
                         title="The Phases of New Construction Home Builds | The Denver Real Estate Agent"
-                        frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen></iframe>
                   </SwiperSlide>
                </Swiper>
             </div>
+
+            {isModalOpen && (
+               <div className="modal" onClick={handleOutsideClick}>
+                  <div className="modal-content">
+                     <span className="close" onClick={closeModal}>
+                        &times;
+                     </span>
+                     <video
+                        style={{ borderRadius: ".5em" }}
+                        src={selectedVideo}
+                        controls
+                        autoPlay></video>
+                  </div>
+               </div>
+            )}
+
             <Carrousel texts={texts} interval={3000} />
          </div>
 
