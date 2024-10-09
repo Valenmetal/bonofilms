@@ -242,15 +242,14 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={1.1}
+                  slidesPerView={1.5}
                   spaceBetween={10}
                   loop={true}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  modules={[EffectCoverflow, Navigation]}
-                  className="mySwiper">
+                  modules={[EffectCoverflow, Navigation]}>
                   <SwiperSlide>
                      <div onClick={() => handleClick(Interview_Tacoma_Farmers)}>
                         <video
@@ -290,7 +289,7 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={2.5}
+                  slidesPerView={3.1}
                   spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
@@ -301,6 +300,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(AveryJason)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -312,6 +312,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(CaitlynThomas)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -323,6 +324,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(ChristinaMatth)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -334,6 +336,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(geishachris)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -345,6 +348,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(Jacki)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -356,6 +360,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(Jennifer)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -367,6 +372,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(JessicaNick)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -378,6 +384,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(KatiChris)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -389,6 +396,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(LindsayNick)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -403,7 +411,7 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={2.5}
+                  slidesPerView={3.1}
                   spaceBetween={10}
                   loop={true}
                   coverflowEffect={{
@@ -415,6 +423,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(Zee)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -426,6 +435,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(PanchoVertical)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -437,6 +447,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(Zee)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -448,6 +459,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(PanchoVertical)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -460,7 +472,7 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={1.5}
+                  slidesPerView={2}
                   spaceBetween={10}
                   loop={true}
                   coverflowEffect={{
@@ -472,6 +484,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(MADA_1)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -483,6 +496,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(Fandelier)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -494,6 +508,7 @@ const Videoediting = () => {
                   <SwiperSlide>
                      <div onClick={() => handleClick(MADA_3)}>
                         <video
+                           className="mySwiper"
                            style={{ pointerEvents: "none" }}
                            autoPlay
                            muted
@@ -509,14 +524,13 @@ const Videoediting = () => {
                   grabCursor={true}
                   navigation={true}
                   loop={true}
-                  slidesPerView={1.1}
+                  slidesPerView={1.5}
                   spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  modules={[EffectCoverflow, Navigation]}
-                  className="mySwiper">
+                  modules={[EffectCoverflow, Navigation]}>
                   <SwiperSlide>
                      <div onClick={() => handleClick(Tapps_Electrics)}>
                         <video
@@ -568,14 +582,13 @@ const Videoediting = () => {
                   grabCursor={true}
                   navigation={true}
                   loop={true}
-                  slidesPerView={1.1}
+                  slidesPerView={1.5}
                   spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
                   }}
-                  modules={[EffectCoverflow, Navigation]}
-                  className="mySwiper">
+                  modules={[EffectCoverflow, Navigation]}>
                   <SwiperSlide>
                      <div onClick={() => handleClick(Sprague)}>
                         <video
@@ -615,7 +628,7 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={1.1}
+                  slidesPerView={1.5}
                   spaceBetween={10}
                   loop={true}
                   coverflowEffect={{

@@ -337,7 +337,6 @@ nav {
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
-
       width: 90%;
    }
    .img_container {
@@ -377,8 +376,8 @@ nav {
    }
 
    .mySwiper {
-      min-height: 20em;
-      max-height: 45em;
+      min-height: 15em;
+      max-height: 47em;
    }
 
    .swiper {
@@ -388,9 +387,6 @@ nav {
 
       .swiper-slide {
          background-position: center;
-         background-size: cover;
-         margin-top: auto;
-         margin-bottom: auto;
       }
 
       .swiper-slide video {
@@ -687,6 +683,8 @@ nav {
    nav {
       ul {
          width: 30vh;
+         flex-direction: column;
+         align-items: end;
       }
    }
    .modal-content {
@@ -864,9 +862,6 @@ nav {
    }
    nav {
       ul {
-         flex-direction: column;
-         align-items: end;
-
          li {
             font-size: 0.9em;
          }
