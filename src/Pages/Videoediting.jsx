@@ -242,7 +242,14 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={1.5}
+                  breakpoints={{
+                     768: {
+                        slidesPerView: 1.5,
+                     },
+                     0: {
+                        slidesPerView: 1.1,
+                     },
+                  }}
                   spaceBetween={10}
                   loop={true}
                   coverflowEffect={{
@@ -289,8 +296,18 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={3.1}
                   spaceBetween={10}
+                  breakpoints={{
+                     1200: {
+                        slidesPerView: 5.1,
+                     },
+                     522: {
+                        slidesPerView: 3.1,
+                     },
+                     0: {
+                        slidesPerView: 2.1,
+                     },
+                  }}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
@@ -408,73 +425,44 @@ const Videoediting = () => {
                </Swiper>
 
                <h2 className="carrousel-title">Social Media</h2>
+               <div className="social-media-vert-container">
+                  <div onClick={() => handleClick(Zee)}>
+                     <video
+                        className="mySwiper"
+                        style={{ pointerEvents: "none" }}
+                        autoPlay
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={Zee}></video>
+                  </div>
+                  <div onClick={() => handleClick(PanchoVertical)}>
+                     <video
+                        className="mySwiper"
+                        style={{ pointerEvents: "none" }}
+                        autoPlay
+                        muted
+                        loop
+                        id="videoediting_video"
+                        src={PanchoVertical}></video>
+                  </div>
+               </div>
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={3.1}
-                  spaceBetween={10}
-                  loop={true}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
+                  breakpoints={{
+                     768: {
+                        slidesPerView: 2.9,
+                     },
+                     522: {
+                        slidesPerView: 2.1,
+                     },
+                     0: {
+                        slidesPerView: 1.5,
+                     },
                   }}
-                  modules={[EffectCoverflow, Navigation]}
-                  className="mySwiper">
-                  <SwiperSlide>
-                     <div onClick={() => handleClick(Zee)}>
-                        <video
-                           className="mySwiper"
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={Zee}></video>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick(PanchoVertical)}>
-                        <video
-                           className="mySwiper"
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={PanchoVertical}></video>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick(Zee)}>
-                        <video
-                           className="mySwiper"
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={Zee}></video>
-                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                     <div onClick={() => handleClick(PanchoVertical)}>
-                        <video
-                           className="mySwiper"
-                           style={{ pointerEvents: "none" }}
-                           autoPlay
-                           muted
-                           loop
-                           id="videoediting_video"
-                           src={PanchoVertical}></video>
-                     </div>
-                  </SwiperSlide>
-               </Swiper>
-               <Swiper
-                  grabCursor={true}
-                  navigation={true}
-                  slidesPerView={2}
                   spaceBetween={10}
-                  loop={true}
+                  // loop={true}
                   coverflowEffect={{
                      modifier: 1,
                      slideShadows: false,
@@ -524,7 +512,14 @@ const Videoediting = () => {
                   grabCursor={true}
                   navigation={true}
                   loop={true}
-                  slidesPerView={1.5}
+                  breakpoints={{
+                     768: {
+                        slidesPerView: 1.5,
+                     },
+                     0: {
+                        slidesPerView: 1.1,
+                     },
+                  }}
                   spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
@@ -582,7 +577,14 @@ const Videoediting = () => {
                   grabCursor={true}
                   navigation={true}
                   loop={true}
-                  slidesPerView={1.5}
+                  breakpoints={{
+                     768: {
+                        slidesPerView: 1.5,
+                     },
+                     0: {
+                        slidesPerView: 1.1,
+                     },
+                  }}
                   spaceBetween={10}
                   coverflowEffect={{
                      modifier: 1,
@@ -628,7 +630,14 @@ const Videoediting = () => {
                <Swiper
                   grabCursor={true}
                   navigation={true}
-                  slidesPerView={1.5}
+                  breakpoints={{
+                     768: {
+                        slidesPerView: 1.5,
+                     },
+                     0: {
+                        slidesPerView: 1.1,
+                     },
+                  }}
                   spaceBetween={10}
                   loop={true}
                   coverflowEffect={{

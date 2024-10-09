@@ -1,7 +1,7 @@
-import React from "react";
-import Hero from "../components/Hero";
-import Clientes from "../components/Clientes";
-import Team from "../components/Team";
+import React from "react"
+import Hero from "../components/Hero"
+import Clientes from "../components/Clientes"
+import Team from "../components/Team"
 export default function Index() {
    return (
       <div>
@@ -9,5 +9,5 @@ export default function Index() {
          <Clientes />
          {/* <Team /> */}
       </div>
-   );
+   )
 }

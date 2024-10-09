@@ -395,7 +395,7 @@ nav {
          height: inherit;
       }
       .iframe-carrousel {
-         height: 40vw;
+         height: 37vw;
       }
    }
 
@@ -427,7 +427,14 @@ nav {
       font-size: 2em;
       cursor: pointer;
    }
-
+   .social-media-vert-container {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+      :nth-child(1) {
+         margin-right: 1em;
+      }
+   }
    .carrousel-title {
       margin-top: 1em;
       font-size: clamp(1.75rem, 1.225rem + 2.625vw, 4.375rem);
@@ -704,6 +711,9 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .iframe-carrousel {
+      height: 50vw;
+   }
    .hero {
       margin-bottom: 1em;
    }
