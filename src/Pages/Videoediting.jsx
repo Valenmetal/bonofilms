@@ -34,11 +34,10 @@ import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
 import Carrousel from "../components/Carrousel"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { EffectCoverflow, Navigation } from "swiper/modules"
+import { Navigation } from "swiper/modules"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
-import "swiper/css/pagination"
 import "swiper/css/navigation"
 
 const Videoediting = () => {
@@ -71,11 +70,6 @@ const Videoediting = () => {
          gsap.from(".work_title", {
             opacity: 0,
             y: 100,
-         })
-         gsap.from(".carrousel-title", {
-            opacity: 0,
-            y: 100,
-            delay: 0.5,
          })
       },
       { scope: work_container }
@@ -252,11 +246,7 @@ const Videoediting = () => {
                   }}
                   spaceBetween={10}
                   loop={true}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
-                  }}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[Navigation]}>
                   <SwiperSlide>
                      <div onClick={() => handleClick(Interview_Tacoma_Farmers)}>
                         <video
@@ -308,11 +298,7 @@ const Videoediting = () => {
                         slidesPerView: 2.1,
                      },
                   }}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
-                  }}
-                  modules={[EffectCoverflow, Navigation]}
+                  modules={[Navigation]}
                   className="mySwiper">
                   <SwiperSlide>
                      <div onClick={() => handleClick(AveryJason)}>
@@ -463,11 +449,8 @@ const Videoediting = () => {
                   }}
                   spaceBetween={10}
                   // loop={true}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
-                  }}
-                  modules={[EffectCoverflow, Navigation]}
+
+                  modules={[Navigation]}
                   className="mySwiper">
                   <SwiperSlide>
                      <div onClick={() => handleClick(MADA_1)}>
@@ -521,11 +504,7 @@ const Videoediting = () => {
                      },
                   }}
                   spaceBetween={10}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
-                  }}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[Navigation]}>
                   <SwiperSlide>
                      <div onClick={() => handleClick(Tapps_Electrics)}>
                         <video
@@ -586,11 +565,7 @@ const Videoediting = () => {
                      },
                   }}
                   spaceBetween={10}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
-                  }}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[Navigation]}>
                   <SwiperSlide>
                      <div onClick={() => handleClick(Sprague)}>
                         <video
@@ -640,11 +615,7 @@ const Videoediting = () => {
                   }}
                   spaceBetween={10}
                   loop={true}
-                  coverflowEffect={{
-                     modifier: 1,
-                     slideShadows: false,
-                  }}
-                  modules={[EffectCoverflow, Navigation]}>
+                  modules={[Navigation]}>
                   <SwiperSlide>
                      <iframe
                         className="iframe-carrousel"

@@ -7,7 +7,7 @@ export default function Index() {
       <div>
          <Hero />
          <Clientes />
-         {/* <Team /> */}
+         <Team />
       </div>
    )
 }

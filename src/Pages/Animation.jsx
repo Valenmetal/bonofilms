@@ -3,7 +3,7 @@ import video from "../assets/vid/banners/Banner Home ANIMACION.mp4"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import thirdhome from "/thirdhome.mp4"
-import xledger from "/thirdhome.mp4"
+// import xledger from "/thirdhome.mp4"
 
 import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
@@ -177,43 +177,40 @@ const Animation = () => {
                      className="iframe"
                      src="https://www.youtube.com/embed/Bc83dCoqrJw"
                      title="AUKAN - Corto animado"
-                     frameborder="0"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                     referrerpolicy="strict-origin-when-cross-origin"
+                     referrerPolicy="strict-origin-when-cross-origin"
                      id="animation_video"
-                     allowfullscreen></iframe>
+                     allowFullScreen></iframe>
                   <iframe
                      className="iframe"
                      src="https://www.youtube.com/embed/1akzc0WkIHQ"
                      title="What is Coinbase?"
-                     frameborder="0"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                     referrerpolicy="strict-origin-when-cross-origin"
+                     referrerPolicy="strict-origin-when-cross-origin"
                      id="animation_video"
-                     allowfullscreen></iframe>
+                     allowFullScreen></iframe>
                   <video
                      className="iframe"
                      src={thirdhome}
                      id="animation_video"
                      controls
-                     autoPlay={false}
-                     muted={false}></video>
+                     autoPlay
+                     muted></video>
                   <video
                      className="iframe"
-                     src={xledger}
+                     src={thirdhome}
                      id="animation_video"
                      controls
-                     autoPlay={false}
-                     muted={false}
+                     autoPlay
+                     muted
                   />
                   <iframe
                      className="iframe"
                      src="https://www.youtube.com/embed/3i5-TBCu3qE"
                      title="Lord Enos - Freedom (Lyric Video)"
-                     frameborder="0"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                     referrerpolicy="strict-origin-when-cross-origin"
-                     allowfullscreen></iframe>
+                     referrerPolicy="strict-origin-when-cross-origin"
+                     allowFullScreen></iframe>
                </div>
             </div>
          </div>

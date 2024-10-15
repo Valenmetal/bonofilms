@@ -40,7 +40,6 @@ nav {
 }
 .section {
    height: 250vh;
-
    width: 70%;
    margin: 10em auto 0 auto;
 
@@ -384,7 +383,6 @@ nav {
       width: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
-
       .swiper-slide {
          background-position: center;
       }
@@ -394,6 +392,7 @@ nav {
          width: inherit;
          height: inherit;
       }
+
       .iframe-carrousel {
          height: 37vw;
       }
@@ -646,12 +645,30 @@ nav {
 //TEAM
 //TEAM
 
-.team_title {
-   font-family: "Cehua";
-   font-size: clamp(6rem, 8vw + 12rem, 9rem);
-   .team_work_grid {
-      @extend .work_grid;
-      margin-top: 1em;
+.team_section {
+   @extend .section;
+   height: fit-content;
+   width: 70%;
+   margin-top: 1em;
+
+   .team_title {
+      font-family: "Cehua";
+      font-size: clamp(6rem, 8vw + 12rem, 9rem);
+   }
+   .team_container {
+      .team-member {
+         display: flex;
+         align-items: center;
+         margin-bottom: 5em;
+         p {
+            font-size: clamp(1rem, 1.7vw + 1rem, 1.9rem);
+         }
+         img {
+            height: 35em;
+            margin-inline: 1em;
+            -webkit-user-drag: none;
+         }
+      }
    }
 }
 
@@ -687,6 +704,9 @@ nav {
 // MEDIA QUERIES
 
 @media screen and (max-width: 1280px) {
+   .team_section {
+      width: 80%;
+   }
    nav {
       ul {
          width: 30vh;
@@ -699,6 +719,17 @@ nav {
    }
 }
 @media screen and (max-width: 878px) {
+   .team_container :nth-child(2) {
+      flex-direction: column-reverse;
+   }
+   .team-member {
+      flex-direction: column;
+      align-items: center;
+
+      img {
+         width: 20em;
+      }
+   }
    .divider {
       margin-top: 4em;
    }
@@ -711,6 +742,10 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .team_section {
+      width: 80% !important;
+      height: min-content !important;
+   }
    .iframe-carrousel {
       height: 50vw;
    }
