@@ -57,7 +57,7 @@ export default function Team() {
             <div className="team_container">
                <div id="team-1" className="team-member">
                   <img
-                     src="../assets/team/PrincipalAlan.webp"
+                     src="/PrincipalAlan.webp"
                      alt="Alan Lutricuso - Filmmaker, Videoeditor and Colorist"
                   />
                   <p>
@@ -87,7 +87,7 @@ export default function Team() {
                      Colored on Davinci Resolve.
                   </p>
                   <img
-                     src="/src/assets/team/PrincipalAlan.webp"
+                     src="/PrincipalAlan.webp"
                      alt="Alan Lutricuso - Filmmaker, Videoeditor and Colorist"
                   />
                </div>
@@ -112,82 +112,67 @@ export default function Team() {
                }}
                modules={[Autoplay, Navigation]}>
                <SwiperSlide>
-                  <img src="/src/assets/team/Alan.webp" alt="Alan Lutricuso" />
+                  <img src="/Alan.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alan4.webp" alt="Alan Lutricuso" />
+                  <img src="/alan4.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alan5.webp" alt="Alan Lutricuso" />
+                  <img src="/alan5.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alan6.webp" alt="Alan Lutricuso" />
+                  <img src="/alan6.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alan7.webp" alt="Alan Lutricuso" />
+                  <img src="/alan7.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alan8.webp" alt="Alan Lutricuso" />
+                  <img src="/alan8.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alanauto.webp" alt="Alan Lutricuso" />
+                  <img src="/alanauto.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img
-                     src="/src/assets/team/AlanClaqueta.webp"
-                     alt="Alan Lutricuso"
-                  />
+                  <img src="/AlanClaqueta.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/AlanMile.webp" alt="Alan Lutricuso" />
+                  <img src="/AlanMile.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/AlanMile2.webp" alt="Alan Lutricuso" />
+                  <img src="/AlanMile2.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/alanmile3.webp" alt="Alan Lutricuso" />
+                  <img src="/alanmile3.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img
-                     src="/src/assets/team/AlanMileJero.webp"
-                     alt="Alan Lutricuso"
-                  />
+                  <img src="/AlanMileJero.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img
-                     src="/src/assets/team/AlanMileLed.webp"
-                     alt="Alan Lutricuso"
-                  />
+                  <img src="/AlanMileLed.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img
-                     src="/src/assets/team/AlanMileRoman.webp"
-                     alt="Alan Lutricuso"
-                  />
+                  <img src="/AlanMileRoman.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/Mile.webp" alt="Alan Lutricuso" />
+                  <img src="/Mile.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/Mile3.webp" alt="Alan Lutricuso" />
+                  <img src="/Mile3.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/Mile2.webp" alt="Alan Lutricuso" />
+                  <img src="/Mile2.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/mile4.webp" alt="Alan Lutricuso" />
+                  <img src="/mile4.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/mile5.webp" alt="Alan Lutricuso" />
+                  <img src="/mile5.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img src="/src/assets/team/muchagente.webp" alt="Alan Lutricuso" />
+                  <img src="/muchagente.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
                <SwiperSlide>
-                  <img
-                     src="/src/assets/team/muchagente2.webp"
-                     alt="Alan Lutricuso"
-                  />
+                  <img src="/muchagente2.webp" alt="Alan Lutricuso" />
                </SwiperSlide>
             </Swiper>
          </main>
