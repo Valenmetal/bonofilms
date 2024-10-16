@@ -57,7 +57,7 @@ export default function Team() {
             <div className="team_container">
                <div id="team-1" className="team-member">
                   <img
-                     src="/src/assets/team/PrincipalAlan.webp"
+                     src="../assets/team/PrincipalAlan.webp"
                      alt="Alan Lutricuso - Filmmaker, Videoeditor and Colorist"
                   />
                   <p>
