@@ -341,13 +341,39 @@ nav {
    .img_container {
       max-width: 100%;
       margin: 1em;
-
+      position: relative;
       video {
          max-height: 100%;
          object-fit: scale-down;
          width: fit-content;
       }
    }
+
+   .custom-video__control {
+      position: absolute;
+      top: 41%;
+      left: 45%;
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      font-size: 1em;
+      font-weight: 400;
+      width: 5em;
+      height: 5em;
+      white-space: nowrap;
+      line-height: 0;
+      svg {
+         transition: 0.5s;
+      }
+   }
+   .triangle:hover {
+      transform: scale(1.5);
+      transition: 0.5s;
+   }
+
    .vertical_video {
       @extend .img_container;
       max-height: 38vw;
@@ -653,7 +679,7 @@ nav {
 
    .team_title {
       font-family: "Cehua";
-      font-size: clamp(6rem, 8vw + 12rem, 9rem);
+      font-size: clamp(4.125rem, 2.5rem + 10.3281vi, 9.4531rem);
    }
    .team_container {
       .team-member {
@@ -662,9 +688,13 @@ nav {
          margin-bottom: 5em;
          p {
             font-size: clamp(1rem, 1.7vw + 1rem, 1.9rem);
+            font-family: "Antonio-ExtraLight";
+            letter-spacing: 1px;
+            word-spacing: 3px;
          }
          img {
-            height: 35em;
+            max-height: 35em;
+            min-height: 20em !important;
             margin-inline: 1em;
             -webkit-user-drag: none;
          }
@@ -704,6 +734,10 @@ nav {
 // MEDIA QUERIES
 
 @media screen and (max-width: 1280px) {
+   .custom-video__control {
+      top: 36% !important;
+      left: 40% !important;
+   }
    .team_section {
       width: 80%;
    }
@@ -719,6 +753,10 @@ nav {
    }
 }
 @media screen and (max-width: 878px) {
+   .custom-video__control {
+      width: 4em !important;
+      height: 4em !important;
+   }
    .team_container :nth-child(2) {
       flex-direction: column-reverse;
    }
@@ -742,9 +780,19 @@ nav {
    }
 }
 @media screen and (max-width: 522px) {
+   .custom-video__control {
+      width: 3em !important;
+      height: 3em !important;
+      path {
+         width: 2em !important;
+         height: 2em !important;
+      }
+   }
+
    .team_section {
       width: 80% !important;
       height: min-content !important;
+      margin-top: 0 !important;
    }
    .iframe-carrousel {
       height: 50vw;
@@ -896,6 +944,16 @@ nav {
    }
 }
 @media screen and (max-width: 424px) {
+   .custom-video__control {
+      top: 36% !important;
+      left: 42% !important;
+      width: 2em !important;
+      height: 2em !important;
+      path {
+         width: 1em !important;
+         height: 1em !important;
+      }
+   }
    .logo-container {
       text-align: start;
       p {
@@ -921,9 +979,6 @@ nav {
       }
    }
 
-   .tecnologies {
-      margin: 0 auto 2em auto;
-   }
    .banner_container {
       height: 17em;
    }

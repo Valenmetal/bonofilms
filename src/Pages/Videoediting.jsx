@@ -25,7 +25,7 @@ import Jennifer from "/Jennifer.mp4"
 import KatiChris from "/KatiChris.mp4"
 import LindsayNick from "/LindsayNick.mp4"
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import { Link } from "react-router-dom"
@@ -43,28 +43,7 @@ import "swiper/css/navigation"
 const Videoediting = () => {
    const work_container = useRef()
    const pojects_menu_grid = useRef()
-   useEffect(() => {
-      const handlePointerMove = (e) => {
-         e.target.setAttribute("controls", true)
-      }
 
-      const handlePointerOut = (e) => {
-         e.target.removeAttribute("controls")
-      }
-
-      const videoElements = document.querySelectorAll("#videoediting_video")
-      videoElements.forEach((video) => {
-         video.addEventListener("pointermove", handlePointerMove)
-         video.addEventListener("pointerout", handlePointerOut)
-      })
-
-      return () => {
-         videoElements.forEach((video) => {
-            video.removeEventListener("pointermove", handlePointerMove)
-            video.removeEventListener("pointerout", handlePointerOut)
-         })
-      }
-   }, [])
    useGSAP(
       () => {
          gsap.from(".work_title", {

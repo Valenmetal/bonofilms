@@ -13,7 +13,7 @@ import Pancho from "/Pancho.mp4"
 import SEBA from "/SEBA.mp4"
 import Reel from "/Reel.mp4"
 
-import React, { useEffect, useRef } from "react"
+import { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import { Link } from "react-router-dom"
@@ -25,22 +25,23 @@ export default function Filmmaking() {
    const work_container = useRef()
    const pojects_menu_grid = useRef()
 
-   useEffect(() => {
-      const handleClick = (e) => {
-         e.target.setAttribute("controls", true)
-      }
+   const [isModalOpen, setIsModalOpen] = useState(false)
+   const [selectedVideo, setSelectedVideo] = useState("")
 
-      const videoElements = document.querySelectorAll("#filmmaking_video")
-      videoElements.forEach((video) => {
-         video.addEventListener("click", handleClick)
-      })
+   const handleClick = (videoSrc) => {
+      setSelectedVideo(videoSrc) // Guarda el video que se va a mostrar en el modal
+      setIsModalOpen(true) // Abre el modal
+   }
 
-      return () => {
-         videoElements.forEach((video) => {
-            video.removeEventListener("click", handleClick)
-         })
+   const closeModal = () => {
+      setIsModalOpen(false)
+      setSelectedVideo("") // Limpia el video seleccionado al cerrar
+   }
+   const handleOutsideClick = (event) => {
+      if (event.target.className === "modal") {
+         closeModal()
       }
-   }, [])
+   }
 
    useGSAP(
       () => {
@@ -188,25 +189,55 @@ export default function Filmmaking() {
 
             <div className="work_grid">
                <div className="wraper">
-                  <div id="work11" className="img_container">
+                  <div
+                     id="work11"
+                     className="img_container"
+                     onClick={() => handleClick(Handball)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/Handball`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         poster="/src/assets/thumbnails/Handball.jpg"
                         id="filmmaking_video"
                         muted
                         loop
                         src={Handball}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
-                  <div id="work12" className="img_container">
+                  <div
+                     id="work12"
+                     className="img_container"
+                     onClick={() => handleClick(Rio)}>
                      <Link className="external-logo" to={`/filmmaking/Rio`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         poster="/src/assets/thumbnails/MADA Rio.jpg"
                         id="filmmaking_video"
                         muted
                         loop
                         src={Rio}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
                </div>
             </div>
@@ -225,97 +256,241 @@ export default function Filmmaking() {
 
             <div style={{ marginTop: "1em" }} className="work_grid">
                <div className="wraper">
-                  <div id="work1" className="vertical_video">
+                  <div
+                     id="work1"
+                     className="vertical_video"
+                     onClick={() => handleClick(Danza_vertical_2)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/Danza_vertical_2`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         id="filmmaking_video"
                         muted
                         loop
+                        autoPlay
                         src={Danza_vertical_2}></video>
                   </div>
-                  <div id="work2" className="img_container">
+                  <div
+                     id="work2"
+                     className="img_container"
+                     onClick={() => handleClick(EmiliaCafe)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/EmiliaCafe`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         poster="/src/assets/thumbnails/Emilia Cafe.jpg"
                         id="filmmaking_video"
                         muted
                         loop
                         src={EmiliaCafe}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
                </div>
                <div className="wraper">
-                  <div id="work3" className="img_container">
+                  <div
+                     id="work3"
+                     className="img_container"
+                     onClick={() => handleClick(FPM)}>
                      <Link className="external-logo" to={`/filmmaking/FPM`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         poster="/src/assets/thumbnails/Clase MADA.jpg"
                         id="filmmaking_video"
                         muted
                         loop
                         src={FPM}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
-                  <div id="work4" className="vertical_video">
+                  <div
+                     id="work4"
+                     className="vertical_video"
+                     onClick={() => handleClick(Danza_vertical_3)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/Danza_vertical_3`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         id="filmmaking_video"
                         muted
                         loop
+                        autoPlay
                         src={Danza_vertical_3}></video>
                   </div>
                </div>
                <div className="wraper">
-                  <div id="work5" className="img_container">
+                  <div
+                     id="work5"
+                     className="img_container"
+                     onClick={() => handleClick(Pasta)}>
                      <Link className="external-logo" to={`/filmmaking/Pasta`}></Link>
-                     <video id="filmmaking_video" muted loop src={Pasta}></video>
+                     <video
+                        style={{ pointerEvents: "none" }}
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={Pasta}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
-                  <div id="work6" className="img_container">
+                  <div
+                     id="work6"
+                     className="img_container"
+                     onClick={() => handleClick(Pancho)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/Pancho`}></Link>
-                     <video id="filmmaking_video" muted loop src={Pancho}></video>
+                     <video
+                        style={{ pointerEvents: "none" }}
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={Pancho}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
                </div>
                <div className="wraper">
-                  <div id="work7" className="img_container">
+                  <div
+                     id="work7"
+                     className="img_container"
+                     onClick={() => handleClick(ClaseMADA)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/ClaseMADA`}></Link>
-                     <video id="filmmaking_video" muted loop src={ClaseMADA}></video>
+                     <video
+                        style={{ pointerEvents: "none" }}
+                        id="filmmaking_video"
+                        muted
+                        loop
+                        src={ClaseMADA}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
-                  <div id="work8" className="vertical_video">
+                  <div
+                     id="work8"
+                     className="vertical_video"
+                     onClick={() => handleClick(Danza_vertical_1)}>
                      <Link
                         className="external-logo"
                         to={`/filmmaking/Danza_vertical_1`}></Link>
                      <video
+                        style={{ pointerEvents: "none" }}
                         id="filmmaking_video"
                         muted
                         loop
+                        autoPlay
                         src={Danza_vertical_1}></video>
                   </div>
                </div>
 
                <div className="wraper">
-                  <div id="work9" className="img_container">
+                  <div
+                     id="work9"
+                     className="img_container"
+                     onClick={() => handleClick(SEBA)}>
                      <Link className="external-logo" to={`/filmmaking/SEBA`}></Link>
                      <video id="filmmaking_video" muted loop src={SEBA}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
-                  <div id="work10" className="img_container">
+                  <div
+                     id="work10"
+                     className="img_container"
+                     onClick={() => handleClick(AGUS)}>
                      <Link className="external-logo" to={`/filmmaking/AGUS`}></Link>
                      <video
                         id="filmmaking_video"
                         muted
                         loop
                         src={`${AGUS}#t=0.1`}></video>
+                     <div className="custom-video__control">
+                        <svg
+                           className="triangle"
+                           xmlns="http://www.w3.org/2000/svg"
+                           viewBox="0 0 24 24">
+                           <path
+                              fill="currentColor"
+                              d="M8 17.175V6.825q0-.425.3-.713t.7-.287q.125 0 .263.037t.262.113l8.15 5.175q.225.15.338.375t.112.475t-.112.475t-.338.375l-8.15 5.175q-.125.075-.262.113T9 18.175q-.4 0-.7-.288t-.3-.712"
+                           />
+                        </svg>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
 
+            {isModalOpen && (
+               <div className="modal" onClick={handleOutsideClick}>
+                  <div className="modal-content">
+                     <span className="close" onClick={closeModal}>
+                        &times;
+                     </span>
+                     <video
+                        style={{ borderRadius: ".5em" }}
+                        src={selectedVideo}
+                        controls
+                        autoPlay></video>
+                  </div>
+               </div>
+            )}
+         </div>
          <section className="pojects_menu_section">
             <div ref={pojects_menu_grid} className="pojects_menu_grid">
                <div id="videoediting_menu" className="pojects_menu_item">

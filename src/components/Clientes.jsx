@@ -168,14 +168,15 @@ export default function Clientes() {
                         className="pojects_item pojects_stroke">
                         Filmmaking
                      </div>
+
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="filmmaking_video"
+                        className="flying_video"
+                        src={preview_Filmmaking}></video>
                   </Link>
-                  <video
-                     autoPlay
-                     muted
-                     loop
-                     id="filmmaking_video"
-                     className="flying_video"
-                     src={preview_Filmmaking}></video>
                </div>
                <div className="vert_wraper">
                   <Link className="link" to="/videoediting">
@@ -188,14 +189,15 @@ export default function Clientes() {
                         className="pojects_item pojects_stroke">
                         Videoediting
                      </div>
+
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="videoediting_video"
+                        className="flying_video"
+                        src={preview_Videoediting}></video>
                   </Link>
-                  <video
-                     autoPlay
-                     muted
-                     loop
-                     id="videoediting_video"
-                     className="flying_video"
-                     src={preview_Videoediting}></video>
                </div>
                <div className="vert_wraper">
                   <Link className="link" to="/animation">
@@ -208,14 +210,15 @@ export default function Clientes() {
                         className="pojects_item pojects_stroke">
                         Animation
                      </div>
+
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="animation_video"
+                        className="flying_video"
+                        src={preview_Animation}></video>
                   </Link>
-                  <video
-                     autoPlay
-                     muted
-                     loop
-                     id="animation_video"
-                     className="flying_video"
-                     src={preview_Animation}></video>
                </div>
                <div className="vert_wraper">
                   <Link className="link" to="/colorgrading">
@@ -228,14 +231,15 @@ export default function Clientes() {
                         className="pojects_item pojects_stroke">
                         Colorgrading
                      </div>
+
+                     <video
+                        autoPlay
+                        muted
+                        loop
+                        id="colorgrading_video"
+                        className="flying_video"
+                        src={preview_Colorgrading}></video>
                   </Link>
-                  <video
-                     autoPlay
-                     muted
-                     loop
-                     id="colorgrading_video"
-                     className="flying_video"
-                     src={preview_Colorgrading}></video>
                </div>
             </div>
          </div>

@@ -64,13 +64,13 @@ export default function Team() {
                      With over 5 years of experience, I’ve started out as an
                      independent filmmaker editing and colorgrading my own work. I
                      jumped into freelance working with clients on Upwork in 2020,
-                     when it was hard to go out and shoot videos. For a couple of
-                     years I went to Film School to learn how to become a DP, and
-                     ColorGrading started to captivate my attention and for that
-                     reason I also went ahead and took courses and spent hours and
-                     hours learning the craft on Youtube and other platforms. All of
-                     my work is shot on Sony Cameras, Edited and Colored on Davinci
-                     Resolve.
+                     when it was hard to go out and shoot videos. <br></br> For a
+                     couple of years I went to Film School to learn how to become a
+                     DP, and ColorGrading started to captivate my attention and for
+                     that reason I also went ahead and took courses and spent hours
+                     and hours learning the craft on Youtube and other platforms.
+                     <br></br> All of my work is shot on Sony Cameras, Edited and
+                     Colored on Davinci Resolve.
                   </p>
                </div>
                <div id="team-2" className="team-member">
@@ -78,13 +78,13 @@ export default function Team() {
                      With over 5 years of experience, I’ve started out as an
                      independent filmmaker editing and colorgrading my own work. I
                      jumped into freelance working with clients on Upwork in 2020,
-                     when it was hard to go out and shoot videos. For a couple of
-                     years I went to Film School to learn how to become a DP, and
-                     ColorGrading started to captivate my attention and for that
-                     reason I also went ahead and took courses and spent hours and
-                     hours learning the craft on Youtube and other platforms. All of
-                     my work is shot on Sony Cameras, Edited and Colored on Davinci
-                     Resolve.
+                     when it was hard to go out and shoot videos. <br></br> For a
+                     couple of years I went to Film School to learn how to become a
+                     DP, and ColorGrading started to captivate my attention and for
+                     that reason I also went ahead and took courses and spent hours
+                     and hours learning the craft on Youtube and other platforms.
+                     <br></br> All of my work is shot on Sony Cameras, Edited and
+                     Colored on Davinci Resolve.
                   </p>
                   <img
                      src="/src/assets/team/PrincipalAlan.webp"
