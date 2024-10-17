@@ -25,10 +25,10 @@ import Jennifer from "/Jennifer.mp4"
 import KatiChris from "/KatiChris.mp4"
 import LindsayNick from "/LindsayNick.mp4"
 
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4"
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
@@ -43,6 +43,26 @@ import "swiper/css/navigation"
 const Videoediting = () => {
    const work_container = useRef()
    const pojects_menu_grid = useRef()
+   const location = useLocation() // Obtén la ruta actual
+   useEffect(() => {
+      // Obtén el hash desde la URL
+      let hash = window.location.hash
+
+      // Verifica si el hash incluye un ID de sección
+      if (hash.includes("#/")) {
+         hash = hash.split("#/")[1] // Extraemos solo la parte relevante del hash
+      } else {
+         hash = hash.replace("#", "") // Quitamos el símbolo # si es necesario
+      }
+
+      // Desplaza a la sección correspondiente si se encuentra el hash
+      if (hash) {
+         const section = document.getElementById(hash)
+         if (section) {
+            section.scrollIntoView({ behavior: "smooth", block: "start" })
+         }
+      }
+   }, [location]) // Se ejecuta cuando cambia la ubicación o ruta
 
    useGSAP(
       () => {
@@ -211,7 +231,9 @@ const Videoediting = () => {
             <h1 className="work_title work_title_stroke">Videoediting</h1>
 
             <div style={{ width: "99%" }} className="work_grid">
-               <h2 className="carrousel-title">Docummentary</h2>
+               <h2 id="docummentary" className="carrousel-title">
+                  Docummentary
+               </h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
@@ -261,7 +283,9 @@ const Videoediting = () => {
                   </SwiperSlide>
                </Swiper>
 
-               <h2 className="carrousel-title">Wedding</h2>
+               <h2 id="wedding" className="carrousel-title">
+                  Wedding
+               </h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
@@ -389,7 +413,9 @@ const Videoediting = () => {
                   </SwiperSlide>
                </Swiper>
 
-               <h2 className="carrousel-title">Social Media</h2>
+               <h2 id="socialmedia" className="carrousel-title">
+                  Social Media
+               </h2>
                <div className="social-media-vert-container">
                   <div onClick={() => handleClick(Zee)}>
                      <video
@@ -468,8 +494,9 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                </Swiper>
-
-               <h2 className="carrousel-title">Commercial</h2>
+               <h2 id="commercial" className="carrousel-title">
+                  Commercial
+               </h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
@@ -530,7 +557,9 @@ const Videoediting = () => {
                   </SwiperSlide>
                </Swiper>
 
-               <h2 className="carrousel-title">Corporate</h2>
+               <h2 id="corporate" className="carrousel-title">
+                  Corporate
+               </h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}
@@ -580,7 +609,9 @@ const Videoediting = () => {
                   </SwiperSlide>
                </Swiper>
 
-               <h2 className="carrousel-title">Youtube</h2>
+               <h2 id="youtube" className="carrousel-title">
+                  Youtube
+               </h2>
                <Swiper
                   grabCursor={true}
                   navigation={true}

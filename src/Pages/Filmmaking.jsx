@@ -198,7 +198,7 @@ export default function Filmmaking() {
                         to={`/filmmaking/Handball`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
-                        poster="/src/assets/thumbnails/Handball.jpg"
+                        poster="/Handball.webp"
                         id="filmmaking_video"
                         muted
                         loop
@@ -222,7 +222,7 @@ export default function Filmmaking() {
                      <Link className="external-logo" to={`/filmmaking/Rio`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
-                        poster="/src/assets/thumbnails/MADA Rio.jpg"
+                        poster="/MADA Rio.webp"
                         id="filmmaking_video"
                         muted
                         loop
@@ -280,7 +280,7 @@ export default function Filmmaking() {
                         to={`/filmmaking/EmiliaCafe`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
-                        poster="/src/assets/thumbnails/Emilia Cafe.jpg"
+                        poster="/Emilia Cafe.webp"
                         id="filmmaking_video"
                         muted
                         loop
@@ -306,7 +306,7 @@ export default function Filmmaking() {
                      <Link className="external-logo" to={`/filmmaking/FPM`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
-                        poster="/src/assets/thumbnails/Clase MADA.jpg"
+                        poster="/Clase MADA.webp"
                         id="filmmaking_video"
                         muted
                         loop

@@ -1,16 +1,16 @@
-import React from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
-import Layout from "../Pages/Layout";
-import Index from "../Pages/Index";
-import Filmmaking from "../Pages/Filmmaking";
-import Videoediting from "../Pages/Videoediting";
-import Animation from "../Pages/Animation";
-import Colorgrading from "../Pages/Colorgrading";
-import VideoDetailFilm from "../Pages/VideoDetailFilm";
-import VideoDetailVideo from "../Pages/VideoDetailVideo";
-import VideoDetailAnimation from "../Pages/VideoDetailAnimation";
-import VideoDetailColor from "../Pages/VideoDetailColor";
-import ScrollToTop from "../components/ScrollToTop";
+import React from "react"
+import { HashRouter, Route, Routes } from "react-router-dom"
+import Layout from "../Pages/Layout"
+import Index from "../Pages/Index"
+import Filmmaking from "../Pages/Filmmaking"
+import Videoediting from "../Pages/Videoediting"
+import Animation from "../Pages/Animation"
+import Colorgrading from "../Pages/Colorgrading"
+import VideoDetailFilm from "../Pages/VideoDetailFilm"
+import VideoDetailVideo from "../Pages/VideoDetailVideo"
+import VideoDetailAnimation from "../Pages/VideoDetailAnimation"
+import VideoDetailColor from "../Pages/VideoDetailColor"
+import ScrollToTop from "../components/ScrollToTop"
 const Router = () => {
    return (
       <HashRouter>
@@ -32,7 +32,7 @@ const Router = () => {
             </Route>
          </Routes>
       </HashRouter>
-   );
-};
+   )
+}
 
-export default Router;
+export default Router
