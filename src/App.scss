@@ -114,7 +114,6 @@ nav {
    position: relative;
 }
 .pojects_item {
-   cursor: pointer !important;
    position: absolute;
    font-family: "Cehua";
    font-size: clamp(4rem, 4vw + 4rem, 7rem);
@@ -191,6 +190,9 @@ nav {
 }
 .pojects_grid {
    :nth-child(1) {
+      .pojects_item {
+         cursor: pointer !important;
+      }
       video {
          clip-path: polygon(
             7% 15%,
@@ -215,6 +217,9 @@ nav {
       }
    }
    :nth-child(2) {
+      .pojects_item {
+         cursor: pointer !important;
+      }
       video {
          clip-path: polygon(
             8% 12%,
@@ -239,6 +244,9 @@ nav {
       }
    }
    :nth-child(3) {
+      .pojects_item {
+         cursor: pointer !important;
+      }
       video {
          clip-path: polygon(
             6% 11%,
@@ -263,6 +271,9 @@ nav {
       }
    }
    :nth-child(4) {
+      .pojects_item {
+         cursor: pointer !important;
+      }
       video {
          clip-path: polygon(
             5% 11%,
@@ -479,11 +490,6 @@ nav {
       border: none;
    }
 
-   .mySwiper {
-      min-height: 15em;
-      max-height: 47em;
-   }
-
    .swiper {
       width: 100%;
       padding-top: 50px;
@@ -497,48 +503,8 @@ nav {
          width: inherit;
          height: inherit;
       }
-
-      .iframe-carrousel {
-         height: 37vw;
-      }
    }
 
-   .modal {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.549);
-      z-index: 1000;
-   }
-
-   .modal-content {
-      position: relative;
-
-      video {
-         height: 45em;
-      }
-   }
-
-   .close {
-      position: absolute;
-      top: -40px;
-      right: -20px;
-      font-size: 2em;
-      cursor: pointer;
-   }
-   .social-media-vert-container {
-      display: flex;
-      justify-content: space-between;
-      width: 90%;
-      :nth-child(1) {
-         margin-right: 1em;
-      }
-   }
    .carrousel-title {
       margin-top: 1em;
       font-size: clamp(1.75rem, 1.225rem + 2.625vw, 4.375rem);
@@ -669,7 +635,49 @@ nav {
       overflow-x: hidden;
    }
 }
+.mySwiper {
+   min-height: 15em;
+   max-height: 47em;
+}
+.iframe-carrousel {
+   height: 37vw;
+}
+.social-media-vert-container {
+   display: flex;
+   justify-content: space-between;
+   margin-inline: auto;
+   width: 90%;
+   :nth-child(1) {
+      margin-right: 1em;
+   }
+}
+.close {
+   position: absolute;
+   top: -40px;
+   right: -20px;
+   font-size: 2em;
+   cursor: pointer;
+}
+.modal {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.549);
+   z-index: 1000;
+}
 
+.modal-content {
+   position: relative;
+
+   video {
+      height: 45em;
+   }
+}
 // VIDEO DETAIL
 // VIDEO DETAIL
 // VIDEO DETAIL
@@ -719,7 +727,12 @@ nav {
 .back-button:hover::before {
    width: 100%;
 }
-
+.carrousel-title_videodetail {
+   margin-top: 1em;
+   font-size: clamp(2rem, 1.9rem + 2.625vw, 4.375rem);
+   font-family: "Cehua";
+   text-align: center;
+}
 // FOOTER
 // FOOTER
 // FOOTER

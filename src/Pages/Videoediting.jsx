@@ -186,7 +186,7 @@ const Videoediting = () => {
 
    const closeModal = () => {
       setIsModalOpen(false)
-      setSelectedVideo("") // Limpia el video seleccionado al cerrar
+      setSelectedVideo("")
    }
    const handleOutsideClick = (event) => {
       if (event.target.className === "modal") {
