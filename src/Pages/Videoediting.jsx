@@ -25,7 +25,7 @@ import Jennifer from "/Jennifer.mp4"
 import KatiChris from "/KatiChris.mp4"
 import LindsayNick from "/LindsayNick.mp4"
 
-import React, { useEffect, useRef, useState } from "react"
+import React, { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import { Link, useLocation } from "react-router-dom"
@@ -43,26 +43,6 @@ import "swiper/css/navigation"
 const Videoediting = () => {
    const work_container = useRef()
    const pojects_menu_grid = useRef()
-   const location = useLocation() // Obtén la ruta actual
-   useEffect(() => {
-      // Obtén el hash desde la URL
-      let hash = window.location.hash
-
-      // Verifica si el hash incluye un ID de sección
-      if (hash.includes("#/")) {
-         hash = hash.split("#/")[1] // Extraemos solo la parte relevante del hash
-      } else {
-         hash = hash.replace("#", "") // Quitamos el símbolo # si es necesario
-      }
-
-      // Desplaza a la sección correspondiente si se encuentra el hash
-      if (hash) {
-         const section = document.getElementById(hash)
-         if (section) {
-            section.scrollIntoView({ behavior: "smooth", block: "start" })
-         }
-      }
-   }, [location]) // Se ejecuta cuando cambia la ubicación o ruta
 
    useGSAP(
       () => {
@@ -494,7 +474,7 @@ const Videoediting = () => {
                      </div>
                   </SwiperSlide>
                </Swiper>
-               <h2 id="commercial" className="carrousel-title">
+               <h2 id="Commercial" className="carrousel-title">
                   Commercial
                </h2>
                <Swiper
