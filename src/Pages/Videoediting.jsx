@@ -3,7 +3,6 @@ import AndreCassiano from "/AndreCassiano.mp4"
 import Fandelier from "/Fandelier.mp4"
 import Interview_Tacoma_Farmers from "/Interview_Tacoma_Farmers.mp4"
 import MADA_1 from "/MADA_1.mp4"
-// import MADA_2 from "/MADA_2.mp4"
 import MADA_3 from "/MADA_3.mp4"
 import Max_Drifting from "/Max_Drifting.mp4"
 import Mercy from "/Mercy.mp4"
@@ -39,6 +38,7 @@ import { Navigation } from "swiper/modules"
 import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/navigation"
+import { Modal } from "../components/Modal"
 
 const Videoediting = () => {
    const work_container = useRef()
@@ -182,16 +182,6 @@ const Videoediting = () => {
    const handleClick = (videoSrc) => {
       setSelectedVideo(videoSrc) // Guarda el video que se va a mostrar en el modal
       setIsModalOpen(true) // Abre el modal
-   }
-
-   const closeModal = () => {
-      setIsModalOpen(false)
-      setSelectedVideo("")
-   }
-   const handleOutsideClick = (event) => {
-      if (event.target.className === "modal") {
-         closeModal()
-      }
    }
 
    return (
@@ -652,22 +642,24 @@ const Videoediting = () => {
                         referrerPolicy="strict-origin-when-cross-origin"
                         allowFullScreen></iframe>
                   </SwiperSlide>
+                  <SwiperSlide>
+                     <iframe
+                        className="iframe-carrousel"
+                        src="https://www.youtube.com/embed/f3W7trZ_nJk"
+                        title="15 Min Strong ABS &amp; Core No Equipment, No Repeat"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin"
+                        allowFullScreen></iframe>
+                  </SwiperSlide>
                </Swiper>
             </div>
 
             {isModalOpen && (
-               <div className="modal" onClick={handleOutsideClick}>
-                  <div className="modal-content">
-                     <span className="close" onClick={closeModal}>
-                        &times;
-                     </span>
-                     <video
-                        style={{ borderRadius: ".5em" }}
-                        src={selectedVideo}
-                        controls
-                        autoPlay></video>
-                  </div>
-               </div>
+               <Modal
+                  selectedVideo={selectedVideo}
+                  setIsModalOpen={setIsModalOpen}
+                  setSelectedVideo={setSelectedVideo}
+               />
             )}
 
             <Carrousel texts={texts} interval={3000} />

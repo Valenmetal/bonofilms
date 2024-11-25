@@ -20,6 +20,7 @@ import { Link } from "react-router-dom"
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4"
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
+import { Modal } from "../components/Modal"
 
 export default function Filmmaking() {
    const work_container = useRef()
@@ -31,16 +32,6 @@ export default function Filmmaking() {
    const handleClick = (videoSrc) => {
       setSelectedVideo(videoSrc) // Guarda el video que se va a mostrar en el modal
       setIsModalOpen(true) // Abre el modal
-   }
-
-   const closeModal = () => {
-      setIsModalOpen(false)
-      setSelectedVideo("") // Limpia el video seleccionado al cerrar
-   }
-   const handleOutsideClick = (event) => {
-      if (event.target.className === "modal") {
-         closeModal()
-      }
    }
 
    useGSAP(
@@ -479,18 +470,11 @@ export default function Filmmaking() {
             </div>
 
             {isModalOpen && (
-               <div className="modal" onClick={handleOutsideClick}>
-                  <div className="modal-content">
-                     <span className="close" onClick={closeModal}>
-                        &times;
-                     </span>
-                     <video
-                        style={{ borderRadius: ".5em" }}
-                        src={selectedVideo}
-                        controls
-                        autoPlay></video>
-                  </div>
-               </div>
+               <Modal
+                  selectedVideo={selectedVideo}
+                  setIsModalOpen={setIsModalOpen}
+                  setSelectedVideo={setSelectedVideo}
+               />
             )}
          </div>
          <section className="projects_menu_section">
