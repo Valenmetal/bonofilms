@@ -220,6 +220,13 @@ const Animation = () => {
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                      referrerPolicy="strict-origin-when-cross-origin"
                      allowFullScreen></iframe>
+                  <iframe
+                     className="iframe"
+                     src="https://www.youtube.com/embed/f3W7trZ_nJk"
+                     title="15 Min Strong ABS &amp; Core No Equipment, No Repeat"
+                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                     referrerPolicy="strict-origin-when-cross-origin"
+                     allowFullScreen></iframe>
                </div>
             </div>
          </div>

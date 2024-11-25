@@ -29,7 +29,9 @@ figure {
    -o-object-position: center center;
    object-position: center center;
 }
-
+strong{
+   color: rgba(222, 223, 224, 0.87);
+}
 @font-face {
    font-family: "Cehua";
    src: url(Fonts/CehuaFree.otf);

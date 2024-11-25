@@ -60,55 +60,68 @@ export default function Team() {
                      src="/PrinciAlan.webp"
                      alt="Alan Lutricuso - Filmmaker, Videoeditor and Colorist"
                   />
-                  <p>
-                     Comencé como filmmaker independiente grabando videos para
-                     distintos clientes, y editando mi propio trabajo.<br></br> En
-                     2020 empecé a trabajar full-time como editor de video en Upwork
-                     y otras plataformas. <br></br>Estudié en TCYM (Taller de Cine y
-                     Multimedia) donde me formé para desarrollar roles como Dirección
-                     de foto, eléctrico y distintos roles de camara. Tambien me
-                     desenvuelvo en el area de post-producción editando video, como
-                     colorista y haciendo mezcla de sonido.
-                     <br></br>
-                     <br></br>I started out as an independent filmmaker shooting
-                     videos for clients, and editing my own work. <br></br>In 2020 I
-                     went full-time working freelance as a Videoeditor on Upwork and
-                     other platforms. <br></br>I studied at Film School and gain
+                  <p className="prose">
+                     Comencé como <strong>filmmaker </strong>independiente grabando
+                     videos para distintos clientes, y editando mi propio trabajo. En
+                     2020 empecé a trabajar <strong>full-time</strong> como
+                     <strong> editor</strong> de video en <strong>Upwork</strong> y
+                     otras plataformas. Estudié en TCYM (Taller de Cine y Multimedia)
+                     donde me formé para desarrollar roles como
+                     <strong> Dirección de foto</strong>, eléctrico y distintos roles
+                     de camara. Tambien me desenvuelvo en el area de
+                     <strong> post-producción </strong>
+                     editando video, como <strong>colorista</strong> y haciendo
+                     mezcla de sonido.
+                     <br />
+                     <br /> I started out as an independent
+                     <strong> filmmaker </strong> shooting videos for clients, and
+                     editing my own work. In 2020 I went <strong> full-time </strong>
+                     working freelance as a <strong> Videoeditor </strong> on
+                     <strong> Upwork </strong>
+                     and other platforms. I studied at Film School and gain
                      experience in different areas of the film industry to cover
-                     different rols such as Director, DP, Camera man, Electrician
-                     amongst others. My formation also includes post-production
-                     skills I developed in Videoediting, Colorgrading and Sound
-                     Design.
-                     <br></br>
+                     different rols such as <strong>Director</strong>, DP, Camera
+                     man, Electrician amongst others. My formation also includes
+                     <strong> post-production </strong> skills I developed in
+                     Videoediting, <strong>Colorgrading</strong> and Sound Design.
                   </p>
                </div>
                <div id="team-2" className="team-member">
-                  <p>
-                     I began my journey as a video editor working with clients on
-                     various projects, gaining valuable experience along the way.
-                     <br></br>My passion for visual storytelling led me to study
-                     animation at university for a few years, which I thoroughly
-                     enjoyed. In 2020, I transitioned into full-time freelancing, and
-                     I’ve been dedicated to it ever since. <br></br>Along the way,
-                     I’ve completed courses in Cinematography and Color Grading,
-                     which significantly enhanced my skills and the quality of my
-                     editing work. <br></br>I primarily edit using DaVinci Resolve,
-                     but I’m also highly proficient with a range of other tools,
-                     including After Effects, Premiere Pro, Maya, Moho, Toon Boom,
-                     and ZBrush. <br></br>
-                     <br></br>Comencé mi camino como editora de video trabajando con
-                     clientes en diversos proyectos, adquiriendo experiencia valiosa
-                     en el proceso. <br></br>Mi pasión por la narración visual me
-                     llevó a estudiar animación en la universidad durante algunos
-                     años, algo que disfruté mucho. En 2020, di el paso hacia el
-                     freelance a tiempo completo, y desde entonces me he dedicado
-                     plenamente a ello. <br></br>A lo largo de este tiempo, realicé
-                     cursos de Cinematografía y Corrección de Color, lo que mejoró
+                  <p className="prose">
+                     Comencé mi camino como <strong>editora de video </strong>
+                     trabajando con clientes en diversos proyectos, adquiriendo
+                     experiencia valiosa en el proceso. Mi pasión por la
+                     <strong> narración visual</strong> me llevó a estudiar animación
+                     en la universidad durante algunos años, algo que disfruté mucho.
+                     En 2020, di el paso hacia el
+                     <strong> freelance a tiempo completo</strong>, y desde entonces
+                     me he dedicado plenamente a ello. A lo largo de este tiempo,
+                     realicé cursos de <strong>Cinematografía</strong> y
+                     <strong> Corrección de Color</strong>, lo que mejoró
                      significativamente mis habilidades y la calidad de mi trabajo
-                     como editora. Principalmente edito utilizando DaVinci Resolve,
-                     pero también tengo un alto nivel de manejo en otras
-                     herramientas, como After Effects, Premiere Pro, Maya, Moho,
-                     Toon Boom y ZBrush.
+                     como editora. Principalmente edito utilizando
+                     <strong> DaVinci Resolve</strong>, pero también tengo un alto
+                     nivel de manejo en otras herramientas, como
+                     <strong> After Effects</strong>,<strong> Premiere Pro</strong>,{" "}
+                     <strong>Maya</strong>, <strong>Moho</strong>,{" "}
+                     <strong>Toon Boom</strong> y
+                     <strong> ZBrush</strong>.
+                     <br /> <br /> I began my journey as a{" "}
+                     <strong>video editor</strong> working with clients on various
+                     projects, gaining valuable experience along the way. My passion
+                     for <strong>visual storytelling</strong> led me to study
+                     animation at university for a few years, which I thoroughly
+                     enjoyed. In 2020, I transitioned into{" "}
+                     <strong>full-time freelancing</strong>, and I’ve been dedicated
+                     to it ever since. Along the way, I’ve completed courses in{" "}
+                     <strong>Cinematography</strong> and{" "}
+                     <strong>Color Grading</strong>, which significantly enhanced my
+                     skills and the quality of my editing work. I primarily edit
+                     using <strong>DaVinci Resolve</strong>, but I’m also highly
+                     proficient with a range of other tools, including{" "}
+                     <strong>After Effects</strong>, <strong>Premiere Pro</strong>,{" "}
+                     <strong>Maya</strong>, <strong>Moho</strong>,{" "}
+                     <strong>Toon Boom</strong>, and <strong>ZBrush</strong>.
                   </p>
                   <img
                      src="/PrincipalMile.webp"

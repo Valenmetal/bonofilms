@@ -209,6 +209,7 @@ const Colorgrading = () => {
                         to={`/colorgrading/ClaseMADA`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
+                        poster="/Clase MADA.webp"
                         muted
                         loop
                         id="colorgrading_video"
@@ -235,6 +236,7 @@ const Colorgrading = () => {
                      to={`/colorgrading/EmiliaCafe`}></Link>
                   <video
                      style={{ pointerEvents: "none" }}
+                     poster="/miniatura-video-cafe.webp"
                      muted
                      loop
                      id="colorgrading_video"
@@ -261,6 +263,7 @@ const Colorgrading = () => {
                         to={`/colorgrading/Handball`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
+                        poster="/miniatura-video-handball.webp"
                         muted
                         loop
                         id="colorgrading_video"
@@ -286,6 +289,7 @@ const Colorgrading = () => {
                         to={`/colorgrading/Pancho`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
+                        poster="/miniatura-video-pancho.webp"
                         muted
                         loop
                         id="colorgrading_video"
@@ -310,6 +314,7 @@ const Colorgrading = () => {
                   <Link className="external-logo" to={`/colorgrading/Pasta`}></Link>
                   <video
                      style={{ pointerEvents: "none" }}
+                     poster="/miniatura-video-comida.webp"
                      muted
                      loop
                      id="colorgrading_video"
