@@ -10,7 +10,7 @@ import preview_Colorgrading from "../assets/vid/preview/Scrolling preview COLOR.
 import { useRef } from "react"
 
 export default function Clientes() {
-   const pojects_grid = useRef()
+   const projects_grid = useRef()
    useGSAP(
       () => {
          let mm = gsap.matchMedia()
@@ -151,21 +151,21 @@ export default function Clientes() {
             }
          )
       },
-      { scope: pojects_grid }
+      { scope: projects_grid }
    )
 
    return (
       <>
          <div className="section" style={{ marginTop: 0 }}>
-            <div ref={pojects_grid} className="pojects_grid">
+            <div ref={projects_grid} className="projects_grid">
                <div className="vert_wraper">
                   <Link className="link" to="/filmmaking">
-                     <div id="filmmaking" className="pojects_item">
+                     <div id="filmmaking" className="projects_item">
                         Filmmaking
                      </div>
                      <div
                         id="filmmaking_stroke"
-                        className="pojects_item pojects_stroke">
+                        className="projects_item projects_stroke">
                         Filmmaking
                      </div>
 
@@ -180,13 +180,13 @@ export default function Clientes() {
                </div>
                <div className="vert_wraper">
                   <Link className="link" to="/videoediting">
-                     <div id="videoediting" className="pojects_item">
+                     <div id="videoediting" className="projects_item">
                         Videoediting
                      </div>
 
                      <div
                         id="videoediting_stroke"
-                        className="pojects_item pojects_stroke">
+                        className="projects_item projects_stroke">
                         Videoediting
                      </div>
 
@@ -201,13 +201,13 @@ export default function Clientes() {
                </div>
                <div className="vert_wraper">
                   <Link className="link" to="/animation">
-                     <div id="animation" className="pojects_item">
+                     <div id="animation" className="projects_item">
                         Animation
                      </div>
 
                      <div
                         id="animation_stroke"
-                        className="pojects_item pojects_stroke">
+                        className="projects_item projects_stroke">
                         Animation
                      </div>
 
@@ -222,13 +222,13 @@ export default function Clientes() {
                </div>
                <div className="vert_wraper">
                   <Link className="link" to="/colorgrading">
-                     <div id="colorgrading" className="pojects_item">
+                     <div id="colorgrading" className="projects_item">
                         Colorgrading
                      </div>
 
                      <div
                         id="colorgrading_stroke"
-                        className="pojects_item pojects_stroke">
+                        className="projects_item projects_stroke">
                         Colorgrading
                      </div>
 

@@ -42,7 +42,7 @@ import "swiper/css/navigation"
 
 const Videoediting = () => {
    const work_container = useRef()
-   const pojects_menu_grid = useRef()
+   const projects_menu_grid = useRef()
 
    useGSAP(
       () => {
@@ -56,7 +56,7 @@ const Videoediting = () => {
 
    useGSAP(
       () => {
-         gsap.to(".pojects_menu_item_fill", {
+         gsap.to(".projects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#animation_menu",
                start: "-75% center",
@@ -64,7 +64,7 @@ const Videoediting = () => {
             },
             width: "100%",
          })
-         gsap.to(".pojects_menu_item_fill", {
+         gsap.to(".projects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#animation_menu",
                start: "-75% center",
@@ -162,7 +162,7 @@ const Videoediting = () => {
             )
          }
       },
-      { scope: pojects_menu_grid }
+      { scope: projects_menu_grid }
    )
 
    const texts = [
@@ -673,11 +673,11 @@ const Videoediting = () => {
             <Carrousel texts={texts} interval={3000} />
          </div>
 
-         <section className="pojects_menu_section">
-            <div ref={pojects_menu_grid} className="pojects_menu_grid">
-               <div id="filmmaking_menu" className="pojects_menu_item">
+         <section className="projects_menu_section">
+            <div ref={projects_menu_grid} className="projects_menu_grid">
+               <div id="filmmaking_menu" className="projects_menu_item">
                   <Link className="link" to="/filmmaking">
-                     <span className="pojects_menu_item_fill">Filmmaking</span>
+                     <span className="projects_menu_item_fill">Filmmaking</span>
                      <span id="ghost">Film</span>
                      <video
                         autoPlay
@@ -689,9 +689,9 @@ const Videoediting = () => {
                      <span id="ghost">making</span>
                   </Link>
                </div>
-               <div id="animation_menu" className="pojects_menu_item">
+               <div id="animation_menu" className="projects_menu_item">
                   <Link className="link" to="/animation">
-                     <span className="pojects_menu_item_fill">Animation</span>
+                     <span className="projects_menu_item_fill">Animation</span>
                      <span id="ghost">Animation</span>
                      <video
                         autoPlay
@@ -702,9 +702,9 @@ const Videoediting = () => {
                         src={mini_Animation}></video>
                   </Link>
                </div>
-               <div id="colorgrading_menu" className="pojects_menu_item">
+               <div id="colorgrading_menu" className="projects_menu_item">
                   <Link className="link" to="/colorgrading">
-                     <span className="pojects_menu_item_fill">Colorgrading</span>
+                     <span className="projects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video
                         autoPlay

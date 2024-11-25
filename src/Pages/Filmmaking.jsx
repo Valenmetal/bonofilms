@@ -11,7 +11,7 @@ import Pasta from "/Pasta.mp4"
 import Rio from "/Rio.mp4"
 import Pancho from "/Pancho.mp4"
 import SEBA from "/SEBA.mp4"
-import Reel from "/Reel.mp4"
+import Reel from "/Reel2024.mp4"
 
 import { useRef, useState } from "react"
 import { gsap } from "gsap"
@@ -23,7 +23,7 @@ import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
 
 export default function Filmmaking() {
    const work_container = useRef()
-   const pojects_menu_grid = useRef()
+   const projects_menu_grid = useRef()
 
    const [isModalOpen, setIsModalOpen] = useState(false)
    const [selectedVideo, setSelectedVideo] = useState("")
@@ -66,7 +66,7 @@ export default function Filmmaking() {
 
    useGSAP(
       () => {
-         gsap.to(".pojects_menu_item_fill", {
+         gsap.to(".projects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#videoediting_menu",
                start: "-75% center",
@@ -74,7 +74,7 @@ export default function Filmmaking() {
             },
             width: "100%",
          })
-         gsap.to(".pojects_menu_item_fill", {
+         gsap.to(".projects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#videoediting_menu",
                start: "-75% center",
@@ -170,7 +170,7 @@ export default function Filmmaking() {
             )
          }
       },
-      { scope: pojects_menu_grid }
+      { scope: projects_menu_grid }
    )
 
    return (
@@ -198,7 +198,7 @@ export default function Filmmaking() {
                         to={`/filmmaking/Handball`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
-                        poster="/Handball.webp"
+                        poster="/miniatura-video-handball.webp"
                         id="filmmaking_video"
                         muted
                         loop
@@ -243,8 +243,8 @@ export default function Filmmaking() {
             </div>
 
             <div id="reel" className="reel">
-               <p className="subtitle">REEL 2024</p>
-               <p className="subtitle_stroke">REEL 2024</p>
+               <p className="subtitle">Reel 2024</p>
+               <p className="subtitle_stroke">Reel 2024</p>
                <video
                   className="reel_video"
                   autoPlay
@@ -280,7 +280,7 @@ export default function Filmmaking() {
                         to={`/filmmaking/EmiliaCafe`}></Link>
                      <video
                         style={{ pointerEvents: "none" }}
-                        poster="/Emilia Cafe.webp"
+                        poster="/miniatura-video-cafe.webp"
                         id="filmmaking_video"
                         muted
                         loop
@@ -348,6 +348,7 @@ export default function Filmmaking() {
                      <video
                         style={{ pointerEvents: "none" }}
                         id="filmmaking_video"
+                        poster="/miniatura-video-comida.webp"
                         muted
                         loop
                         src={Pasta}></video>
@@ -373,6 +374,7 @@ export default function Filmmaking() {
                      <video
                         style={{ pointerEvents: "none" }}
                         id="filmmaking_video"
+                        poster="/miniatura-video-pancho.webp"
                         muted
                         loop
                         src={Pancho}></video>
@@ -491,11 +493,11 @@ export default function Filmmaking() {
                </div>
             )}
          </div>
-         <section className="pojects_menu_section">
-            <div ref={pojects_menu_grid} className="pojects_menu_grid">
-               <div id="videoediting_menu" className="pojects_menu_item">
+         <section className="projects_menu_section">
+            <div ref={projects_menu_grid} className="projects_menu_grid">
+               <div id="videoediting_menu" className="projects_menu_item">
                   <Link className="link" to="/videoediting">
-                     <span className="pojects_menu_item_fill">Videoediting</span>
+                     <span className="projects_menu_item_fill">Videoediting</span>
 
                      <span id="ghost">Video</span>
                      <video
@@ -508,9 +510,9 @@ export default function Filmmaking() {
                      <span id="ghost">editing</span>
                   </Link>
                </div>
-               <div id="animation_menu" className="pojects_menu_item">
+               <div id="animation_menu" className="projects_menu_item">
                   <Link className="link" to="/animation">
-                     <span className="pojects_menu_item_fill">Animation</span>
+                     <span className="projects_menu_item_fill">Animation</span>
                      <span id="ghost">Animation</span>
                      <video
                         autoPlay
@@ -521,9 +523,9 @@ export default function Filmmaking() {
                         src={mini_Animation}></video>
                   </Link>
                </div>
-               <div id="colorgrading_menu" className="pojects_menu_item">
+               <div id="colorgrading_menu" className="projects_menu_item">
                   <Link className="link" to="/colorgrading">
-                     <span className="pojects_menu_item_fill">Colorgrading</span>
+                     <span className="projects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video
                         autoPlay

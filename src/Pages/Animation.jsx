@@ -3,7 +3,8 @@ import video from "../assets/vid/banners/Banner Home ANIMACION.mp4"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import thirdhome from "/thirdhome.mp4"
-// import xledger from "/thirdhome.mp4"
+import kiss from "/Kisscam.mp4"
+import Xledger from "/Xledger.mp4"
 
 import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
@@ -13,7 +14,7 @@ import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
 
 const Animation = () => {
    const work_container = useRef()
-   const pojects_menu_grid = useRef()
+   const projects_menu_grid = useRef()
    useEffect(() => {
       const handlePointerMove = (e) => {
          e.target.setAttribute("controls", true)
@@ -48,7 +49,7 @@ const Animation = () => {
    )
    useGSAP(
       () => {
-         gsap.to(".pojects_menu_item_fill", {
+         gsap.to(".projects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#filmmaking_menu",
                start: "-75% center",
@@ -56,7 +57,7 @@ const Animation = () => {
             },
             width: "100%",
          })
-         gsap.to(".pojects_menu_item_fill", {
+         gsap.to(".projects_menu_item_fill", {
             scrollTrigger: {
                trigger: "#filmmaking_menu",
                start: "-75% center",
@@ -154,7 +155,7 @@ const Animation = () => {
             )
          }
       },
-      { scope: pojects_menu_grid }
+      { scope: projects_menu_grid }
    )
    return (
       <section className="page_section">
@@ -198,7 +199,15 @@ const Animation = () => {
                      muted></video>
                   <video
                      className="iframe"
-                     src={thirdhome}
+                     src={kiss}
+                     id="animation_video"
+                     controls
+                     autoPlay
+                     muted
+                  />
+                  <video
+                     className="iframe"
+                     src={Xledger}
                      id="animation_video"
                      controls
                      autoPlay
@@ -215,11 +224,11 @@ const Animation = () => {
             </div>
          </div>
 
-         <section className="pojects_menu_section">
-            <div ref={pojects_menu_grid} className="pojects_menu_grid">
-               <div id="filmmaking_menu" className="pojects_menu_item">
+         <section className="projects_menu_section">
+            <div ref={projects_menu_grid} className="projects_menu_grid">
+               <div id="filmmaking_menu" className="projects_menu_item">
                   <Link className="link" to="/filmmaking">
-                     <span className="pojects_menu_item_fill">Filmmaking</span>
+                     <span className="projects_menu_item_fill">Filmmaking</span>
                      <span id="ghost">Film</span>
                      <video
                         autoPlay
@@ -231,9 +240,9 @@ const Animation = () => {
                      <span id="ghost">making</span>
                   </Link>
                </div>
-               <div id="videoediting_menu" className="pojects_menu_item">
+               <div id="videoediting_menu" className="projects_menu_item">
                   <Link className="link" to="/videoediting">
-                     <span className="pojects_menu_item_fill">Videoediting</span>
+                     <span className="projects_menu_item_fill">Videoediting</span>
 
                      <span id="ghost">Video</span>
                      <video
@@ -247,9 +256,9 @@ const Animation = () => {
                   </Link>
                </div>
 
-               <div id="colorgrading_menu" className="pojects_menu_item">
+               <div id="colorgrading_menu" className="projects_menu_item">
                   <Link className="link" to="/colorgrading">
-                     <span className="pojects_menu_item_fill">Colorgrading</span>
+                     <span className="projects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video
                         autoPlay
