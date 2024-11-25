@@ -30,7 +30,14 @@ figure {
    object-position: center center;
 }
 strong{
-   color: rgba(222, 223, 224, 0.87);
+   color: oklch(90.32% 0.0017 247.84);
+    transition: text-shadow 1s ease-in-out;
+   
+}
+strong.active{
+   text-shadow: 0 0 10px rgb(175, 182, 223,0.7), 
+                 0 0 20px rgb(175, 182, 223,0.5), 
+                 0 0 30px rgb(175, 182, 223,0.4);
 }
 @font-face {
    font-family: "Cehua";
@@ -59,7 +66,7 @@ h1 {
 }
 :root {
    margin: 0 auto;
-   color: rgba(175, 182, 223, 0.87);
+   color: oklch(78.46% 0.0588 277.36);
    background-color: #1e1e1e;
 
    background-size: 100%;

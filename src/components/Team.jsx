@@ -11,6 +11,24 @@ import "swiper/css/navigation"
 
 gsap.registerPlugin(ScrollTrigger)
 export default function Team() {
+   const strongElements = document.querySelectorAll("strong")
+
+   // Función para activar y desactivar el brillo aleatoriamente
+   function toggleGlow() {
+      strongElements.forEach((word) => {
+         // Generar un número aleatorio para decidir si activar el brillo
+         const shouldGlow = Math.random() > 0.5 // 50% de probabilidad
+         if (shouldGlow) {
+            word.classList.add("active")
+         } else {
+            word.classList.remove("active")
+         }
+      })
+   }
+
+   // Activar la función cada cierto intervalo
+   setInterval(toggleGlow, 1000) // Cambia cada segundo
+
    useGSAP(
       () => {
          gsap.from(".team_title", {
