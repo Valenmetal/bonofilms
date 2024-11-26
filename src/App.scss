@@ -670,9 +670,9 @@ nav {
 
 .modal-content {
    position: relative;
-
    video {
-      height: 45em;
+      max-height: 95vh;
+      max-width: 95vw;
    }
 }
 // VIDEO DETAIL
@@ -836,9 +836,6 @@ nav {
          flex-direction: column;
          align-items: end;
       }
-   }
-   .modal-content {
-      width: 90%;
    }
 }
 @media screen and (max-width: 878px) {
