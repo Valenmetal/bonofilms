@@ -1,33 +1,60 @@
 import video from "../assets/vid/banners/Banner Home VIDEOEDITING.mp4"
 import AndreCassiano from "/AndreCassiano.mp4"
+import AndreCassiano15seg from "/Andre Cassiano.mp4"
 import Fandelier from "/Fandelier.mp4"
 import Interview_Tacoma_Farmers from "/Interview_Tacoma_Farmers.mp4"
+import Interview_Tacoma_Farmers15seg from "/Interview_Tacoma_Farmers15seg.mp4"
 import MADA_1 from "/MADA_1.mp4"
 import MADA_3 from "/MADA_3.mp4"
 import Max_Drifting from "/Max_Drifting.mp4"
+import Max_Drifting15seg from "/Max_Drifting15seg.mp4"
 import Mercy from "/Mercy.mp4"
+import Mercy15seg from "/Mercy15seg.mp4"
 import Olive_Group from "/Olive_Group.mp4"
+import Olive_Group15seg from "/Olive_Group15seg.mp4"
 import PanchoVertical from "/PanchoVertical.mp4"
+import PanchoVertical15seg from "/PanchoVertical15seg.mp4"
 import Pancho from "/Pancho.mp4"
+import Pancho15seg from "/Pancho15seg.mp4"
 import Sprague from "/Sprague.mp4"
+import Sprague15seg from "/Sprague15seg.mp4"
 import Tacoma_Farmers from "/Tacoma_Farmers.mp4"
+import Tacoma_Farmers15seg from "/Tacoma_Farmers15seg.mp4"
 import Tapps_Electrics from "/Tapps_Electrics.mp4"
+import Tapps_Electrics15seg from "/Tapps_Electrics15seg.mp4"
+import Vendimia from "/Vendimia.mp4"
+import Vendimia15seg from "/Vendimia15seg.mp4"
 import Zee from "/Zee.mp4"
+import Zee15seg from "/Zee15seg.mp4"
 import ZOOM_TRB from "/ZOOM_TRB.mp4"
+import ZOOM_TRB15seg from "/ZOOM_TRB15seg.mp4"
 import AveryJason from "/AveryJason.mp4"
+import AveryJason15seg from "/AveryJason15seg.mp4"
 import CaitlynThomas from "/CaitlynThomas.mp4"
+import CaitlynThomas15seg from "/CaitlynThomas15seg.mp4"
 import ChristinaMatth from "/ChristinaMatth.mp4"
+import ChristinaMatth15seg from "/ChristinaMatth15seg.mp4"
 import geishachris from "/geishachris.mp4"
+import geishachris15seg from "/geishachris15seg.mp4"
 import Jacki from "/Jacki.mp4"
+import Jacki15seg from "/Jacki15seg.mp4"
 import JessicaNick from "/JessicaNick.mp4"
+import JessicaNick15seg from "/JessicaNick15seg.mp4"
 import Jennifer from "/Jennifer.mp4"
+import Jennifer15seg from "/Jennifer15seg.mp4"
 import KatiChris from "/KatiChris.mp4"
+import KatiChris15seg from "/KatiChris15seg.mp4"
 import LindsayNick from "/LindsayNick.mp4"
+import LindsayNick15seg from "/LindsayNick15seg.mp4"
+import Sunny1 from "/Sunny1.mp4"
+import Sunny2 from "/Sunny2.mp4"
+import Sunny3 from "/Sunny3.mp4"
+import Sunny4 from "/Sunny4.mp4"
 
 import React, { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4"
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
@@ -226,7 +253,18 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Interview_Tacoma_Farmers}></video>
+                           src={Interview_Tacoma_Farmers15seg}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Vendimia)}>
+                        <video
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Vendimia15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -237,7 +275,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Tacoma_Farmers}></video>
+                           src={Tacoma_Farmers15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -248,7 +286,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={AndreCassiano}></video>
+                           src={AndreCassiano15seg}></video>
                      </div>
                   </SwiperSlide>
                </Swiper>
@@ -282,7 +320,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={AveryJason}></video>
+                           src={AveryJason15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -294,7 +332,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={CaitlynThomas}></video>
+                           src={CaitlynThomas15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -306,7 +344,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={ChristinaMatth}></video>
+                           src={ChristinaMatth15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -318,7 +356,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={geishachris}></video>
+                           src={geishachris15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -330,7 +368,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Jacki}></video>
+                           src={Jacki15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -342,7 +380,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Jennifer}></video>
+                           src={Jennifer15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -354,7 +392,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={JessicaNick}></video>
+                           src={JessicaNick15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -366,7 +404,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={KatiChris}></video>
+                           src={KatiChris15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -378,7 +416,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={LindsayNick}></video>
+                           src={LindsayNick15seg}></video>
                      </div>
                   </SwiperSlide>
                </Swiper>
@@ -386,28 +424,95 @@ const Videoediting = () => {
                <h2 id="socialmedia" className="carrousel-title">
                   Social Media
                </h2>
-               <div className="social-media-vert-container">
-                  <div onClick={() => handleClick(Zee)}>
-                     <video
-                        className="mySwiper"
-                        style={{ pointerEvents: "none" }}
-                        autoPlay
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={Zee}></video>
-                  </div>
-                  <div onClick={() => handleClick(PanchoVertical)}>
-                     <video
-                        className="mySwiper"
-                        style={{ pointerEvents: "none" }}
-                        autoPlay
-                        muted
-                        loop
-                        id="videoediting_video"
-                        src={PanchoVertical}></video>
-                  </div>
-               </div>
+               <Swiper
+                  grabCursor={true}
+                  navigation={true}
+                  spaceBetween={10}
+                  breakpoints={{
+                     1200: {
+                        slidesPerView: 5.1,
+                     },
+                     522: {
+                        slidesPerView: 3.1,
+                     },
+                     0: {
+                        slidesPerView: 2.1,
+                     },
+                  }}
+                  modules={[Navigation]}>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Zee)}>
+                        <video
+                           className="mySwiper"
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Zee15seg}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(PanchoVertical)}>
+                        <video
+                           className="mySwiper"
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={PanchoVertical15seg}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Sunny1)}>
+                        <video
+                           className="mySwiper"
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Sunny1}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Sunny2)}>
+                        <video
+                           className="mySwiper"
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Sunny2}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Sunny3)}>
+                        <video
+                           className="mySwiper"
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Sunny3}></video>
+                     </div>
+                  </SwiperSlide>
+                  <SwiperSlide>
+                     <div onClick={() => handleClick(Sunny4)}>
+                        <video
+                           className="mySwiper"
+                           style={{ pointerEvents: "none" }}
+                           autoPlay
+                           muted
+                           loop
+                           id="videoediting_video"
+                           src={Sunny4}></video>
+                     </div>
+                  </SwiperSlide>
+               </Swiper>
                <Swiper
                   grabCursor={true}
                   navigation={true}
@@ -489,7 +594,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Tapps_Electrics}></video>
+                           src={Tapps_Electrics15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -500,7 +605,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Mercy}></video>
+                           src={Mercy15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -511,7 +616,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Max_Drifting}></video>
+                           src={Max_Drifting15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -522,7 +627,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Pancho}></video>
+                           src={Pancho15seg}></video>
                      </div>
                   </SwiperSlide>
                </Swiper>
@@ -552,7 +657,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Sprague}></video>
+                           src={Sprague15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -563,7 +668,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={ZOOM_TRB}></video>
+                           src={ZOOM_TRB15seg}></video>
                      </div>
                   </SwiperSlide>
                   <SwiperSlide>
@@ -574,7 +679,7 @@ const Videoediting = () => {
                            muted
                            loop
                            id="videoediting_video"
-                           src={Olive_Group}></video>
+                           src={Olive_Group15seg}></video>
                      </div>
                   </SwiperSlide>
                </Swiper>

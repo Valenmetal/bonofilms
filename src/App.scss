@@ -639,15 +639,7 @@ nav {
 .iframe-carrousel {
    height: 37vw;
 }
-.social-media-vert-container {
-   display: flex;
-   justify-content: space-between;
-   margin-inline: auto;
-   width: 90%;
-   :nth-child(1) {
-      margin-right: 1em;
-   }
-}
+
 .close {
    position: absolute;
    top: -40px;
