@@ -73,7 +73,7 @@ export default function Team() {
          <main className="work_container">
             <h1 className="team_title">Team</h1>
             <div className="team_container">
-               <div id="team-1" className="team-member">
+               <div id="team-1" className="team_member">
                   <img
                      src="/PrinciAlan.webp"
                      alt="Alan Lutricuso - Filmmaker, Videoeditor and Colorist"
@@ -104,7 +104,7 @@ export default function Team() {
                      Videoediting, <strong>Colorgrading</strong> and Sound Design.
                   </p>
                </div>
-               <div id="team-2" className="team-member">
+               <div id="team-2" className="team_member">
                   <p className="prose">
                      Comencé mi camino como <strong>editora de video </strong>
                      trabajando con clientes en diversos proyectos, adquiriendo
@@ -149,11 +149,10 @@ export default function Team() {
             </div>
             <Swiper
                grabCursor={true}
-               navigation={true}
                centeredSlides={true}
                breakpoints={{
                   768: {
-                     slidesPerView: 1.5,
+                     slidesPerView: 1,
                   },
                   0: {
                      slidesPerView: 1.1,

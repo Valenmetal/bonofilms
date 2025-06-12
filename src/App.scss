@@ -763,7 +763,7 @@ nav {
       font-size: clamp(4.125rem, 2.5rem + 10.3281vi, 9.4531rem);
    }
    .team_container {
-      .team-member {
+      .team_member {
          display: flex;
          align-items: center;
          margin-bottom: 5em;
@@ -822,6 +822,18 @@ nav {
    .team_section {
       width: 80%;
    }
+   .team_container :nth-child(2) {
+      flex-direction: column-reverse;
+   }
+   .team_member {
+      flex-direction: column;
+      align-items: center;
+      justify-self: center;
+
+      img {
+         width: 30em;
+      }
+   }
    nav {
       ul {
          width: 30vh;
@@ -835,17 +847,7 @@ nav {
       width: 4em !important;
       height: 4em !important;
    }
-   .team_container :nth-child(2) {
-      flex-direction: column-reverse;
-   }
-   .team-member {
-      flex-direction: column;
-      align-items: center;
 
-      img {
-         width: 30em;
-      }
-   }
    .divider {
       margin-top: 4em;
    }
@@ -866,11 +868,15 @@ nav {
          height: 2em !important;
       }
    }
-
+   .team_container {
+      margin-inline: auto;
+   }
    .team_section {
-      width: 80% !important;
       height: min-content !important;
       margin-top: 0 !important;
+   }
+   .team_member {
+      width: 90% !important;
    }
    .iframe-carrousel {
       height: 50vw;
@@ -889,7 +895,6 @@ nav {
       align-content: center;
       width: 100% !important;
    }
-
    .iframe {
       width: 90% !important;
       height: 50vw !important;
@@ -900,13 +905,11 @@ nav {
       width: 100%;
       overflow-x: hidden;
    }
-
    .banner_filmmaking {
       top: -20% !important;
       left: 0;
       height: 25em !important;
    }
-
    .banner_videoediting {
       top: -15% !important;
       left: 20% !important;

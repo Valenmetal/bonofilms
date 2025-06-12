@@ -23,7 +23,7 @@ export default function Navbar() {
             ease: "Expo.easeOut", // <- NavBar Animation
             opacity: 0,
             y: -200,
-            delay: 4.5,
+            delay: 6.5,
             duration: 1.5,
             stagger: 0.2,
          })

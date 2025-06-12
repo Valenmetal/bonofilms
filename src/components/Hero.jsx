@@ -24,7 +24,7 @@ export default function Hero() {
             {
                y: "0",
                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-               duration: 2,
+               duration: 4.5,
                ease: CustomEase.create(
                   "custom",
                   "M0,0 C0.067,0.132 0.01,0.634 0.273,0.886 0.414,1.021 0.822,1 1,1 "
