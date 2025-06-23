@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import React from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
+import AnimatedLink from "../components/AnimatedLink";
 
 import preview_Filmmaking from "../assets/vid/preview/Scrolling preview FILMMAKING .mp4"
 import preview_Videoediting from "../assets/vid/preview/Scrolling preview VIDEOEDITING.mp4"
@@ -159,7 +160,7 @@ export default function Clientes() {
          <div className="section" style={{ marginTop: 0 }}>
             <div ref={projects_grid} className="projects_grid">
                <div className="vert_wraper">
-                  <Link className="link" to="/filmmaking">
+                  <AnimatedLink className="AnimatedLink" to="/filmmaking">
                      <div id="filmmaking" className="projects_item">
                         Filmmaking
                      </div>
@@ -176,10 +177,10 @@ export default function Clientes() {
                         id="filmmaking_video"
                         className="flying_video"
                         src={preview_Filmmaking}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div className="vert_wraper">
-                  <Link className="link" to="/videoediting">
+                  <AnimatedLink className="link" to="/videoediting">
                      <div id="videoediting" className="projects_item">
                         Videoediting
                      </div>
@@ -197,10 +198,10 @@ export default function Clientes() {
                         id="videoediting_video"
                         className="flying_video"
                         src={preview_Videoediting}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div className="vert_wraper">
-                  <Link className="link" to="/animation">
+                  <AnimatedLink className="link" to="/animation">
                      <div id="animation" className="projects_item">
                         Animation
                      </div>
@@ -218,10 +219,10 @@ export default function Clientes() {
                         id="animation_video"
                         className="flying_video"
                         src={preview_Animation}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div className="vert_wraper">
-                  <Link className="link" to="/colorgrading">
+                  <AnimatedLink className="link" to="/colorgrading">
                      <div id="colorgrading" className="projects_item">
                         Colorgrading
                      </div>
@@ -239,7 +240,7 @@ export default function Clientes() {
                         id="colorgrading_video"
                         className="flying_video"
                         src={preview_Colorgrading}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
             </div>
          </div>

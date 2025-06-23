@@ -14,6 +14,7 @@ import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4"
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4"
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import { Modal } from "../components/Modal"
+import AnimatedLink from '../components/AnimatedLink';
 
 const Colorgrading = () => {
    const work_container = useRef()
@@ -336,7 +337,7 @@ const Colorgrading = () => {
          <section className="projects_menu_section">
             <div ref={projects_menu_grid} className="projects_menu_grid">
                <div id="filmmaking_menu" className="projects_menu_item">
-                  <Link className="link" to="/filmmaking">
+                  <AnimatedLink className="link" to="/filmmaking">
                      <span className="projects_menu_item_fill">Filmmaking</span>
                      <span id="ghost">Film</span>
                      <video
@@ -347,10 +348,10 @@ const Colorgrading = () => {
                         className="poject_mini"
                         src={mini_Filmmaking}></video>
                      <span id="ghost">making</span>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="videoediting_menu" className="projects_menu_item">
-                  <Link className="link" to="/videoediting">
+                  <AnimatedLink className="link" to="/videoediting">
                      <span className="projects_menu_item_fill">Videoediting</span>
 
                      <span id="ghost">Video</span>
@@ -362,10 +363,10 @@ const Colorgrading = () => {
                         className="poject_mini"
                         src={mini_Videoediting}></video>
                      <span id="ghost">editing</span>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="animation_menu" className="projects_menu_item">
-                  <Link className="link" to="/animation">
+                  <AnimatedLink className="link" to="/animation">
                      <span className="projects_menu_item_fill">Animation</span>
                      <span id="ghost">Animation</span>
                      <video
@@ -375,7 +376,7 @@ const Colorgrading = () => {
                         id="animation_mini"
                         className="poject_mini"
                         src={mini_Animation}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
             </div>
          </section>

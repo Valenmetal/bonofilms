@@ -31,6 +31,7 @@ nav {
       .navbar-li-container {
          display: flex;
          align-items: center;
+         color: oklch(99.7% 0 0);
       }
       li {
          list-style: none;
@@ -105,6 +106,34 @@ nav {
 // PROJECTS ANIMATION
 // PROJECTS ANIMATION
 // PROJECTS ANIMATION
+
+::view-transition-new(root) {
+   animation-duration: 2s;
+}
+
+::view-transition-old(root) {
+   animation-name: fade-out;
+}
+::view-transition-new(root) {
+   animation-name: fade-in;
+}
+
+@keyframes fade-in {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+@keyframes fade-out {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
 
 .projects_grid {
    height: 250vh;

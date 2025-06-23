@@ -17,10 +17,13 @@ import { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import { Link } from "react-router-dom"
+import AnimatedLink from "../components/AnimatedLink"
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4"
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
 import { Modal } from "../components/Modal"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+gsap.registerPlugin(ScrollTrigger)
 
 export default function Filmmaking() {
    const work_container = useRef()
@@ -36,24 +39,31 @@ export default function Filmmaking() {
 
    useGSAP(
       () => {
-         gsap.from(".work_title", {
+         gsap.from(".work_title,#work11,#work12", {
             opacity: 0,
             y: 100,
-         })
-         gsap.from(".subtitle", {
-            delay: 0.1,
-            opacity: 0,
-            y: 100,
-         })
-
-         gsap.from("#work1, #work2", {
-            delay: 0.2,
-            opacity: 0,
-            y: 100,
+            stagger: 0.2,
          })
       },
       { scope: work_container }
    )
+   useGSAP(
+      () => {
+         gsap.utils.toArray(".wraper, .reel").forEach((item) => {
+            gsap.from(item, {
+               scrollTrigger: {
+                  trigger: item,
+                  start: "top 80%",
+                  end: "bottom 30%",
+                  scrub: 1,
+               },
+               opacity: 0,
+               y: 100,
+               duration: 1,
+            });
+         });
+      }, { scope: work_container });
+
 
    useGSAP(
       () => {
@@ -480,7 +490,7 @@ export default function Filmmaking() {
          <section className="projects_menu_section">
             <div ref={projects_menu_grid} className="projects_menu_grid">
                <div id="videoediting_menu" className="projects_menu_item">
-                  <Link className="link" to="/videoediting">
+                  <AnimatedLink className="link" to="/videoediting">
                      <span className="projects_menu_item_fill">Videoediting</span>
 
                      <span id="ghost">Video</span>
@@ -492,10 +502,10 @@ export default function Filmmaking() {
                         className="poject_mini"
                         src={mini_Videoediting}></video>
                      <span id="ghost">editing</span>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="animation_menu" className="projects_menu_item">
-                  <Link className="link" to="/animation">
+                  <AnimatedLink className="link" to="/animation">
                      <span className="projects_menu_item_fill">Animation</span>
                      <span id="ghost">Animation</span>
                      <video
@@ -505,10 +515,10 @@ export default function Filmmaking() {
                         id="animation_mini"
                         className="poject_mini"
                         src={mini_Animation}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="colorgrading_menu" className="projects_menu_item">
-                  <Link className="link" to="/colorgrading">
+                  <AnimatedLink className="link" to="/colorgrading">
                      <span className="projects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video
@@ -518,7 +528,7 @@ export default function Filmmaking() {
                         id="colorgrading_mini"
                         className="poject_mini"
                         src={mini_Colorgrading}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
             </div>
          </section>

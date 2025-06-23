@@ -66,6 +66,7 @@ import "swiper/css"
 import "swiper/css/effect-coverflow"
 import "swiper/css/navigation"
 import { Modal } from "../components/Modal"
+import AnimatedLink from '../components/AnimatedLink';
 
 const Videoediting = () => {
    const work_container = useRef()
@@ -73,9 +74,10 @@ const Videoediting = () => {
 
    useGSAP(
       () => {
-         gsap.from(".work_title", {
+         gsap.from(".work_title,#docummentary", {
             opacity: 0,
             y: 100,
+            stagger: 0.1,
          })
       },
       { scope: work_container }
@@ -773,7 +775,7 @@ const Videoediting = () => {
          <section className="projects_menu_section">
             <div ref={projects_menu_grid} className="projects_menu_grid">
                <div id="filmmaking_menu" className="projects_menu_item">
-                  <Link className="link" to="/filmmaking">
+                  <AnimatedLink className="link" to="/filmmaking">
                      <span className="projects_menu_item_fill">Filmmaking</span>
                      <span id="ghost">Film</span>
                      <video
@@ -784,10 +786,10 @@ const Videoediting = () => {
                         className="poject_mini"
                         src={mini_Filmmaking}></video>
                      <span id="ghost">making</span>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="animation_menu" className="projects_menu_item">
-                  <Link className="link" to="/animation">
+                  <AnimatedLink className="link" to="/animation">
                      <span className="projects_menu_item_fill">Animation</span>
                      <span id="ghost">Animation</span>
                      <video
@@ -797,10 +799,10 @@ const Videoediting = () => {
                         id="animation_mini"
                         className="poject_mini"
                         src={mini_Animation}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="colorgrading_menu" className="projects_menu_item">
-                  <Link className="link" to="/colorgrading">
+                  <AnimatedLink className="link" to="/colorgrading">
                      <span className="projects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video
@@ -810,7 +812,7 @@ const Videoediting = () => {
                         id="colorgrading_mini"
                         className="poject_mini"
                         src={mini_Colorgrading}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
             </div>
          </section>

@@ -7,10 +7,13 @@ import kiss from "/Kisscam.mp4"
 import Xledger from "/Xledger.mp4"
 
 import { useEffect, useRef } from "react"
-import { Link } from "react-router-dom"
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4"
 import mini_Videoediting from "../assets/vid/mini/Miniatura_VIDEOEDITING.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
+import AnimatedLink from "../components/AnimatedLink"
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Animation = () => {
    const work_container = useRef()
@@ -40,13 +43,15 @@ const Animation = () => {
 
    useGSAP(
       () => {
-         gsap.from(".work_title", {
+         gsap.from(".work_title,.iframe", {
             opacity: 0,
             y: 100,
+            stagger: 0.2,
          })
       },
       { scope: work_container }
    )
+
    useGSAP(
       () => {
          gsap.to(".projects_menu_item_fill", {
@@ -227,7 +232,7 @@ const Animation = () => {
          <section className="projects_menu_section">
             <div ref={projects_menu_grid} className="projects_menu_grid">
                <div id="filmmaking_menu" className="projects_menu_item">
-                  <Link className="link" to="/filmmaking">
+                  <AnimatedLink className="link" to="/filmmaking">
                      <span className="projects_menu_item_fill">Filmmaking</span>
                      <span id="ghost">Film</span>
                      <video
@@ -238,10 +243,10 @@ const Animation = () => {
                         className="poject_mini"
                         src={mini_Filmmaking}></video>
                      <span id="ghost">making</span>
-                  </Link>
+                  </AnimatedLink>
                </div>
                <div id="videoediting_menu" className="projects_menu_item">
-                  <Link className="link" to="/videoediting">
+                  <AnimatedLink className="link" to="/videoediting">
                      <span className="projects_menu_item_fill">Videoediting</span>
 
                      <span id="ghost">Video</span>
@@ -253,11 +258,11 @@ const Animation = () => {
                         className="poject_mini"
                         src={mini_Videoediting}></video>
                      <span id="ghost">editing</span>
-                  </Link>
+                  </AnimatedLink>
                </div>
 
                <div id="colorgrading_menu" className="projects_menu_item">
-                  <Link className="link" to="/colorgrading">
+                  <AnimatedLink className="link" to="/colorgrading">
                      <span className="projects_menu_item_fill">Colorgrading</span>
                      <span id="ghost">Colorgrading</span>
                      <video
@@ -267,7 +272,7 @@ const Animation = () => {
                         id="colorgrading_mini"
                         className="poject_mini"
                         src={mini_Colorgrading}></video>
-                  </Link>
+                  </AnimatedLink>
                </div>
             </div>
          </section>

@@ -1,6 +1,7 @@
 import React from "react"
 import { gsap } from "gsap"
 import { Link } from "react-router-dom"
+import AnimatedLink from "./AnimatedLink"
 import { useGSAP } from "@gsap/react"
 import { LogoEmail } from "../assets/Icons"
 import { useRef } from "react"
@@ -19,7 +20,7 @@ export default function Navbar() {
    const navbar = useRef()
    useGSAP(
       () => {
-         gsap.from("#logo,.navbar-li-container", {
+         gsap.from(".navbar_logo,.navbar-li-container", {
             ease: "Expo.easeOut", // <- NavBar Animation
             opacity: 0,
             y: -200,
@@ -34,9 +35,9 @@ export default function Navbar() {
    return (
       <nav ref={navbar} id="navbar">
          <main className="navbar-items-container">
-            <Link id="logo" to="/" aria-label="Home">
+            <AnimatedLink id="logo" to="/" aria-label="Home">
                <img className="navbar_logo" src="/logo-bono.png" alt="logo" />
-            </Link>
+            </AnimatedLink>
             <ul>
                <Link to="https://wa.me/5491126512436" aria-label="Contact">
                   <div className="navbar-li-container">
