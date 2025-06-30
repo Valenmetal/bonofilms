@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger)
 const Animation = () => {
    const work_container = useRef()
    const projects_menu_grid = useRef()
-   useEffect(() => {
+   /* useEffect(() => {
       const handlePointerMove = (e) => {
          e.target.setAttribute("controls", true)
       }
@@ -39,7 +39,7 @@ const Animation = () => {
             video.removeEventListener("pointerout", handlePointerOut)
          })
       }
-   }, [])
+   }, []) */
 
    useGSAP(
       () => {
