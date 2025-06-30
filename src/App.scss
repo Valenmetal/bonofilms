@@ -926,7 +926,8 @@ nav {
       }
    }
    .category_iframe {
-      width: 90%;
+      // width: 90%;
+      max-width: 90vw;
       min-height: 55vw;
       min-width: 35vw;
       margin: 1em;
@@ -935,9 +936,9 @@ nav {
    .category_vertical {
       max-width: 55vw;
    }
-   .category_horizontal {
+   /*  .category_horizontal {
       max-width: 90vw;
-   }
+   } */
 
    .custom-video__control {
       width: 4em !important;

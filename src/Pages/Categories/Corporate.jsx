@@ -38,13 +38,13 @@ export default function Corporate() {
                         controls
                         muted
                         loop
-                        src={ZOOM_TRB}></video>
+                        src={ZOOM_TRB}>
+                    </video>
                 </div>
                 <div className="category_wraper">
                     <video
                         className="category_iframe"
                         src={Xledger}
-                        id="animation_video"
                         controls
                         muted
                     />

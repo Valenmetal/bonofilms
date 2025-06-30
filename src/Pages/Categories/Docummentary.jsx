@@ -1,6 +1,6 @@
-
-import Xledger from '/Xledger.mp4';
-import ZOOM_TRB from "/ZOOM_TRB.mp4"
+import tacoma from '/Interview_Tacoma_Farmers.mp4';
+import tacoma2 from '/Tacoma_Farmers.mp4';
+import AndreCassiano from '/AndreCassiano.mp4';
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -26,28 +26,48 @@ export default function Docummentary() {
                     </Link>
                 </button>
                 <div className="category_wraper">
-                    <iframe
-                        className="category_vertical"
-                        allowtransparency="true"
-                        title="Wistia video player"
-                        name="wistia_embed"
-                        src="https://fast.wistia.com/embed/iframe/855qaezfj1">
-                    </iframe>
                     <video
-                        className="category_iframe category_horizontal"
+                        className="category_iframe"
                         controls
                         muted
                         loop
-                        src={ZOOM_TRB}></video>
+                        src={tacoma}></video>
+                    <div className="two_blocks">
+                        <video className="category_iframe category_horizontal"
+                            src={tacoma2}
+                            controls
+                            muted></video>
+                        <video className="category_iframe category_horizontal"
+                            src={AndreCassiano}
+                            controls
+                            muted
+                        ></video>
+                    </div>
                 </div>
                 <div className="category_wraper">
-                    <video
+                    <div className="two_blocks">
+                        <iframe
+                            className="category_iframe category_horizontal"
+                            allowtransparency="true"
+                            title="Wistia video player"
+                            name="wistia_embed"
+                            src="https://fast.wistia.com/embed/iframe/ey5qvc4neo">
+                        </iframe>
+                        <iframe
+                            className="category_iframe category_horizontal"
+                            allowtransparency="true"
+                            title="Wistia video player"
+                            name="wistia_embed"
+                            src="https://fast.wistia.com/embed/iframe/ey5qvc4neo">
+                        </iframe>
+                    </div>
+                    <iframe
                         className="category_iframe"
-                        src={Xledger}
-                        id="animation_video"
-                        controls
-                        muted
-                    />
+                        allowtransparency="true"
+                        title="Wistia video player"
+                        name="wistia_embed"
+                        src="https://fast.wistia.com/embed/iframe/ey5qvc4neo">
+                    </iframe>
                 </div>
             </div>
         </>

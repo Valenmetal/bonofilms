@@ -20,6 +20,8 @@ import Corporate from "../Pages/Categories/Corporate"
 import Food from "../Pages/Categories/Food"
 import Dance from "../Pages/Categories/Dance"
 import Docummentary from "../Pages/Categories/Docummentary"
+import Reels from '../Pages/Categories/Reels';
+import Wedding from '../Pages/Categories/Wedding';
 
 const Router = () => {
    return (
@@ -49,6 +51,8 @@ const Router = () => {
                <Route path="/food" element={<Food />} />
                <Route path="/dance" element={<Dance />} />
                <Route path="/docummentary" element={<Docummentary />} />
+               <Route path="/reels" element={<Reels />} />
+               <Route path="/wedding" element={<Wedding />} />
             </Route>
          </Routes>
       </HashRouter>
