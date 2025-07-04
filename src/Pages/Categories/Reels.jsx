@@ -1,4 +1,5 @@
-import tacoma from '/Interview_Tacoma_Farmers.mp4';
+import PanchoVertical from '/PanchoVertical.mp4';
+import MADA_3 from '/MADA_3.mp4';
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -36,7 +37,7 @@ export default function Reels() {
                         allowtransparency="true"
                         title="Wistia video player"
                         name="wistia_embed"
-                        src="https://fast.wistia.com/embed/iframe/7has112ogn">
+                        src="https://fast.wistia.com/embed/iframe/2j3g2ys6dv">
                     </iframe>
                     <iframe
                         className="category_vertical"
@@ -100,6 +101,29 @@ export default function Reels() {
                         name="wistia_embed"
                         src="https://fast.wistia.com/embed/iframe/z04ywl91id">
                     </iframe>
+                    <iframe
+                        className="category_vertical"
+                        allowtransparency="true"
+                        title="Wistia video player"
+                        name="wistia_embed"
+                        src="https://fast.wistia.com/embed/iframe/7has112ogn">
+                    </iframe>
+                    <video
+                        className="category_vertical"
+                        controls
+                        muted
+                        loop
+                        src={PanchoVertical}>
+                    </video>
+                </div>
+                <div className="category_wraper" style={{ justifyContent: 'space-evenly' }}>
+                    <video
+                        className="category_vertical"
+                        controls
+                        muted
+                        loop
+                        src={MADA_3}>
+                    </video>
                 </div>
             </div>
         </>

@@ -1,36 +1,44 @@
-import React from "react"
+import { React, useState, useEffect } from "react"
 import { gsap } from "gsap"
 import { Link } from "react-router-dom"
 import AnimatedLink from "./AnimatedLink"
 import { useGSAP } from "@gsap/react"
-import { LogoEmail } from "../assets/Icons"
+import { LogoEmail, LogoInsta, LogoWhatsApp, LogoYoutube } from '../assets/Icons';
 import { useRef } from "react"
+import { useTeamScroll } from "./TeamScrollContext"
+import SocialsButton from "./Socials"
+import ContactButton from "./Contact"
 
 export default function Navbar() {
-   var prevScrollpos = window.scrollY
-   window.onscroll = function () {
-      var currentScrollPos = window.scrollY
-      if (prevScrollpos > currentScrollPos) {
-         document.getElementById("navbar").style.top = "0"
-      } else {
-         document.getElementById("navbar").style.top = "-200px"
-      }
-      prevScrollpos = currentScrollPos
-   }
+   const [isOpen, setIsOpen] = useState(false)
+   const { scrollToTeam } = useTeamScroll()
    const navbar = useRef()
-   useGSAP(
-      () => {
-         gsap.from(".navbar_logo,.navbar-li-container", {
-            ease: "Expo.easeOut", // <- NavBar Animation
-            opacity: 0,
-            y: -200,
-            delay: 6.5,
-            duration: 1.5,
-            stagger: 0.2,
-         })
-      },
-      { scope: navbar }
-   )
+
+   const toggleMenu = () => setIsOpen(!isOpen)
+
+   /* useGSAP(() => {
+      gsap.from(".navbar_logo,.navbar-li-container", {
+         ease: "Expo.easeOut",
+         opacity: 0,
+         y: -200,
+         delay: 6.5,
+         duration: 1.5,
+         stagger: 0.2,
+      })
+   }, { scope: navbar }) */
+
+   useEffect(() => {
+      let prevScrollpos = window.scrollY
+      const onScroll = () => {
+         const currentScrollPos = window.scrollY
+         document.getElementById("navbar").style.top =
+            prevScrollpos > currentScrollPos ? "0" : "-200px"
+         prevScrollpos = currentScrollPos
+      }
+
+      window.addEventListener("scroll", onScroll)
+      return () => window.removeEventListener("scroll", onScroll)
+   }, [])
 
    return (
       <nav ref={navbar} id="navbar">
@@ -38,14 +46,19 @@ export default function Navbar() {
             <AnimatedLink id="logo" to="/" aria-label="Home">
                <img className="navbar_logo" src="/logo-bono.png" alt="logo" />
             </AnimatedLink>
-            <ul>
-               <Link to="https://wa.me/5491126512436" aria-label="Contact">
-                  <div className="navbar-li-container">
-                     <li>Contact</li>
-                     <LogoEmail />
-                  </div>
-               </Link>
-            </ul>
+            <div>
+               <button className="hamburger" onClick={toggleMenu}>
+                  <div className={`bar ${isOpen ? "open" : ""}`} />
+                  <div className={`bar ${isOpen ? "open" : ""}`} />
+                  <div className={`bar ${isOpen ? "open" : ""}`} />
+               </button>
+
+               <ul className={`navbar-li-container ${isOpen ? "active" : ""}`}>
+                  <li><button onClick={() => { scrollToTeam(); setIsOpen(false) }}>Team</button></li>
+                  <li><SocialsButton /></li>
+                  <li><ContactButton /></li>
+               </ul>
+            </div>
          </main>
       </nav>
    )

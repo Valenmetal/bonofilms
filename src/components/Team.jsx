@@ -4,6 +4,7 @@ import { useGSAP } from "@gsap/react"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Autoplay, Navigation } from "swiper/modules"
+import { useTeamScroll } from "./TeamScrollContext"
 
 import "swiper/css"
 import "swiper/css/effect-coverflow"
@@ -12,6 +13,7 @@ import "swiper/css/navigation"
 gsap.registerPlugin(ScrollTrigger)
 export default function Team() {
    const strongElements = document.querySelectorAll("strong")
+   const { teamRef } = useTeamScroll()
 
    // Función para activar y desactivar el brillo aleatoriamente
    function toggleGlow() {
@@ -69,7 +71,7 @@ export default function Team() {
       { scope: ".work_container" }
    )
    return (
-      <section id="team_section" className="team_section">
+      <section ref={teamRef} id="team_section" className="team_section">
          <main className="work_container">
             <h1 className="team_title">Team</h1>
             <div className="team_container">
