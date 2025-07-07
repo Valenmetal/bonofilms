@@ -45,17 +45,17 @@ function AllinOne() {
             <h1 style={{ textAlign: "center" }}>Animation</h1>
             <div className="category-tags">
                 <Link to="/animation/thirdhome"><button>Thirdhome</button></Link>
-                <Link to="/animation/kisscam"><button>Kisscam</button></Link>
-                <Link to="/animation/xledger"><button>Xledger</button></Link>
+                <Link to="/animation/Kisscam"><button>Kisscam</button></Link>
+                <Link to="/animation/Xledger"><button>Xledger</button></Link>
             </div>
             <h1 style={{ textAlign: "center" }}>Colorgrading</h1>
             <div className="category-tags">
                 <Link to="/colorgrading/ClaseMADA"><button>ClaseMADA</button></Link>
-                <Link to="/colorgrading/rio"><button>Rio</button></Link>
+                <Link to="/colorgrading/Rio"><button>Rio</button></Link>
                 <Link to="/colorgrading/EmiliaCafe"><button>EmiliaCafe</button></Link>
-                <Link to="/colorgrading/handball"><button>Handball</button></Link>
-                <Link to="/colorgrading/pancho"><button>Pancho</button></Link>
-                <Link to="/colorgrading/pasta"><button>Pasta</button></Link>
+                <Link to="/colorgrading/Handball"><button>Handball</button></Link>
+                <Link to="/colorgrading/Pancho"><button>Pancho</button></Link>
+                <Link to="/colorgrading/Pasta"><button>Pasta</button></Link>
             </div>
         </section>
     )
