@@ -63,8 +63,6 @@ export default function Filmmaking() {
             });
          });
       }, { scope: work_container });
-
-
    useGSAP(
       () => {
          gsap.to(".projects_menu_item_fill", {

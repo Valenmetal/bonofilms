@@ -54,7 +54,6 @@ import Sunny4 from "/Sunny4.mp4"
 import React, { useRef, useState } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
-import { Link } from "react-router-dom"
 import mini_Filmmaking from "../assets/vid/mini/Miniatura_FILMMAKING.mp4"
 import mini_Animation from "../assets/vid/mini/Miniatura_ANIMACION.mp4"
 import mini_Colorgrading from "../assets/vid/mini/Miniatura_COLORGRADING.mp4"
@@ -254,7 +253,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Interview_Tacoma_Farmers15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -265,7 +264,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Vendimia15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -276,7 +275,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Tacoma_Farmers15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -287,7 +286,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={AndreCassiano15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -321,7 +320,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={AveryJason15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -333,7 +332,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={CaitlynThomas15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -345,7 +344,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={ChristinaMatth15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -357,7 +356,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={geishachris15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -369,7 +368,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Jacki15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -381,7 +380,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Jennifer15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -393,7 +392,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={JessicaNick15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -405,7 +404,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={KatiChris15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -417,7 +416,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={LindsayNick15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -450,7 +449,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Zee15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -462,7 +461,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={PanchoVertical15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -474,7 +473,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Sunny1}></video>
                      </div>
                   </SwiperSlide>
@@ -486,7 +485,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Sunny2}></video>
                      </div>
                   </SwiperSlide>
@@ -498,7 +497,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Sunny3}></video>
                      </div>
                   </SwiperSlide>
@@ -510,7 +509,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Sunny4}></video>
                      </div>
                   </SwiperSlide>
@@ -542,7 +541,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={MADA_1}></video>
                      </div>
                   </SwiperSlide>
@@ -554,7 +553,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Fandelier}></video>
                      </div>
                   </SwiperSlide>
@@ -566,7 +565,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={MADA_3}></video>
                      </div>
                   </SwiperSlide>
@@ -595,7 +594,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Tapps_Electrics15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -606,7 +605,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Mercy15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -617,7 +616,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Max_Drifting15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -628,7 +627,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Pancho15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -658,7 +657,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Sprague15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -669,7 +668,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={ZOOM_TRB15seg}></video>
                      </div>
                   </SwiperSlide>
@@ -680,7 +679,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
-                           id="videoediting_video"
+
                            src={Olive_Group15seg}></video>
                      </div>
                   </SwiperSlide>

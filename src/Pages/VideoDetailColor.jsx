@@ -22,7 +22,6 @@ const VideoDetail = () => {
                </Link>
             </button>
             <video
-               id="colorgrading_video"
                autoPlay
                muted
                loop

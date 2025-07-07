@@ -22,6 +22,7 @@ import Dance from "../Pages/Categories/Dance"
 import Docummentary from "../Pages/Categories/Docummentary"
 import Reels from '../Pages/Categories/Reels';
 import Wedding from '../Pages/Categories/Wedding';
+import AllinOne from '../Pages/AllinOne';
 
 const Router = () => {
    return (
@@ -53,6 +54,8 @@ const Router = () => {
                <Route path="/docummentary" element={<Docummentary />} />
                <Route path="/reels" element={<Reels />} />
                <Route path="/wedding" element={<Wedding />} />
+               // Todas
+               <Route path="/todo" element={<AllinOne />} />
             </Route>
          </Routes>
       </HashRouter>

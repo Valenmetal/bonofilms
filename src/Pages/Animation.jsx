@@ -185,7 +185,7 @@ const Animation = () => {
                      title="AUKAN - Corto animado"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                      referrerPolicy="strict-origin-when-cross-origin"
-                     id="animation_video"
+
                      allowFullScreen></iframe>
                   <iframe
                      className="iframe"
@@ -193,19 +193,19 @@ const Animation = () => {
                      title="What is Coinbase?"
                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                      referrerPolicy="strict-origin-when-cross-origin"
-                     id="animation_video"
+
                      allowFullScreen></iframe>
                   <video
                      className="iframe"
                      src={thirdhome}
-                     id="animation_video"
+
                      controls
                      autoPlay
                      muted></video>
                   <video
                      className="iframe"
                      src={kiss}
-                     id="animation_video"
+
                      controls
                      autoPlay
                      muted
@@ -213,7 +213,7 @@ const Animation = () => {
                   <video
                      className="iframe"
                      src={Xledger}
-                     id="animation_video"
+
                      controls
                      autoPlay
                      muted

@@ -22,7 +22,6 @@ const VideoDetail = () => {
                </Link>
             </button>
             <video
-               id="filmmaking_video"
                autoPlay
                muted
                loop
