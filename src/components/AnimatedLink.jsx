@@ -1,4 +1,4 @@
-// components/AnimatedLink.jsx
+
 import { useNavigate } from "react-router-dom";
 
 export default function AnimatedLink({ to, name, children, className }) {

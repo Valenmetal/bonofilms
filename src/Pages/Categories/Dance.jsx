@@ -2,7 +2,7 @@ import dv1 from '/Danza_vertical_1.mp4';
 import dv2 from '/Danza_vertical_2.mp4';
 import dv3 from '/Danza_vertical_3.mp4';
 import React from "react";
-import { Link } from "react-router-dom";
+import AnimatedLink from '../../components/AnimatedLink';
 
 export default function Dance() {
     return (
@@ -12,7 +12,7 @@ export default function Dance() {
                     Dance
                 </h2>
                 <button className="back-button">
-                    <Link to={`/`}>
+                    <AnimatedLink to={`/`}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="32"
@@ -23,7 +23,7 @@ export default function Dance() {
                                 d="M17.77 3.77L16 2L6 12l10 10l1.77-1.77L9.54 12z"
                             />
                         </svg>
-                    </Link>
+                    </AnimatedLink>
                 </button>
                 <div className="category_wraper" style={{ justifyContent: 'space-evenly' }}>
                     <iframe

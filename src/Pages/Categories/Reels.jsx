@@ -1,7 +1,7 @@
 import PanchoVertical from '/PanchoVertical.mp4';
 import MADA_3 from '/MADA_3.mp4';
 import React from "react";
-import { Link } from "react-router-dom";
+import AnimatedLink from '../../components/AnimatedLink';
 
 export default function Reels() {
     return (
@@ -11,7 +11,7 @@ export default function Reels() {
                     Reels
                 </h2>
                 <button className="back-button">
-                    <Link to={`/`}>
+                    <AnimatedLink to={`/`}>
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="32"
@@ -22,7 +22,7 @@ export default function Reels() {
                                 d="M17.77 3.77L16 2L6 12l10 10l1.77-1.77L9.54 12z"
                             />
                         </svg>
-                    </Link>
+                    </AnimatedLink>
                 </button>
                 <div className="category_wraper" style={{ justifyContent: 'space-evenly' }}>
                     <iframe

@@ -1,61 +1,61 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import AnimatedLink from '../components/AnimatedLink';
 
 function AllinOne() {
     return (
         <section className='category_section'>
             <h1 style={{ textAlign: "center" }}>Categories</h1>
             <div className="category-tags">
-                <Link to="/youtube"><button>Youtube</button></Link>
-                <Link to="/youtubevlogs"><button>Youtube Vlogs</button></Link>
-                <Link to="/coursesandtutorials"><button>Courses and Tutorials</button></Link>
-                <Link to="/podcasts"><button>Podcasts</button></Link>
-                <Link to="/sportsandmovement"><button>Sports</button></Link>
-                <Link to="/corporate"><button>Corporate</button></Link>
-                <Link to="/food"><button>Food and Coffee Shops</button></Link>
-                <Link to="/dance"><button>Dance</button></Link>
-                <Link to="/docummentary"><button>Documentary</button></Link>
-                <Link to="/reels"><button>Reels</button></Link>
-                <Link to="/wedding"><button>Weddings</button></Link>
+                <AnimatedLink to="/youtube"><button>Youtube</button></AnimatedLink>
+                <AnimatedLink to="/youtubevlogs"><button>Youtube Vlogs</button></AnimatedLink>
+                <AnimatedLink to="/coursesandtutorials"><button>Courses and Tutorials</button></AnimatedLink>
+                <AnimatedLink to="/podcasts"><button>Podcasts</button></AnimatedLink>
+                <AnimatedLink to="/sportsandmovement"><button>Sports</button></AnimatedLink>
+                <AnimatedLink to="/corporate"><button>Corporate</button></AnimatedLink>
+                <AnimatedLink to="/food"><button>Food and Coffee Shops</button></AnimatedLink>
+                <AnimatedLink to="/dance"><button>Dance</button></AnimatedLink>
+                <AnimatedLink to="/docummentary"><button>Documentary</button></AnimatedLink>
+                <AnimatedLink to="/reels"><button>Reels</button></AnimatedLink>
+                <AnimatedLink to="/wedding"><button>Weddings</button></AnimatedLink>
             </div>
             <h1 style={{ textAlign: "center" }}>Filmmaking</h1>
             <div className="category-tags">
-                <Link to="/filmmaking/Handball"><button>Handball</button></Link>
-                <Link to="/filmmaking/Rio"><button>Rio</button></Link>
-                <Link to="/filmmaking/Danza_vertical_2"><button>Danza vertical 2</button></Link>
-                <Link to="/filmmaking/EmiliaCafe"><button>EmiliaCafe</button></Link>
-                <Link to="/filmmaking/FPM"><button>FPM</button></Link>
-                <Link to="/filmmaking/Danza_vertical_3"><button>Danza vertical 3</button></Link>
-                <Link to="/filmmaking/Pasta"><button>Pasta</button></Link>
-                <Link to="/filmmaking/Pancho"><button>Pancho</button></Link>
-                <Link to="/filmmaking/ClaseMADA"><button>ClaseMADA</button></Link>
-                <Link to="/filmmaking/Danza_vertical_1"><button>Danza vertical 1</button></Link>
-                <Link to="/filmmaking/SEBA"><button>SEBA</button></Link>
-                <Link to="/filmmaking/AGUS"><button>AGUS</button></Link>
+                <AnimatedLink to="/filmmaking/Handball"><button>Handball</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/Rio"><button>Rio</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/Danza_vertical_2"><button>Danza vertical 2</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/EmiliaCafe"><button>EmiliaCafe</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/FPM"><button>FPM</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/Danza_vertical_3"><button>Danza vertical 3</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/Pasta"><button>Pasta</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/Pancho"><button>Pancho</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/ClaseMADA"><button>ClaseMADA</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/Danza_vertical_1"><button>Danza vertical 1</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/SEBA"><button>SEBA</button></AnimatedLink>
+                <AnimatedLink to="/filmmaking/AGUS"><button>AGUS</button></AnimatedLink>
             </div>
             <h1 style={{ textAlign: "center" }}>Videoediting</h1>
             <div className="category-tags">
-                <Link to="/videoediting/docummentary"><button>Docummentary</button></Link>
-                <Link to="/videoediting/wedding"><button>Wedding</button></Link>
-                <Link to="/videoediting/socialmedia"><button>Social media</button></Link>
-                <Link to="/videoediting/commercial"><button>Commercial</button></Link>
-                <Link to="/videoediting/corporate"><button>Corporate</button></Link>
-                <Link to="/videoediting/youtube"><button>Youtube</button></Link>
+                <AnimatedLink to="/videoediting/docummentary"><button>Docummentary</button></AnimatedLink>
+                <AnimatedLink to="/videoediting/wedding"><button>Wedding</button></AnimatedLink>
+                <AnimatedLink to="/videoediting/socialmedia"><button>Social media</button></AnimatedLink>
+                <AnimatedLink to="/videoediting/commercial"><button>Commercial</button></AnimatedLink>
+                <AnimatedLink to="/videoediting/corporate"><button>Corporate</button></AnimatedLink>
+                <AnimatedLink to="/videoediting/youtube"><button>Youtube</button></AnimatedLink>
             </div>
             <h1 style={{ textAlign: "center" }}>Animation</h1>
             <div className="category-tags">
-                <Link to="/animation/thirdhome"><button>Thirdhome</button></Link>
-                <Link to="/animation/Kisscam"><button>Kisscam</button></Link>
-                <Link to="/animation/Xledger"><button>Xledger</button></Link>
+                <AnimatedLink to="/animation/thirdhome"><button>Thirdhome</button></AnimatedLink>
+                <AnimatedLink to="/animation/Kisscam"><button>Kisscam</button></AnimatedLink>
+                <AnimatedLink to="/animation/Xledger"><button>Xledger</button></AnimatedLink>
             </div>
             <h1 style={{ textAlign: "center" }}>Colorgrading</h1>
             <div className="category-tags">
-                <Link to="/colorgrading/ClaseMADA"><button>ClaseMADA</button></Link>
-                <Link to="/colorgrading/Rio"><button>Rio</button></Link>
-                <Link to="/colorgrading/EmiliaCafe"><button>EmiliaCafe</button></Link>
-                <Link to="/colorgrading/Handball"><button>Handball</button></Link>
-                <Link to="/colorgrading/Pancho"><button>Pancho</button></Link>
-                <Link to="/colorgrading/Pasta"><button>Pasta</button></Link>
+                <AnimatedLink to="/colorgrading/ClaseMADA"><button>ClaseMADA</button></AnimatedLink>
+                <AnimatedLink to="/colorgrading/Rio"><button>Rio</button></AnimatedLink>
+                <AnimatedLink to="/colorgrading/EmiliaCafe"><button>EmiliaCafe</button></AnimatedLink>
+                <AnimatedLink to="/colorgrading/Handball"><button>Handball</button></AnimatedLink>
+                <AnimatedLink to="/colorgrading/Pancho"><button>Pancho</button></AnimatedLink>
+                <AnimatedLink to="/colorgrading/Pasta"><button>Pasta</button></AnimatedLink>
             </div>
         </section>
     )
