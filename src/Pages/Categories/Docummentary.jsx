@@ -25,6 +25,58 @@ export default function Docummentary() {
                         </svg>
                     </Link>
                 </button>
+
+                <div className="category_wraper">
+                    <div className="two_blocks">
+                        <iframe
+                            className="category_iframe category_horizontal"
+                            allowtransparency="true"
+                            title="Wistia video player"
+                            name="wistia_embed"
+                            src="https://fast.wistia.com/embed/iframe/jy22a2ev4a">
+                        </iframe>
+                        <iframe
+                            className="category_iframe category_horizontal"
+                            allowtransparency="true"
+                            title="Wistia video player"
+                            name="wistia_embed"
+                            src="https://fast.wistia.com/embed/iframe/brqiy2z4qn">
+                        </iframe>
+                    </div>
+                    <iframe
+                        className="category_iframe"
+                        allowtransparency="true"
+                        title="Wistia video player"
+                        name="wistia_embed"
+                        src="https://fast.wistia.com/embed/iframe/n5dp6bwikq">
+                    </iframe>
+                </div>
+                <div className="category_wraper">
+                    <iframe
+                        className="category_iframe"
+                        allowtransparency="true"
+                        title="Wistia video player"
+                        name="wistia_embed"
+                        src="https://fast.wistia.com/embed/iframe/wbnsnjpy6d">
+                    </iframe>
+                    <div className="two_blocks">
+                        <iframe
+                            className="category_iframe category_horizontal"
+                            allowtransparency="true"
+                            title="Wistia video player"
+                            name="wistia_embed"
+                            src="https://fast.wistia.com/embed/iframe/3tmgqfdvt6">
+                        </iframe>
+                        <iframe
+                            className="category_iframe category_horizontal"
+                            allowtransparency="true"
+                            title="Wistia video player"
+                            name="wistia_embed"
+                            src="https://fast.wistia.com/embed/iframe/3ukp3zoxmc">
+                        </iframe>
+                    </div>
+
+                </div>
                 <div className="category_wraper">
                     <video
                         className="category_iframe"
@@ -43,31 +95,6 @@ export default function Docummentary() {
                             muted
                         ></video>
                     </div>
-                </div>
-                <div className="category_wraper">
-                    <div className="two_blocks">
-                        <iframe
-                            className="category_iframe category_horizontal"
-                            allowtransparency="true"
-                            title="Wistia video player"
-                            name="wistia_embed"
-                            src="https://fast.wistia.com/embed/iframe/ey5qvc4neo">
-                        </iframe>
-                        <iframe
-                            className="category_iframe category_horizontal"
-                            allowtransparency="true"
-                            title="Wistia video player"
-                            name="wistia_embed"
-                            src="https://fast.wistia.com/embed/iframe/ey5qvc4neo">
-                        </iframe>
-                    </div>
-                    <iframe
-                        className="category_iframe"
-                        allowtransparency="true"
-                        title="Wistia video player"
-                        name="wistia_embed"
-                        src="https://fast.wistia.com/embed/iframe/ey5qvc4neo">
-                    </iframe>
                 </div>
             </div>
         </>

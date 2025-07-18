@@ -1120,6 +1120,28 @@ nav {
       }
    }
 }
+@media screen and (max-width: 1000px) {
+   .work_grid {
+      margin-top: 12em !important;
+   }
+   .banner_container {
+      overflow-x: hidden;
+   }
+   .banner_filmmaking {
+      top: -7% !important;
+   }
+   .banner_videoediting {
+      top: -25% !important;
+      left: 20% !important;
+   }
+   .banner_Colorgrading {
+      top: -40% !important;
+   }
+   .banner_Animation {
+      top: -27% !important;
+   }
+}
+
 @media screen and (max-width: 878px) {
    .category_wraper {
       display: flex;
