@@ -777,7 +777,10 @@ nav {
          height: max-content;
       }
    }
-
+   .estrellita-container {
+      position: relative;
+      display: inline-block;
+   }
    .estrellita {
       display: block;
    }

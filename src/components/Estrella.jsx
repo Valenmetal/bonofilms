@@ -33,7 +33,7 @@ export const Estrella = () => {
    }, []);
 
    return (
-      <div className="logo-container">
+      <div className="estrellita-container">
          <svg
             className="estrellita"
             xmlns="http://www.w3.org/2000/svg"
