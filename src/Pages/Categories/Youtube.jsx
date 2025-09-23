@@ -26,7 +26,7 @@ export default function Youtube() {
                     </AnimatedLink>
                 </button>
                 <h2>eLearning Partners</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -124,7 +124,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>Explainer Comics España</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -202,7 +202,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>Max AfterBurner</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -290,7 +290,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>TooPiece</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -398,7 +398,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>FlutterFlow</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -466,7 +466,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>Doctor Rana, DDS</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -524,7 +524,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>OneTwo Stop</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -572,7 +572,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>Athlete With Asthma</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -650,7 +650,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>Its Jermaine Man</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
@@ -708,7 +708,7 @@ export default function Youtube() {
                     </Swiper>
                 </div>
                 <h2>Shorts</h2>
-                <div className="category_wraper">
+                <div className="category_wraper" style={{ flexDirection: 'row' }}>
                     <Swiper
                         grabCursor={true}
                         navigation={true}
