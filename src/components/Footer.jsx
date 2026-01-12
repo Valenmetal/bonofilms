@@ -2,7 +2,6 @@ import React, { useLayoutEffect, useRef } from "react"
 import { LogoEmail, LogoInsta, LogoYoutube } from "../assets/Icons"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import SocialsButton from "./Socials"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function Footer() {

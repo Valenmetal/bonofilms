@@ -1,11 +1,11 @@
-import { React, useState, useEffect } from "react"
+import { React, useState, useEffect, useRef } from "react"
 import { gsap } from "gsap"
 import AnimatedLink from "./AnimatedLink"
 import { useGSAP } from "@gsap/react"
-import { useRef } from "react"
 import { useTeamScroll } from "./TeamScrollContext"
 import SocialsButton from "./Socials"
 import ContactButton from "./Contact"
+import LanguageToggle from "./LanguageToggle"
 
 export default function Navbar() {
    const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +15,7 @@ export default function Navbar() {
    const toggleMenu = () => setIsOpen(!isOpen)
 
    useGSAP(() => {
-      gsap.from(".navbar_logo,.hamburger,#li-1,#li-2,#li-3", {
+      gsap.from(".navbar_logo,.hamburger,#li-1,#li-2,#li-3,#li-4", {
          ease: "Expo.easeOut",
          opacity: 0,
          y: -200,
@@ -53,6 +53,7 @@ export default function Navbar() {
                <li id='li-1'><button onClick={() => { scrollToTeam(); setIsOpen(false) }}>Team</button></li>
                <li id='li-2'><SocialsButton /></li>
                <li id='li-3'><ContactButton /></li>
+               <li id='li-4'><LanguageToggle /></li>
             </ul>
          </main>
       </nav>

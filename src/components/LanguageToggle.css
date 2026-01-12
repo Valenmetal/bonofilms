@@ -1,0 +1,47 @@
+/* Language Toggle Styles */
+
+.language-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: "Antonio-Light";
+  font-size: 1.5rem;
+  color: oklch(99.7% 0 0);
+  transition: all var(--transition-smooth);
+}
+
+.language-toggle:hover {
+  transform: scale(1.05);
+}
+
+.lang-option {
+  color: rgba(175, 182, 223, 0.5);
+  transition: all var(--transition-fast);
+  font-weight: 400;
+}
+
+.lang-option.active {
+  color: oklch(99.7% 0 0);
+  font-weight: 400;
+}
+
+.toggle-separator {
+  color: rgba(175, 182, 223, 0.5);
+  margin: 0 0.15rem;
+}
+
+.language-toggle:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .language-toggle {
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+  }
+}

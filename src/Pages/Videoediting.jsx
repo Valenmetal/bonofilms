@@ -220,6 +220,7 @@ const Videoediting = () => {
                   autoPlay
                   muted
                   loop
+                  preload="metadata"
                   src={video}
                   className="banner_videoediting"></video>
             </div>
@@ -253,6 +254,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Interview_Tacoma_Farmers15seg}></video>
                      </div>
@@ -264,6 +266,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Vendimia15seg}></video>
                      </div>
@@ -275,6 +278,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Tacoma_Farmers15seg}></video>
                      </div>
@@ -286,6 +290,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={AndreCassiano15seg}></video>
                      </div>
@@ -320,6 +325,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={AveryJason15seg}></video>
                      </div>
@@ -332,6 +338,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={CaitlynThomas15seg}></video>
                      </div>
@@ -344,6 +351,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={ChristinaMatth15seg}></video>
                      </div>
@@ -356,6 +364,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={geishachris15seg}></video>
                      </div>
@@ -368,6 +377,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Jacki15seg}></video>
                      </div>
@@ -380,6 +390,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Jennifer15seg}></video>
                      </div>
@@ -392,6 +403,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={JessicaNick15seg}></video>
                      </div>
@@ -404,6 +416,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={KatiChris15seg}></video>
                      </div>
@@ -416,6 +429,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={LindsayNick15seg}></video>
                      </div>
@@ -449,6 +463,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Zee15seg}></video>
                      </div>
@@ -461,6 +476,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={PanchoVertical15seg}></video>
                      </div>
@@ -473,6 +489,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Sunny1}></video>
                      </div>
@@ -485,6 +502,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Sunny2}></video>
                      </div>
@@ -497,6 +515,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Sunny3}></video>
                      </div>
@@ -509,6 +528,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Sunny4}></video>
                      </div>
@@ -541,6 +561,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={MADA_1}></video>
                      </div>
@@ -553,6 +574,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Fandelier}></video>
                      </div>
@@ -565,6 +587,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={MADA_3}></video>
                      </div>
@@ -594,6 +617,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Tapps_Electrics15seg}></video>
                      </div>
@@ -605,6 +629,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Mercy15seg}></video>
                      </div>
@@ -616,6 +641,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Max_Drifting15seg}></video>
                      </div>
@@ -627,6 +653,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Pancho15seg}></video>
                      </div>
@@ -657,6 +684,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Sprague15seg}></video>
                      </div>
@@ -668,6 +696,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={ZOOM_TRB15seg}></video>
                      </div>
@@ -679,6 +708,7 @@ const Videoediting = () => {
                            autoPlay
                            muted
                            loop
+                           preload="metadata"
 
                            src={Olive_Group15seg}></video>
                      </div>
@@ -704,6 +734,7 @@ const Videoediting = () => {
                   modules={[Navigation]}>
                   <SwiperSlide>
                      <iframe
+                        loading="lazy"
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/WMASl9qsoRE"
                         title="Talent Cards LMS 2024: Comprehensive Review &amp; Tutorial"
@@ -714,6 +745,7 @@ const Videoediting = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                      <iframe
+                        loading="lazy"
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/m5hGwGN65Ms"
                         title="Ultimate Talent LMS 2024 Review: Features, Pricing, and Setup Guide"
@@ -723,6 +755,7 @@ const Videoediting = () => {
                   </SwiperSlide>
                   <SwiperSlide>
                      <iframe
+                        loading="lazy"
                         className="iframe-carrousel"
                         src="https://www.youtube.com/embed/qwzHqNJ_KGI"
                         title="How Russia and the USA Would Actually Fight Each Other"
@@ -781,6 +814,7 @@ const Videoediting = () => {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="filmmaking_mini"
                         className="poject_mini"
                         src={mini_Filmmaking}></video>

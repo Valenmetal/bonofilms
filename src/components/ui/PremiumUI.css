@@ -1,0 +1,21 @@
+
+
+/* Custom Selection */
+::selection {
+    background: rgba(144, 116, 158, 0.5); 
+    color: white;
+}
+
+::-moz-selection {
+    background: rgba(144, 116, 158, 0.5);
+    color: white;
+}
+
+/* Aggressive Cursor Reset */
+*, *::before, *::after {
+    cursor: none !important;
+}
+
+html, body, #root {
+    cursor: none !important;
+}

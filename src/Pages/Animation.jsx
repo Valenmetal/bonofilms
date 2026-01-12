@@ -171,6 +171,7 @@ const Animation = () => {
                   autoPlay
                   muted
                   loop
+                  preload="metadata"
                   src={video}
                   className="banner_Animation"></video>
             </div>
@@ -180,6 +181,7 @@ const Animation = () => {
             <div className="work_grid">
                <div className="iframe_container">
                   <iframe
+                     loading="lazy"
                      className="iframe"
                      src="https://www.youtube.com/embed/Bc83dCoqrJw"
                      title="AUKAN - Corto animado"
@@ -188,6 +190,7 @@ const Animation = () => {
 
                      allowFullScreen></iframe>
                   <iframe
+                     loading="lazy"
                      className="iframe"
                      src="https://www.youtube.com/embed/1akzc0WkIHQ"
                      title="What is Coinbase?"
@@ -219,6 +222,7 @@ const Animation = () => {
                      muted
                   />
                   <iframe
+                     loading="lazy"
                      className="iframe"
                      src="https://www.youtube.com/embed/3i5-TBCu3qE"
                      title="Lord Enos - Freedom (Lyric Video)"
@@ -239,6 +243,7 @@ const Animation = () => {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="filmmaking_mini"
                         className="poject_mini"
                         src={mini_Filmmaking}></video>
@@ -254,6 +259,7 @@ const Animation = () => {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="videoediting_mini"
                         className="poject_mini"
                         src={mini_Videoediting}></video>

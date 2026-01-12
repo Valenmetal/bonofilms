@@ -1,0 +1,67 @@
+/* Design Tokens - Sistema de diseño unificado */
+
+:root {
+  /* ===== SPACING TOKENS ===== */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 3rem;      /* 48px */
+  --spacing-2xl: 4rem;     /* 64px */
+  --spacing-3xl: 6rem;     /* 96px */
+
+  /* ===== COLOR TOKENS ===== */
+  --color-primary: rgba(175, 182, 223, 0.87);
+  --color-primary-light: rgba(175, 182, 223, 0.65);
+  --color-primary-faint: rgba(175, 182, 223, 0.331);
+  
+  --color-bg-dark: #1e1e1e;
+  --color-text-light: oklch(99.7% 0 0);
+  --color-text-body: oklch(78.46% 0.0588 277.36);
+  --color-text-muted: oklch(90.32% 0.0017 247.84);
+  
+  --color-accent: rgba(144, 116, 158, 0.696);
+
+  /* ===== TYPOGRAPHY TOKENS ===== */
+  --font-heading: "Cehua", sans-serif;
+  --font-title: "Prompt-Black", sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-light: "Antonio-Light", sans-serif;
+  --font-thin: "Antonio-Thin", sans-serif;
+  --font-extralight: "Antonio-ExtraLight", sans-serif;
+
+  --font-size-xs: clamp(0.75rem, 1vw + 0.5rem, 1rem);
+  --font-size-sm: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+  --font-size-md: clamp(1.429rem, 2vw + 1rem, 2rem);
+  --font-size-lg: clamp(2rem, 3vw + 1.5rem, 3.5rem);
+  --font-size-xl: clamp(3.7rem, 3vw + 3rem, 5rem);
+  --font-size-2xl: clamp(4rem, 4vw + 4rem, 7rem);
+  --font-size-3xl: clamp(4.125rem, 2.0594rem + 10.3281vi, 14.4531rem);
+
+  /* ===== TRANSITION TOKENS ===== */
+  --transition-fast: 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-smooth: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  --transition-slow: 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  /* ===== SHADOW TOKENS ===== */
+  --shadow-sm: 0 2px 8px rgba(59, 59, 59, 0.32);
+  --shadow-md: 0 4px 12px rgba(59, 59, 59, 0.4);
+  --shadow-lg: 0 8px 24px rgba(59, 59, 59, 0.5);
+
+  /* ===== BORDER RADIUS TOKENS ===== */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-round: 50%;
+
+  /* ===== Z-INDEX TOKENS ===== */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 400;
+  --z-modal: 500;
+  --z-popover: 600;
+  --z-tooltip: 700;
+}

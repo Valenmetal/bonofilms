@@ -65,7 +65,7 @@ export default function Hero() {
 
    return (
       <section ref={hero} id="me" className="hero">
-         <video autoPlay muted loop className="bg" src={video}></video>
+         <video autoPlay muted loop preload="metadata" className="bg" src={video}></video>
 
          <main className="container">
             <div className="content">

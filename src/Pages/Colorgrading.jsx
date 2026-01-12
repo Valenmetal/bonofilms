@@ -161,6 +161,7 @@ const Colorgrading = () => {
                   autoPlay
                   muted
                   loop
+                  preload="metadata"
                   src={video}
                   className="banner_Colorgrading"></video>
             </div>
@@ -178,6 +179,7 @@ const Colorgrading = () => {
                         style={{ pointerEvents: "none" }}
                         muted
                         loop
+                        preload="metadata"
                         id="colorgrading_video"
                         src={Rio}></video>
                      <div className="custom-video__control">
@@ -204,6 +206,7 @@ const Colorgrading = () => {
                         poster="/Clase MADA.webp"
                         muted
                         loop
+                        preload="metadata"
                         id="colorgrading_video"
                         src={ClaseMADA}></video>
                      <div className="custom-video__control">
@@ -258,6 +261,7 @@ const Colorgrading = () => {
                         poster="/miniatura-video-handball.webp"
                         muted
                         loop
+                        preload="metadata"
                         id="colorgrading_video"
                         src={Handball}></video>
                      <div className="custom-video__control">
@@ -284,6 +288,7 @@ const Colorgrading = () => {
                         poster="/miniatura-video-pancho.webp"
                         muted
                         loop
+                        preload="metadata"
                         id="colorgrading_video"
                         src={Pancho}></video>
                      <div className="custom-video__control">
@@ -344,6 +349,7 @@ const Colorgrading = () => {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="filmmaking_mini"
                         className="poject_mini"
                         src={mini_Filmmaking}></video>
@@ -359,6 +365,7 @@ const Colorgrading = () => {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="videoediting_mini"
                         className="poject_mini"
                         src={mini_Videoediting}></video>

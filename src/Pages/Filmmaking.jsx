@@ -13,7 +13,7 @@ import Pancho from "/Pancho.mp4"
 import SEBA from "/SEBA.mp4"
 import Reel from "/Reel2024.mp4"
 
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { gsap } from "gsap"
 import { useGSAP } from "@gsap/react"
 import { Link } from "react-router-dom"
@@ -180,6 +180,7 @@ export default function Filmmaking() {
                   autoPlay
                   muted
                   loop
+                  preload="metadata"
                   src={video}
                   className="banner_filmmaking"></video>
             </div>
@@ -249,6 +250,7 @@ export default function Filmmaking() {
                   autoPlay
                   muted
                   loop
+                  preload="metadata"
                   id="videoediting_video"
                   src={Reel}></video>
             </div>
@@ -496,6 +498,7 @@ export default function Filmmaking() {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="videoediting_mini"
                         className="poject_mini"
                         src={mini_Videoediting}></video>
@@ -510,6 +513,7 @@ export default function Filmmaking() {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="animation_mini"
                         className="poject_mini"
                         src={mini_Animation}></video>
@@ -523,6 +527,7 @@ export default function Filmmaking() {
                         autoPlay
                         muted
                         loop
+                        loading="lazy"
                         id="colorgrading_mini"
                         className="poject_mini"
                         src={mini_Colorgrading}></video>

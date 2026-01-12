@@ -1,0 +1,59 @@
+/* CTA Section Styles */
+
+.cta-section {
+  width: 100%;
+  padding: var(--spacing-3xl) var(--spacing-xl);
+  margin: var(--spacing-3xl) 0;
+  /* background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.05) 0%, 
+    rgba(255, 255, 255, 0.01) 100%); 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-xl);*/
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-title {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  color: var(--color-text-light);
+  margin-bottom: var(--spacing-md);
+  text-align: center;
+}
+
+.cta-description {
+  font-family: var(--font-light);
+  font-size: var(--font-size-md);
+  color: var(--color-text-body);
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.6;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .cta-section {
+    padding: var(--spacing-xl) var(--spacing-md);
+    margin: var(--spacing-xl) 0;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
