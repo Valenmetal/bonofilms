@@ -35,11 +35,15 @@ export default function Team() {
          })
       }
 
-      // Activar la función cada cierto intervalo
-      const interval = setInterval(toggleGlow, 1000) // Cambia cada segundo
+      // Solo activar si no es mobile
+      const isMobile = window.innerWidth <= 768
+      let interval
+      if (!isMobile) {
+         interval = setInterval(toggleGlow, 1000) // Cambia cada segundo
+      }
 
       // Cleanup para prevenir memory leaks
-      return () => clearInterval(interval)
+      return () => interval && clearInterval(interval)
    }, [language])
 
    useGSAP(
@@ -89,7 +93,7 @@ export default function Team() {
                scrub: 1,
             },
             y: 80,
-            ease: "none"
+            ease: "none",
          })
          gsap.to("#team-1 .prose", {
             scrollTrigger: {
@@ -99,7 +103,7 @@ export default function Team() {
                scrub: 1,
             },
             y: -80,
-            ease: "none"
+            ease: "none",
          })
 
          // Team 2 (Milena)
@@ -111,7 +115,7 @@ export default function Team() {
                scrub: 1,
             },
             y: 80,
-            ease: "none"
+            ease: "none",
          })
          gsap.to("#team-2 .prose", {
             scrollTrigger: {
@@ -121,10 +125,10 @@ export default function Team() {
                scrub: 1,
             },
             y: -80,
-            ease: "none"
+            ease: "none",
          })
       },
-      { scope: ".work_container" }
+      { scope: ".work_container" },
    )
 
    return (
@@ -137,10 +141,16 @@ export default function Team() {
                      src="/PrinciAlan.webp"
                      alt="Alan Lutricuso - Filmmaker, Videoeditor and Colorist"
                   />
-                  <p className="prose" dangerouslySetInnerHTML={{ __html: t.alan }} />
+                  <p
+                     className="prose"
+                     dangerouslySetInnerHTML={{ __html: t.alan }}
+                  />
                </div>
                <div id="team-2" className="team_member">
-                  <p className="prose" dangerouslySetInnerHTML={{ __html: t.lucas }} />
+                  <p
+                     className="prose"
+                     dangerouslySetInnerHTML={{ __html: t.lucas }}
+                  />
                   <img
                      src="/PrincipalMile.webp"
                      alt="Milena Arias - Filmmaker, Videoeditor and Colorist"
@@ -167,7 +177,11 @@ export default function Team() {
                modules={[Autoplay, Navigation]}>
                {[...Array(20).keys()].map((i) => (
                   <SwiperSlide key={i}>
-                     <img src={`/${i}.webp`} alt={`Bonofilms team behind the scenes photo ${i + 1}`} loading="lazy" />
+                     <img
+                        src={`/${i}.webp`}
+                        alt={`Bonofilms team behind the scenes photo ${i + 1}`}
+                        loading="lazy"
+                     />
                   </SwiperSlide>
                ))}
             </Swiper>

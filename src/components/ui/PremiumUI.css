@@ -11,11 +11,13 @@
     color: white;
 }
 
-/* Aggressive Cursor Reset */
-*, *::before, *::after {
-    cursor: none !important;
-}
+/* CSS for cursor-hiding based on hover capability */
+@media (hover: hover) {
+    *, *::before, *::after {
+        cursor: none !important;
+    }
 
-html, body, #root {
-    cursor: none !important;
+    html, body, #root {
+        cursor: none !important;
+    }
 }
