@@ -9,12 +9,13 @@
    cursor: default;
    --swiper-navigation-color: rgba(175, 182, 223, 0.87);
 }
-::selection {
-   color: rgba(144, 116, 158, 0.696);
-}
+
+
+
 ::-webkit-scrollbar {
    width: 0;
 }
+
 img,
 picture,
 video,
@@ -29,16 +30,19 @@ figure {
    -o-object-position: center center;
    object-position: center center;
 }
-strong{
+
+strong {
    color: oklch(90.32% 0.0017 247.84);
-    transition: text-shadow 1s ease-in-out;
-   
+   transition: text-shadow 1s ease-in-out;
+
 }
-strong.active{
-   text-shadow: 0 0 10px rgb(175, 182, 223,0.7), 
-                 0 0 20px rgb(175, 182, 223,0.5), 
-                 0 0 30px rgb(175, 182, 223,0.4);
+
+strong.active {
+   text-shadow: 0 0 10px rgb(175, 182, 223, 0.7),
+      0 0 20px rgb(175, 182, 223, 0.5),
+      0 0 30px rgb(175, 182, 223, 0.4);
 }
+
 @font-face {
    font-family: "Cehua";
    src: url(Fonts/CehuaFree.otf);
@@ -48,14 +52,17 @@ strong.active{
    font-family: "Prompt-Black";
    src: url(Fonts/Prompt-Black.ttf);
 }
+
 @font-face {
    font-family: "Antonio-Thin";
    src: url(Fonts/Antonio-Thin.ttf);
 }
+
 @font-face {
    font-family: "Antonio-Light";
    src: url(Fonts/Antonio-Light.ttf);
 }
+
 @font-face {
    font-family: "Antonio-ExtraLight";
    src: url(Fonts/Antonio-ExtraLight.ttf);
@@ -64,6 +71,40 @@ strong.active{
 h1 {
    font-size: clamp(3.7rem, 3vw + 3rem, 5rem);
 }
+
+h2 {
+   font-size: clamp(2.2rem, 2.5vw + 1.8rem, 3.5rem);
+}
+
+/* Videoediting Typography */
+.videoediting_intro p {
+   font-size: clamp(1.4rem, 2vw + 1rem, 2.2rem);
+}
+
+.sidebar_title {
+   font-size: clamp(1.5rem, 1.5vw + 1rem, 2.2rem);
+}
+
+.sidebar_item {
+   font-size: clamp(0.9rem, 0.5vw + 0.8rem, 1.05rem);
+}
+
+.section_title {
+   font-size: clamp(2rem, 4vw + 1.5rem, 4rem);
+}
+
+.slide_project_title {
+   font-size: clamp(1.6rem, 2.5vw + 1rem, 2.5rem);
+}
+
+.slide_client {
+   font-size: clamp(1rem, 1vw + 0.8rem, 1.4rem);
+}
+
+.slide_description {
+   /* font-size: clamp(0.35rem, 0.35vw + 0.35rem, 0.15rem); */
+}
+
 :root {
    margin: 0 auto;
    color: oklch(78.46% 0.0588 277.36);
@@ -90,6 +131,7 @@ a {
 
 /* Motion Accessibility - Respect user preferences */
 @media (prefers-reduced-motion: reduce) {
+
    *,
    *::before,
    *::after {

@@ -1,18 +1,18 @@
 // src/TextCarousel.js
-import React, { useState, useEffect } from "react";
-import { LogoUpWork } from "../assets/Icons";
-import Estrella from "../components/Estrella";
+import React, { useState, useEffect } from "react"
+import { LogoUpWork } from "../assets/Icons"
+import Estrella from "./Estrella"
 
 const TextCarousel = ({ texts, interval = 3000 }) => {
-   const [currentIndex, setCurrentIndex] = useState(0);
+   const [currentIndex, setCurrentIndex] = useState(0)
 
    useEffect(() => {
       const timer = setInterval(() => {
-         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length);
-      }, interval);
+         setCurrentIndex((prevIndex) => (prevIndex + 1) % texts.length)
+      }, interval)
 
-      return () => clearInterval(timer);
-   }, [texts.length, interval]);
+      return () => clearInterval(timer)
+   }, [texts.length, interval])
 
    return (
       <div className="carousel-container">
@@ -44,7 +44,7 @@ const TextCarousel = ({ texts, interval = 3000 }) => {
             ))}
          </div>
       </div>
-   );
-};
+   )
+}
 
-export default TextCarousel;
+export default TextCarousel

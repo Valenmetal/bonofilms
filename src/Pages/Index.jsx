@@ -3,7 +3,7 @@ import Hero from "../components/Hero"
 import Clientes from "../components/Clientes"
 import Team from "../components/Team"
 import CTASection from "../components/CTASection"
-import Carrousel from "../components/Carrousel"
+import Testimonials from "../components/Testimonials"
 
 export default function Index() {
    const testimonials = [
@@ -15,17 +15,15 @@ export default function Index() {
       '"Did a really really good edit job. We struggled at first with the colour grading but the issue was fixed. Thank you"',
       '"Great work! did precisely what was asked in a timely fashion and with great quality!"',
       '"Bono Films did a great job delivering what I asked for. Will work with again in the future."',
-   ];
+   ]
 
    return (
       <div>
          <Hero />
          <Clientes />
          <Team />
-         <Carrousel texts={testimonials} interval={3000} />
-         <CTASection
-            primaryLink="https://wa.me/5491126512436"
-         />
+         <Testimonials texts={testimonials} interval={3000} />
+         <CTASection primaryLink="https://wa.me/5491126512436" />
       </div>
    )
 }

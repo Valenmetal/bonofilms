@@ -1,18 +1,11 @@
 import React, { useState } from "react"
 import AndreCassiano from "/AndreCassiano.mp4"
-import Fandelier from "/Fandelier.mp4"
 import Interview_Tacoma_Farmers from "/Interview_Tacoma_Farmers.mp4"
-import MADA_1 from "/MADA_1.mp4"
-// import MADA_2 from "/MADA_2.mp4"
-import MADA_3 from "/MADA_3.mp4"
+import vendimia from "/Vendimia.mp4"
 import Max_Drifting from "/Max_Drifting.mp4"
-import Mercy from "/Mercy.mp4"
-import Olive_Group from "/Olive_Group.mp4"
 import PanchoVertical from "/PanchoVertical.mp4"
-import Pancho from "/Pancho.mp4"
 import Sprague from "/Sprague.mp4"
 import Tacoma_Farmers from "/Tacoma_Farmers.mp4"
-import Tapps_Electrics from "/Tapps_Electrics.mp4"
 import Zee from "/Zee.mp4"
 import ZOOM_TRB from "/ZOOM_TRB.mp4"
 import AveryJason from "/AveryJason.mp4"
@@ -221,6 +214,17 @@ const VideoDetail = () => {
                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
+                           <div onClick={() => handleClick(vendimia)}>
+                              <video
+                                 style={{ pointerEvents: "none" }}
+                                 autoPlay
+                                 muted
+                                 loop
+                                 id="videoediting_video"
+                                 src={vendimia}></video>
+                           </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
                            <div onClick={() => handleClick(Tacoma_Farmers)}>
                               <video
                                  style={{ pointerEvents: "none" }}
@@ -275,62 +279,6 @@ const VideoDetail = () => {
                               src={PanchoVertical}></video>
                         </div>
                      </div>
-                     <Swiper
-                        grabCursor={true}
-                        navigation={true}
-                        breakpoints={{
-                           768: {
-                              slidesPerView: 2.9,
-                           },
-                           522: {
-                              slidesPerView: 2.1,
-                           },
-                           0: {
-                              slidesPerView: 1.5,
-                           },
-                        }}
-                        spaceBetween={10}
-                        // loop={true}
-
-                        modules={[Navigation]}
-                        className="mySwiper">
-                        <SwiperSlide>
-                           <div onClick={() => handleClick(MADA_1)}>
-                              <video
-                                 className="mySwiper"
-                                 style={{ pointerEvents: "none" }}
-                                 autoPlay
-                                 muted
-                                 loop
-                                 id="videoediting_video"
-                                 src={MADA_1}></video>
-                           </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                           <div onClick={() => handleClick(Fandelier)}>
-                              <video
-                                 className="mySwiper"
-                                 style={{ pointerEvents: "none" }}
-                                 autoPlay
-                                 muted
-                                 loop
-                                 id="videoediting_video"
-                                 src={Fandelier}></video>
-                           </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                           <div onClick={() => handleClick(MADA_3)}>
-                              <video
-                                 className="mySwiper"
-                                 style={{ pointerEvents: "none" }}
-                                 autoPlay
-                                 muted
-                                 loop
-                                 id="videoediting_video"
-                                 src={MADA_3}></video>
-                           </div>
-                        </SwiperSlide>
-                     </Swiper>
                   </div>
                </>
             )
@@ -364,17 +312,6 @@ const VideoDetail = () => {
                                  loop
                                  id="videoediting_video"
                                  src={Tapps_Electrics}></video>
-                           </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                           <div onClick={() => handleClick(Mercy)}>
-                              <video
-                                 style={{ pointerEvents: "none" }}
-                                 autoPlay
-                                 muted
-                                 loop
-                                 id="videoediting_video"
-                                 src={Mercy}></video>
                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
